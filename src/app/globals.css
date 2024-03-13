@@ -2,28 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+@font-face {
+  font-family: poppins-300;
+  src: url("../../public/fonts/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: poppins-400;
+  src: url("../../public/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: poppins-500;
+  src: url("../../public/fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: poppins-700;
+  src: url("../../public/fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: roboto-800;
+  src: url("../../public/fonts/Roboto-Black.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
+:root {
+  --color-red: #dc1d28;
+  --color-whitesmoke: #f9f9f9;
+  --color-black: #000000;
+  --color-gret: #858185;
+  --color-white: #ffffff;
+  --font-poppins-300: poppins-300;
+  --font-poppins-400: poppins-400;
+  --font-poppins-500: poppins-500;
+  --font-poppins-700: poppins-700;
+  --font-roboto-800: roboto-800;
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  h5 {
+    @apply underline;
+  }
 }
 
 @layer utilities {
