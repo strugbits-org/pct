@@ -1,4 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 
-export { Header, Footer };
+// 
+import TextWithIcon from "./TextWithIcon";
+
+export { Header, Footer, TextWithIcon };

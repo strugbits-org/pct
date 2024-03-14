@@ -21,6 +21,14 @@
   src: url("../../public/fonts/Poppins-SemiBold.ttf");
 }
 @font-face {
+  font-family: roboto-300;
+  src: url("../../public/fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: roboto-400;
+  src: url("../../public/fonts/Roboto-Regular.ttf");
+}
+@font-face {
   font-family: roboto-800;
   src: url("../../public/fonts/Roboto-Black.ttf");
 }

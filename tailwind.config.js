@@ -12,6 +12,8 @@ module.exports = {
         pop400: ["poppins-400"],
         pop500: ["poppins-500"],
         pop700: ["poppins-700"],
+        rob300: ["roboto-300"],
+        rob400: ["roboto-400"],
         rob800: ["roboto-800"],
       },
       colors: {
