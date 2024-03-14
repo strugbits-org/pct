@@ -7,6 +7,7 @@ import { useState } from "react";
 import { TextWithIcon } from ".";
 
 import { headerContactList, headerSocialList } from "@/lib/data";
+import { buttonTheme } from "@/lib/constant";
 import { ButtonRed } from "./Buttons";
 
 const Header = () => {
@@ -155,7 +156,7 @@ const Header = () => {
             </Link>
           </div>
           <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <ButtonRed>Contact Us</ButtonRed>
+                <ButtonRed className={buttonTheme.red}>Contact Us</ButtonRed>
 
             
           </div>

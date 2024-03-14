@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @font-face {
   font-family: poppins-300;
   src: url("../../public/fonts/Poppins-Light.ttf");
@@ -63,5 +61,30 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .button-red::before {
+    position: absolute;
+    background-color: var(--color-whitesmoke);
+    border-radius: 100px;
+    content: "hamza";
+    width: 2px;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.6s;
+    z-index: -1;
+  }
+  .button-red:hover {
+    color: #000000;
+    transition: all 0.6s;
+    background-color: var(--color-whitesmoke);
+  }
+
+  .button-red:hover::before {
+    transition: all 0.6s;
+    opacity: 1;
+    transform: scale(100);
   }
 }
