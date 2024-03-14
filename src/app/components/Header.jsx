@@ -1,6 +1,7 @@
 'use client'
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const Header = () => {
@@ -40,6 +41,9 @@ const Header = () => {
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
+        <Link href="/" class="text-sm font-semibold leading-6 text-secondary">
+            Home
+          </Link>
           <div class="">
             <button
               type="button"
@@ -92,27 +96,28 @@ const Header = () => {
             )}
           </div>
 
-          <a href="#" class="text-sm font-semibold leading-6 text-secondary">
+          
+          <Link href="/about" class="text-sm font-semibold leading-6 text-secondary">
             About Us
-          </a>
-          <a href="#" class="text-sm font-semibold leading-6 text-secondary">
+          </Link>
+          <Link href="/industries-served" class="text-sm font-semibold leading-6 text-secondary">
             Industries Served
-          </a>
-          <a href="#" class="text-sm font-semibold leading-6 text-secondary">
+          </Link>
+          <Link href="/blog" class="text-sm font-semibold leading-6 text-secondary">
             Blog
-          </a>
-          <a href="#" class="text-sm font-semibold leading-6 text-secondary">
+          </Link>
+          <Link href="/careers" class="text-sm font-semibold leading-6 text-secondary">
             Careers
-          </a>
-          <a href="#" class="text-sm font-semibold leading-6 text-secondary">
+          </Link>
+          <Link href="/dimer-and-machine-sales" class="text-sm font-semibold leading-6 text-secondary">
             Dimer & Machine Sales
-          </a>
+          </Link>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <button className="bg-red text-secondary p-4 rounded-lg">Contact Us</button>
         </div>
       </nav>
-      {/* <!-- Mobile menu, show/hide based on menu open state. --> */}
+      {/* <!-- Mobile menu, show/hide based on menus open state. --> */}
       <div class="lg:hidden" role="dialog" aria-modal="true">
         {/* <!-- Background backdrop, show/hide based on slide-over state. --> */}
         <div class="fixed inset-0 z-10"></div>
