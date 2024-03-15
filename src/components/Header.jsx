@@ -3,19 +3,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "public/pct_logo.png";
+import { FullWidth } from "./Sections";
 import { useState } from "react";
 import { TextWithIcon } from ".";
 
 import { headerContactList, headerSocialList } from "@/lib/data";
 import { buttonTheme } from "@/lib/constant";
 import { ButtonRed } from "./Buttons";
+import { SubMenu } from "./ServicesSubMenu";
+import { IndustriesSubMenu } from "./IndustiresSubMenu";
 
 const Header = () => {
   const [toggleServices, setToggleServices] = useState(false);
-  const linkClassValues = "text-sm font-semibold leading-6 text-secondary font-rob400"
+  const [toggleIndustires, setToggleIndstries] = useState(false);
+  const linkClassValues =
+    "text-sm font-semibold leading-6 text-secondary font-rob400";
   return (
     <header class="bg-primary">
-      <div className="max-w-[1394px] mx-auto px-[20px]">
+      <FullWidth>
         <div className="flex gap-x-6 items-center justify-between py-2">
           <div className="flex gap-x-6 items-center">
             {headerContactList.map((item) => {
@@ -30,18 +35,22 @@ const Header = () => {
             {headerSocialList.map((item) => {
               return (
                 <Link href="#" key={item.id}>
-                  <TextWithIcon leftIcon={item.icon} text={item.value} iconSize={14} />
+                  <TextWithIcon
+                    leftIcon={item.icon}
+                    text={item.value}
+                    iconSize={14}
+                  />
                 </Link>
               );
             })}
           </div>
         </div>
 
-        <nav class="flex items-center justify-between" aria-label="Global">
-          <div class="flex lg:flex-1">
-            <Link href="/" class="-m-1.5 p-1.5">
-              <span class="sr-only">Para Coat Technologies</span>
-              <Image className="h-[74px] w-auto" src={logo} alt="" />
+        <nav className="flex items-center justify-between gap-x-4" aria-label="Global">
+          <div className="flex lg:flex-1">
+            <Link href="/" className="-m-1.5 p-1.5">
+              <span className="sr-only">Para Coat Technologies</span>
+              <Image className="h-[74px] w-auto object-contain" src={logo} alt="" />
             </Link>
           </div>
           <div class="flex lg:hidden">
@@ -67,98 +76,52 @@ const Header = () => {
             </button>
           </div>
           <div class="hidden lg:flex lg:gap-x-8">
-            <Link
-              href="/"
-              class={linkClassValues}
-            >
+            <Link href="/" className={linkClassValues}>
               Home
             </Link>
-            <div class="">
-              <button
-                type="button"
-                class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-secondary"
-                aria-expanded="false"
-                onClick={() => setToggleServices(!toggleServices)}
+            <div>
+              <Link
+                href=""
+                className={linkClassValues}
+                onClick={() => {
+                  setToggleServices(!toggleServices)
+                  setToggleIndstries(false)
+                }}
               >
-                Product
-              </button>
-              {toggleServices ? (
-                <div class="absolute z-10 mt-3 left-0 w-screen overflow-hidden bg-primary">
-                  <h2 className="text-secondary">OUR SERVICES</h2>
-                  <div class="p-4 flex">
-                    <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
-                      <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <svg
-                          class="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z"
-                          />
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z"
-                          />
-                        </svg>
-                      </div>
-                      <div class="flex-auto">
-                        <a href="#" class="block font-semibold text-gray-900">
-                          Analytics
-                          <span class="absolute inset-0"></span>
-                        </a>
-                        <p class="mt-1 text-gray-600">
-                          Get a better understanding of your traffic
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                ""
-              )}
+                Services
+              </Link>
+
+              {toggleServices ? <SubMenu /> : ""}
             </div>
-            <Link
-              href="/about"
-              class={linkClassValues}
-            >
+            <Link href="/about" className={linkClassValues}>
               About Us
             </Link>
-            <Link
-              href="/industries-served"
-              class={linkClassValues}
-            >
-              Industries Served
-            </Link>
-            <Link
-              href="/blog"
-              class={linkClassValues}
+            <div>
+              <Link
+                href=""
+                className={linkClassValues}
+                onClick={() => {
+                  setToggleIndstries(!toggleIndustires)
+                  setToggleServices(false)
+                }}
               >
+                Industries Served
+              </Link>
+
+              {toggleIndustires ? <IndustriesSubMenu /> : ""}
+            </div>
+            <Link href="/blog" className={linkClassValues}>
               Blog
             </Link>
-            <Link
-              href="/careers"
-              class={linkClassValues}
-            >
+            <Link href="/careers" className={linkClassValues}>
               Careers
             </Link>
-            <Link
-              href="/dimer-and-machine-sales"
-              class={linkClassValues}
-            >
+            <Link href="/dimer-and-machine-sales" className={linkClassValues}>
               Dimer & Machine Sales
             </Link>
           </div>
           <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <ButtonRed className={buttonTheme.red}>Contact Us</ButtonRed>
-
-            
+            <ButtonRed className={buttonTheme.red}>Contact Us</ButtonRed>
           </div>
         </nav>
         {/* <!-- Mobile menu, show/hide based on menus open state. --> */}
@@ -302,7 +265,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+      </FullWidth>
     </header>
   );
 };

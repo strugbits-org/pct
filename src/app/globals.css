@@ -53,8 +53,28 @@
 } */
 
 @layer base {
+  h1{
+    @apply font-rob800
+  }
+  h2{
+    @apply font-rob400
+    
+  }
+  h3{
+    @apply font-rob300
+  }
+  h4{
+    @apply font-pop700
+    
+  }
   h5 {
-    @apply underline;
+    @apply font-pop400
+  }
+  h6{
+    @apply font-pop400
+  }
+  p{
+    @apply font-pop300
   }
 }
 

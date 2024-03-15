@@ -23,6 +23,9 @@ module.exports = {
         gret: "var(--color-gret)",
         white: "var(--color-white)",
       },
+      screens:{
+        lg: "1124px"
+      }
     },
   },
   plugins: [],
