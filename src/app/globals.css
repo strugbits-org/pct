@@ -67,7 +67,7 @@
     position: absolute;
     background-color: var(--color-whitesmoke);
     border-radius: 100px;
-    content: "hamza";
+    content: "";
     width: 2px;
     height: 2px;
     bottom: -2px;

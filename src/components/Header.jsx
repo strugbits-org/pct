@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../../public/pct_logo.png";
+import logo from "public/pct_logo.png";
 import { useState } from "react";
 import { TextWithIcon } from ".";
 
