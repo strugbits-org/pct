@@ -11,7 +11,7 @@ export const IndustriesSubMenu = () => {
             return (
               <div
                 key={item.id}
-                className="group relative w-[30vw] max-w-[324px] flex items-center justify-center ring-1 ring-red gap-x-6 rounded-s p-6 text-sm hover:bg-red"
+                className="group relative w-[23vw] max-w-[324px] flex items-center justify-center ring-1 ring-red gap-x-6 rounded-s p-6 text-sm hover:bg-red"
               >
                 <div className="flex-auto text-white">
                   <h4 className="text-base">{item.title}</h4>

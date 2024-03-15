@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export const ButtonRed = ({ children, className }) => {
+export const AnimateButton = ({ children, className }) => {
   return (
     <button
       className={cn(
