@@ -4,21 +4,47 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "public/pct_logo.png";
 import { FullWidth } from "./Sections";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TextWithIcon } from ".";
+import { usePathname } from "next/navigation";
 
-import { headerContactList, headerSocialList } from "@/lib/data";
+import {
+  headerContactList,
+  headerSocialList,
+  industriesServed,
+} from "@/lib/data";
 import { buttonTheme } from "@/lib/constant";
 import { AnimateButton } from "./Buttons";
-import { SubMenu } from "./ServicesSubMenu";
-import { IndustriesSubMenu } from "./IndustiresSubMenu";
+import { MobServicesSubMenu, SubMenu } from "./ServicesSubMenu";
+import { IndustriesSubMenu, MobIndustriesSubMenu } from "./IndustiresSubMenu";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
+  const pathName = usePathname();
+  const [change, setChanges] = useState(0);
   const [toggleServices, setToggleServices] = useState(false);
-  const [toggleIndustires, setToggleIndstries] = useState(false);
-  const [menuModal, setMenuModal ] = useState(false);
+  const [toggleIndustries, setToggleIndustries] = useState(false);
+  const [menuModal, setMenuModal] = useState(false);
   const linkClassValues =
     "text-sm font-semibold leading-6 text-secondary font-rob400";
+  const mobMenuClass =
+    "block py-3 text-base font-rob400 leading-6 text-white border-solid border-0 border-b-[1px] border-secondary";
+
+  useEffect(() => {
+    setChanges((prev) => prev++);
+    setToggleIndustries(false)
+    setToggleServices(false)
+    setMenuModal(false)
+  }, [pathName]);
+  const handleServices = (e) => {
+    setToggleServices(!toggleServices);
+    setToggleIndustries(false);
+  };
+  const handleIndustriesServed = (e) => {
+    console.log("handle instries served 123 132");
+    setToggleIndustries(!toggleIndustries);
+    setToggleServices(false);
+  };
   return (
     <header class="bg-primary">
       <FullWidth>
@@ -62,11 +88,6 @@ const Header = () => {
             </Link>
           </div>
 
-          <div class="flex flex-1 justify-end">
-            <AnimateButton className={buttonTheme.red}>
-              Contact Us
-            </AnimateButton>
-          </div>
           <div class="flex lg:hidden">
             <button
               type="button"
@@ -90,6 +111,7 @@ const Header = () => {
               </svg>
             </button>
           </div>
+
           <div className="hidden lg:flex lg:gap-x-8">
             <Link href="/" className={linkClassValues}>
               Home
@@ -98,10 +120,7 @@ const Header = () => {
               <Link
                 href=""
                 className={linkClassValues}
-                onClick={() => {
-                  setToggleServices(!toggleServices);
-                  setToggleIndstries(false);
-                }}
+                onClick={handleServices}
               >
                 Services
               </Link>
@@ -115,15 +134,12 @@ const Header = () => {
               <Link
                 href=""
                 className={linkClassValues}
-                onClick={() => {
-                  setToggleIndstries(!toggleIndustires);
-                  setToggleServices(false);
-                }}
+                onClick={handleIndustriesServed}
               >
                 Industries Served
               </Link>
 
-              {toggleIndustires ? <IndustriesSubMenu /> : ""}
+              {toggleIndustries ? <IndustriesSubMenu /> : ""}
             </div>
             <Link href="/blog" className={linkClassValues}>
               Blog
@@ -135,25 +151,35 @@ const Header = () => {
               Dimer & Machine Sales
             </Link>
           </div>
+
+          <div class="hidden lg:flex flex-1 justify-end">
+            <AnimateButton className={buttonTheme.red}>
+              Contact Us
+            </AnimateButton>
+          </div>
         </nav>
         {/* <!-- Mobile menu, show/hide based on menus open state. --> */}
         {menuModal ? (
-          <div className="lg:hidden bg-primary" role="dialog" aria-modal="true">
+          <div
+            className="lg:hidden bg-primary/20"
+            role="dialog"
+            aria-modal="true"
+          >
             {/* <!-- Background backdrop, show/hide based on slide-over state. --> */}
             <div className="fixed inset-0 z-10"></div>
-            <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-primary px-6 py-6 sm:max-w-sm">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                  <Image
+                    className="h-8 w-auto hidden sm:visible"
+                    src={logo}
                     alt=""
                   />
                 </a>
                 <button
                   type="button"
-                  className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                  className="-m-2.5 rounded-md p-2.5 text-white"
                   onClick={() => setMenuModal(false)}
                 >
                   <span className="sr-only">Close menu</span>
@@ -174,23 +200,28 @@ const Header = () => {
                 </button>
               </div>
               <div className="mt-6 flow-root">
-                <div className="-my-6 divide-y divide-gray-500/10">
-                  <div className="space-y-2 py-6">
-                    <div className="-mx-3">
+                <div className="">
+                  <div className="">
+                    <Link href="/" className={mobMenuClass}>
+                      Home
+                    </Link>
+                    <Link href="/about" className={mobMenuClass}>
+                      About Us
+                    </Link>
+                    <div className="py-3 border-solid border-0 border-b-[1px] border-secondary">
                       <button
                         type="button"
-                        className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        className="flex w-full items-center justify-between text-base font-rob400 text-white"
                         aria-controls="disclosure-1"
-                        aria-expanded="false"
+                        aria-expanded={"false"}
+                        onClick={handleServices}
                       >
-                        Product
-                        {/* <!--
-                  Expand/collapse icon, toggle classNamees based on menu open state.
-
-                  Open: "rotate-180", Closed: ""
-                --> */}
+                        Services
                         <svg
-                          className="h-5 w-5 flex-none"
+                          className={cn(
+                            "h-5 w-5 flex-none",
+                            toggleIndustries ? "roate-180" : "rotate-0"
+                          )}
                           viewBox="0 0 20 20"
                           fill="currentColor"
                           aria-hidden="true"
@@ -203,77 +234,59 @@ const Header = () => {
                         </svg>
                       </button>
                       {/* <!-- 'Product' sub-menu, show/hide based on menu state. --> */}
-                      <div className="mt-2 space-y-2" id="disclosure-1">
-                        <a
-                          href="#"
-                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                        >
-                          Analytics
-                        </a>
-                        <a
-                          href="#"
-                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                        >
-                          Engagement
-                        </a>
-                        <a
-                          href="#"
-                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                        >
-                          Security
-                        </a>
-                        <a
-                          href="#"
-                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                        >
-                          Integrations
-                        </a>
-                        <a
-                          href="#"
-                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                        >
-                          Automations
-                        </a>
-                        <a
-                          href="#"
-                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                        >
-                          Watch demo
-                        </a>
-                        <a
-                          href="#"
-                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                        >
-                          Contact sales
-                        </a>
+                      <div className="mt-0" id="disclosure-1">
+                        {toggleServices && <MobServicesSubMenu />}
                       </div>
                     </div>
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    <div className="py-3 border-solid border-0 border-b-[1px] border-secondary">
+                      <button
+                        type="button"
+                        className="flex w-full items-center justify-between text-base font-rob400 text-white"
+                        aria-controls="disclosure-2"
+                        aria-expanded={"false"}
+                        onClick={handleIndustriesServed}
+                      >
+                        Industries Served
+                        <svg
+                          className={cn(
+                            "h-5 w-5 flex-none",
+                            toggleIndustries ? "roate-180" : "rotate-0"
+                          )}
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      {/* <!-- 'Product' sub-menu, show/hide based on menu state. --> */}
+                      <div className="mt-0 bg-red h-50" id="disclosure-2">
+                        {toggleIndustries && <MobIndustriesSubMenu />}
+                      </div>
+                    </div>
+                    <Link href="/blog" className={mobMenuClass}>
+                      Blog
+                    </Link>
+                    <Link href="/careers" className={mobMenuClass}>
+                      Careers
+                    </Link>
+                    <Link
+                      href="/dimer-and-machine-sales"
+                      className={mobMenuClass}
                     >
-                      Features
-                    </a>
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Marketplace
-                    </a>
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Company
-                    </a>
+                      Dimer & Machine Sales
+                    </Link>
                   </div>
-                  <div className="py-6">
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Log in
-                    </a>
+                  <div className="py-6 mt-6">
+                    <div class="flex flex-1 justify-center">
+                      <AnimateButton className={`${buttonTheme.red} w-full`}>
+                        Contact Us
+                      </AnimateButton>
+                    </div>
                   </div>
                 </div>
               </div>

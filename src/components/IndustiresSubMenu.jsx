@@ -1,5 +1,6 @@
 import { industriesServed } from "@/lib/data";
 import { FullWidth } from "./Sections";
+import Link from "next/link";
 
 export const IndustriesSubMenu = () => {
   return (
@@ -22,6 +23,24 @@ export const IndustriesSubMenu = () => {
           })}
         </div>
       </FullWidth>
+    </div>
+  );
+};
+
+export const MobIndustriesSubMenu = () => {
+  return (
+    <div class="w-full flex gap-2 flex-col overflow-hidden mt-3">
+        {industriesServed.map((item) => {
+          return (
+            <Link
+              href="#"
+              className="block text-sm font-rob300 text-white"
+              key={item.id}
+            >
+              {item.title}
+            </Link>
+          );
+        })}
     </div>
   );
 };

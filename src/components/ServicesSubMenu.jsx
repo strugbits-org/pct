@@ -1,6 +1,7 @@
 import { ourServices } from "@/lib/data";
 import Image from "next/image";
 import { FullWidth } from "./Sections";
+import Link from "next/link";
 
 export const SubMenu = () => {
   return (
@@ -32,6 +33,24 @@ export const SubMenu = () => {
           })}
         </div>
       </FullWidth>
+    </div>
+  );
+};
+
+export const MobServicesSubMenu = () => {
+  return (
+    <div class="w-full flex gap-1 flex-col overflow-hidden mt-3">
+      {ourServices.map((item) => {
+        return (
+          <Link
+            href="#"
+            className="block text-sm font-rob300 leading-6 text-white"
+            key={item.id}
+          >
+            {item.title}
+          </Link>
+        );
+      })}
     </div>
   );
 };
