@@ -74,14 +74,14 @@ const Header = () => {
         </div>
 
         <nav
-          className="flex items-center justify-between gap-x-4"
+          className="flex items-center justify-between gap-x-4 py-4 md:py-0"
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Para Coat Technologies</span>
               <Image
-                className="h-[74px] w-auto object-contain"
+                className="h-11 md:h-[74px] w-auto object-contain"
                 src={logo}
                 alt=""
               />
@@ -167,12 +167,12 @@ const Header = () => {
           >
             {/* <!-- Background backdrop, show/hide based on slide-over state. --> */}
             <div className="fixed inset-0 z-10"></div>
-            <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-primary px-6 py-6 sm:max-w-sm">
+            <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-primary px-5 py-4 sm:max-w-sm">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
                   <Image
-                    className="h-8 w-auto hidden sm:visible"
+                    className="h-11 w-auto sm:hidden"
                     src={logo}
                     alt=""
                   />
@@ -264,7 +264,7 @@ const Header = () => {
                         </svg>
                       </button>
                       {/* <!-- 'Product' sub-menu, show/hide based on menu state. --> */}
-                      <div className="mt-0 bg-red h-50" id="disclosure-2">
+                      <div className="mt-0 h-50" id="disclosure-2">
                         {toggleIndustries && <MobIndustriesSubMenu />}
                       </div>
                     </div>
