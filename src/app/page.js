@@ -1,9 +1,12 @@
-import Image from "next/image";
+import { FullWidthContent } from "@/components/Sections";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-red">Home</h1>
+    <main className="max-h-screen">
+      <FullWidthContent clas>
+        <h1 className="text-red">Home</h1>
+
+      </FullWidthContent>
     </main>
   );
 }

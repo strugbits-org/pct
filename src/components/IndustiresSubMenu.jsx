@@ -1,11 +1,11 @@
 import { industriesServed } from "@/lib/data";
-import { FullWidth } from "./Sections";
+import { FullWidthContent } from "./Sections";
 import Link from "next/link";
 
 export const IndustriesSubMenu = () => {
   return (
     <div class="absolute z-10 mt-6 left-0 w-full mx-auto overflow-hidden bg-primary px-6 py-8">
-      <FullWidth>
+      <FullWidthContent>
         <h2 className="text-secondary text-lg mb-8">Industries Served</h2>
         <div className="flex gap-4 flex-wrap">
           {industriesServed.map((item) => {
@@ -22,14 +22,14 @@ export const IndustriesSubMenu = () => {
             );
           })}
         </div>
-      </FullWidth>
+      </FullWidthContent>
     </div>
   );
 };
 
 export const MobIndustriesSubMenu = () => {
   return (
-    <div class="w-full flex gap-2 flex-col overflow-hidden mt-3">
+    <div class="w-full flex gap-1 flex-col overflow-hidden mt-3">
         {industriesServed.map((item) => {
           return (
             <Link

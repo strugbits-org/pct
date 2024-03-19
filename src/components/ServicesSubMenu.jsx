@@ -1,12 +1,12 @@
 import { ourServices } from "@/lib/data";
 import Image from "next/image";
-import { FullWidth } from "./Sections";
+import { FullWidth, FullWidthContent } from "./Sections";
 import Link from "next/link";
 
 export const SubMenu = () => {
   return (
     <div class="absolute z-10 mt-6 left-0 w-full mx-auto overflow-hidden bg-primary px-6 py-8">
-      <FullWidth>
+      <FullWidthContent>
         <h2 className="text-secondary text-lg mb-8">OUR SERVICES</h2>
         <div className="flex gap-4 flex-wrap">
           {ourServices.map((item) => {
@@ -32,7 +32,7 @@ export const SubMenu = () => {
             );
           })}
         </div>
-      </FullWidth>
+      </FullWidthContent>
     </div>
   );
 };

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "public/pct_logo.png";
-import { FullWidth } from "./Sections";
+import { FullWidthContent } from "./Sections";
 import { useEffect, useState } from "react";
 import { TextWithIcon } from ".";
 import { usePathname } from "next/navigation";
@@ -47,7 +47,7 @@ const Header = () => {
   };
   return (
     <header class="bg-primary">
-      <FullWidth>
+      <FullWidthContent>
         <div className="hidden lg:flex gap-x-6 items-center justify-between py-2">
           <div className="flex gap-x-6 items-center">
             {headerContactList.map((item) => {
@@ -295,7 +295,7 @@ const Header = () => {
         ) : (
           ""
         )}
-      </FullWidth>
+      </FullWidthContent>
     </header>
   );
 };
