@@ -1,6 +1,6 @@
 import { ourServices } from "@/lib/data";
 import Image from "next/image";
-import { FullWidth, FullWidthContent } from "./Sections";
+import { FullWidthContent } from "./Sections";
 import Link from "next/link";
 
 export const SubMenu = () => {

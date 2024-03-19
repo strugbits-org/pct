@@ -81,6 +81,11 @@
     text-wrap: balance;
   }
 
+  .video{
+    background: url("/videos/hero-video-home.mp4");
+    background: #000000;
+  }
+
   /* .button-red::before {
     position: absolute;
     background-color: var(--color-whitesmoke);
