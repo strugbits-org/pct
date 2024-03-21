@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "public/pct_logo.png";
 import { FullWidthContent } from "./Sections";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { DesignContext } from "@/context/design";
 import { TextWithIcon } from ".";
 import { usePathname } from "next/navigation";
+
 
 import {
   headerContactList,
@@ -20,6 +22,8 @@ import { IndustriesSubMenu, MobIndustriesSubMenu } from "./IndustiresSubMenu";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
+  const {button} = useContext(DesignContext)
+  console.log(button);
   const pathName = usePathname();
   const [change, setChanges] = useState(0);
   const [toggleServices, setToggleServices] = useState(false);
@@ -46,7 +50,7 @@ const Header = () => {
     setToggleServices(false);
   };
   return (
-    <header class="bg-primary">
+    <header className="bg-primary">
       <FullWidthContent>
         <div className="hidden lg:flex gap-x-6 items-center justify-between py-2">
           <div className="flex gap-x-6 items-center">
@@ -88,20 +92,20 @@ const Header = () => {
             </Link>
           </div>
 
-          <div class="flex lg:hidden">
+          <div className="flex lg:hidden">
             <button
               type="button"
-              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-secondary"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-secondary"
               onClick={() => setMenuModal(true)}
             >
-              <span class="sr-only">Open main menu</span>
+              <span className="sr-only">Open main menu</span>
               <svg
-                class="h-6 w-6"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                ariaHidden="true"
+                area-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -152,8 +156,8 @@ const Header = () => {
             </Link>
           </div>
 
-          <div class="hidden lg:flex flex-1 justify-end">
-            <AnimateButton className={buttonTheme.red}>
+          <div className="hidden lg:flex flex-1 justify-end">
+            <AnimateButton className={`${button.red} before:bg-secondary hover:bg-secondary hover:text-primary`}>
               Contact Us
             </AnimateButton>
           </div>
@@ -282,8 +286,8 @@ const Header = () => {
                     </Link>
                   </div>
                   <div className="py-6 mt-6">
-                    <div class="flex flex-1 justify-center">
-                      <AnimateButton className={`${buttonTheme.red} w-full`}>
+                    <div className="flex flex-1 justify-center">
+                      <AnimateButton className={`${button.red} w-full before:hover:scale-[100] before:bg-secondary hover:bg-secondary hover:text-primary`}>
                         Contact Us
                       </AnimateButton>
                     </div>

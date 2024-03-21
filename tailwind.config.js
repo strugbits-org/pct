@@ -22,6 +22,8 @@ module.exports = {
         red: "var(--color-red)",
         gret: "var(--color-gret)",
         white: "var(--color-white)",
+        white200: "var(--color-white-200)",
+        gray: "var(--color-borderGray)",
       },
       screens:{
         lg: "1124px"

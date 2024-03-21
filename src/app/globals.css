@@ -37,6 +37,8 @@
   --color-black: #000000;
   --color-gret: #858185;
   --color-white: #ffffff;
+  --color-white-200: rgba(255, 255, 255, 0.2);
+  --color-borderGray: #e0e0e0;
   --font-poppins-300: poppins-300;
   --font-poppins-400: poppins-400;
   --font-poppins-500: poppins-500;
@@ -74,16 +76,17 @@
   p {
     @apply font-pop300;
   }
+  input {
+    @apply font-pop400;
+  }
+  input:focus {
+    outline: none;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-
-  .video{
-    background: url("/videos/hero-video-home.mp4");
-    background: #000000;
   }
 
   /* .button-red::before {

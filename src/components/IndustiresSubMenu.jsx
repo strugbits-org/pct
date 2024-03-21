@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const IndustriesSubMenu = () => {
   return (
-    <div class="absolute z-10 mt-6 left-0 w-full mx-auto overflow-hidden bg-primary px-6 py-8">
+    <div className="absolute z-10 mt-6 left-0 w-full mx-auto overflow-hidden bg-primary px-6 py-8">
       <FullWidthContent>
         <h2 className="text-secondary text-lg mb-8">Industries Served</h2>
         <div className="flex gap-4 flex-wrap">
@@ -29,7 +29,7 @@ export const IndustriesSubMenu = () => {
 
 export const MobIndustriesSubMenu = () => {
   return (
-    <div class="w-full flex gap-1 flex-col overflow-hidden mt-3">
+    <div className="w-full flex gap-1 flex-col overflow-hidden mt-3">
         {industriesServed.map((item) => {
           return (
             <Link
