@@ -21,6 +21,7 @@ module.exports = {
         primary45: "var(--color-black-45)",
         secondary: "var(--color-whitesmoke)",
         red: "var(--color-red)",
+        ["black-content"]: "var(--color-black-content)",
         gret: "var(--color-gret)",
         white: "var(--color-white)",
         white200: "var(--color-white-200)",

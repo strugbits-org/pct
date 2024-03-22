@@ -1,6 +1,7 @@
 import { HeroContentBox } from "@/components/containers";
 import { GuideForm } from "@/components/forms";
 import HeroSection from "@/components/sections/HeroSection";
+import WhatWeOffer from "@/components/sections/WhatWeOffer";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
           }
         />
       </HeroSection>
+
+      <WhatWeOffer />
     </main>
   );
 }
