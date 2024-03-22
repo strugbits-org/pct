@@ -9,7 +9,7 @@ export const FullWidthContent = ({className, children}) => {
     }, [className])
     return (
         <div className={cn(
-            "max-w-[1920px] mx-auto px-5",
+            "max-w-[1920px] mx-auto px-5 block",
             className 
         )}>
             {children}

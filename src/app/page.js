@@ -7,10 +7,10 @@ export default function Home() {
   const { button } = useContext(DesignContext);
   return (
     <main className="min-h-screen">
-      <section className="min-h-[43vw] relative py-10">
+      <section className="min-h-[628px] flex relative py-10 items-center justify-center">
         <FullWidthContent>
-          <div className="h-full text-xl grid lg:grid-cols-5 gap-x-24 gap-y-6 place-items-center place-content-center text-center lg:text-left">
-            <div className="lg:col-span-3 text-secondary">
+          <div className="text-xl grid lg:grid-cols-5 gap-x-24 gap-y-6 place-content-center items-center text-center lg:text-left">
+            <div className="lg:col-span-3 text-secondary max-w-[804px]">
               <h1 className="text-3xl md:text-6xl mb-3">
                 Unveiling Excellence in{" "}
                 <span className="text-red">Conformal Coating</span> Solutions
@@ -106,11 +106,11 @@ export default function Home() {
         </FullWidthContent>
 
         <div className="w-full h-full absolute top-0 -z-10">
-          <video loop muted className="w-full h-full object-cover">
+          <video loop muted autoPlay className="w-full h-full object-cover">
             <source src="/videos/hero-video-home.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="bg-primary/45 w-full h-full absolute top-0"></div>
+          <div className="bg-primary45 w-full h-full absolute top-0"></div>
         </div>
       </section>
     </main>

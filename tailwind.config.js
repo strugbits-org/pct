@@ -18,6 +18,7 @@ module.exports = {
       },
       colors: {
         primary: "var(--color-black)",
+        primary45: "var(--color-black-45)",
         secondary: "var(--color-whitesmoke)",
         red: "var(--color-red)",
         gret: "var(--color-gret)",
