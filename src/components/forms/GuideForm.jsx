@@ -17,35 +17,35 @@ const GuideForm = ({ title, detail, className }) => {
       <h1 className="text-2xl lg:text-4xl mb-1">{title}</h1>
       <p className="font-pop400 text-xs lg:text-sm mb-3">{detail}</p>
       <form>
-        <div class="mb-4">
+        <div className="mb-4">
           <input
             type="text"
             id="firstName"
-            class="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
+            className="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
             placeholder="First Name"
           />
         </div>
-        <div class="mb-4">
+        <div className="mb-4">
           <input
             type="text"
             id="lastName"
-            class="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
+            className="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
             placeholder="Last Name"
           />
         </div>
-        <div class="mb-4">
+        <div className="mb-4">
           <input
             type="email"
             id="email"
-            class="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
+            className="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
             placeholder="Email*"
           />
         </div>
-        <div class="mb-6 ">
+        <div className="mb-6 ">
           <input
             type="text"
             id="phoneNumber"
-            class="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
+            className="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
             placeholder="Phone Number"
           />
         </div>

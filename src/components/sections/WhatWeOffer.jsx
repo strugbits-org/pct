@@ -1,6 +1,16 @@
-import { FullWidthContent } from "../Sections";
+"use client";
 
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import { FullWidthContent } from "../Sections";
+import Image from "next/image";
+import { ourServices } from "@/lib/data";
+import { SlideColorButton } from "../Buttons";
+import { DesignContext } from "@/context/design";
+import { useContext } from "react";
 const WhatWeOffer = () => {
+  const { button } = useContext(DesignContext);
+
   return (
     <section className="bg-white py-16">
       <FullWidthContent>
@@ -15,7 +25,87 @@ const WhatWeOffer = () => {
             thrive in any environment.
           </p>
         </div>
-        <div className="flex space-x-4">
+        <Splide
+          aria-label="What We Offers"
+          tag="div"
+          options={{
+            gap: "16px",
+            perMove: 4,
+            perPage: 4,
+            breakpoints:{
+              768:{
+                perMove: 2,
+                perPage: 2,
+              },
+              640:{
+                perMove: 1,
+                perPage: 1,
+              },
+            }
+            // pagination: false,
+            // arrows:false,
+          }}
+        >
+          {ourServices.map((item) => {
+            return (
+              <SplideSlide
+                key={item.id}
+                className="min-w-[280px] bg-transparent shadow-md h-full pt-5"
+              >
+                <div className="px-5 mb-5">
+                  <div className="relative mb-7">
+                    <Image
+                      src={item.mainImage}
+                      alt=""
+                      className="w-full"
+                      width={280}
+                      height={280}
+                    />
+                    <Image
+                      className="absolute -bottom-[30px] right-4"
+                      src={item.image}
+                      alt=""
+                      width={60}
+                      height={60}
+                    />
+                  </div>
+                  <h1 className="mb-4" >
+                    {item.title}
+                  </h1>
+                  <p>{item.shortDetail}</p>
+                </div>
+                <SlideColorButton
+                  className={`${button.icon} bg-white before:bg-red text-primary hover:text-secondary justify-start`}
+                >
+                  READ MORE{" "}
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 8L22 12L18 16"
+                      className="stroke-red group-hover:stroke-secondary transition-all duration-300"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M2 12H22"
+                      className="stroke-red group-hover:stroke-secondary transition-all duration-300"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </SlideColorButton>
+              </SplideSlide>
+            );
+          })}
+        </Splide>
+        {/* <div className="flex space-x-4">
           <div className="w-6 flex items-center">
             <button>{"<"}</button>
           </div>
@@ -29,7 +119,7 @@ const WhatWeOffer = () => {
           <div className="w-6 flex items-center">
             <button>{">"}</button>
           </div>
-        </div>
+        </div> */}
       </FullWidthContent>
     </section>
   );

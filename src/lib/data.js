@@ -47,31 +47,41 @@ export const ourServices = [
         id:0,
         title:"PARYLENE",
         shortDetail: "Parylene is a common generic name for a unique series of polymers based on paraxylene.",
-        image:"/images/parylene.png"
+        image:"/images/parylene.png",
+        mainImage:"/images/parylene.jpg",
+        link: ""
     },
     {
         id:1,
         title:"PLOYURETHANE",
         shortDetail: "Polyurethane coatings are available as either single or two-component formulations.",
-        image:"/images/polyurethane.png"
+        image:"/images/polyurethane.png",
+        mainImage:"/images/polyurethene.jpg",
+        link: ""
     },
     {
         id:2,
         title:"EPOXY",
         shortDetail: "Epoxy resins exhibit good abrasive and chemical resistance, as well as reasonable humidity resistance.",
-        image:"/images/epoxy.png"
+        image:"/images/epoxy.png",
+        mainImage:"/images/epoxy.jpg",
+        link: ""
     },
     {
         id:3,
         title:"SILICONE",
         shortDetail: "Silicone provides good chemical resistance, salt spray resistance and are very flexible. ",
-        image:"/images/silicone.png"
+        image:"/images/silicone.png",
+        mainImage:"/images/silicone.jpg",
+        link: ""
     },
     {
         id:4,
         title:"ACRYLIC",
         shortDetail: "Acrylic conformal coatings are perhaps the most popular of all conformal coating.",
-        image:"/images/acrylic.png"
+        image:"/images/acrylic.png",
+        mainImage:"/images/acrylic.jpg",
+        link: ""
     },
 ]
 export const industriesServed = [
