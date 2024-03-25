@@ -25,86 +25,110 @@ const WhatWeOffer = () => {
             thrive in any environment.
           </p>
         </div>
-        <Splide
-          aria-label="What We Offers"
-          tag="div"
-          options={{
-            gap: "16px",
-            perMove: 4,
-            perPage: 4,
-            breakpoints:{
-              768:{
-                perMove: 2,
-                perPage: 2,
+        <div className="p-5 bg-red">
+          <Splide
+            aria-label="What We Offers"
+            tag="div"
+            options={{
+              gap: "16px",
+              perMove: 4,
+              perPage: 4,
+              breakpoints: {
+                768: {
+                  perMove: 2,
+                  perPage: 2,
+                },
+                640: {
+                  perMove: 1,
+                  perPage: 1,
+                },
               },
-              640:{
-                perMove: 1,
-                perPage: 1,
-              },
-            }
-            // pagination: false,
-            // arrows:false,
-          }}
-        >
-          {ourServices.map((item) => {
-            return (
-              <SplideSlide
-                key={item.id}
-                className="min-w-[280px] bg-transparent shadow-md h-full pt-5"
-              >
-                <div className="px-5 mb-5">
-                  <div className="relative mb-7">
-                    <Image
-                      src={item.mainImage}
-                      alt=""
-                      className="w-full"
-                      width={280}
-                      height={280}
-                    />
-                    <Image
-                      className="absolute -bottom-[30px] right-4"
-                      src={item.image}
-                      alt=""
-                      width={60}
-                      height={60}
-                    />
-                  </div>
-                  <h1 className="mb-4" >
-                    {item.title}
-                  </h1>
-                  <p>{item.shortDetail}</p>
-                </div>
-                <SlideColorButton
-                  className={`${button.icon} bg-white before:bg-red text-primary hover:text-secondary justify-start`}
+              // pagination: false,
+              // arrows:false,
+            }}
+          >
+            {ourServices.map((item) => {
+              return (
+                <SplideSlide
+                  key={item.id}
+                  className="min-w-[280px] bg-transparent shadow-md h-auto"
                 >
-                  READ MORE{" "}
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M18 8L22 12L18 16"
-                      className="stroke-red group-hover:stroke-secondary transition-all duration-300"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M2 12H22"
-                      className="stroke-red group-hover:stroke-secondary transition-all duration-300"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </SlideColorButton>
-              </SplideSlide>
-            );
-          })}
-        </Splide>
+                  {/* <div className="px-5 h-full bg-white flex flex-col justify-between">
+                    <div>
+                      <div className="relative mb-7">
+                        <Image
+                          src={item.mainImage}
+                          alt=""
+                          className="w-full"
+                          width={280}
+                          height={280}
+                        />
+                        <Image
+                          className="absolute -bottom-[30px] right-4"
+                          src={item.image}
+                          alt=""
+                          width={60}
+                          height={60}
+                        />
+                      </div>
+                      <h1 className="mb-4">{item.title}</h1>
+                      <p>{item.shortDetail}</p>
+                    </div>
+                  </div> */}
+                  <div className="bg-white h-full">
+                    <div className="px-5">
+                      <div className="relative">
+                        <Image
+                          src={item.mainImage}
+                          alt=""
+                          className="w-full mt-5"
+                          width={260}
+                          height={260}
+                        />
+                        <Image
+                          src={item.image}
+                          alt=""
+                          className="absolute bottom-0 right-0"
+                          width={70}
+                          height={70}
+                        />
+                      </div>
+                      <h1>{item.title}</h1>
+                      <p>{item.shortDetail}</p>
+                    </div>
+                    <SlideColorButton
+                      className={`${button.icon} my-auto bg-white before:bg-red text-primary hover:text-secondary justify-start`}
+                    >
+                      READ MORE{" "}
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18 8L22 12L18 16"
+                          className="stroke-red group-hover:stroke-secondary transition-all duration-300"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M2 12H22"
+                          className="stroke-red group-hover:stroke-secondary transition-all duration-300"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </SlideColorButton>
+                  </div>
+                </SplideSlide>
+              );
+            })}
+          </Splide>
+        </div>
         {/* <div className="flex space-x-4">
           <div className="w-6 flex items-center">
             <button>{"<"}</button>
