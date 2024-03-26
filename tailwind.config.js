@@ -11,6 +11,7 @@ module.exports = {
         pop300: ["poppins-300"],
         pop400: ["poppins-400"],
         pop500: ["poppins-500"],
+        pop600: ["poppins-600"],
         pop700: ["poppins-700"],
         rob300: ["roboto-300"],
         rob400: ["roboto-400"],
@@ -29,6 +30,12 @@ module.exports = {
       },
       screens:{
         lg: "1124px"
+      },
+      height:{
+        ["full-20"]: "calc(100% - 20px)"
+      },
+      boxShadow:{
+        card: "0px 4px 24px rgba(0,0,0,0.16)"
       }
     },
   },

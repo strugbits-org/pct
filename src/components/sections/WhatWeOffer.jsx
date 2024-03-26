@@ -8,6 +8,7 @@ import { ourServices } from "@/lib/data";
 import { SlideColorButton } from "../Buttons";
 import { DesignContext } from "@/context/design";
 import { useContext } from "react";
+import { HorizontalGuidForm, HorizontalGuideForm } from "../forms";
 const WhatWeOffer = () => {
   const { button } = useContext(DesignContext);
 
@@ -18,86 +19,71 @@ const WhatWeOffer = () => {
           <h2 className="text-red text-xs md:text-[16px] mb-1 tracking-widest">
             OUR SERVICES
           </h2>
-          <h1 className="text-3x1 md:text-5xl mb-4">What We Offer</h1>
-          <p className="text-black-content text-xs md:text-sm">
+          <h1 className="text-3xl md:text-5xl mb-2 md:mb-4">What We Offer</h1>
+          <p className="text-black-content text-[13px] md:text-sm">
             Explore our comprehensive range of specialized coatings—meticulously
             applied for optimal protection, ensuring your electronic components
             thrive in any environment.
           </p>
         </div>
-        <div className="p-5 bg-red">
+        <div>
           <Splide
             aria-label="What We Offers"
             tag="div"
             options={{
-              gap: "16px",
-              perMove: 4,
-              perPage: 4,
+              gap: 40,
+              fixedHeight: "auto",
+              pagination: false,
+              perPage: 4.2,
+              perMove: 1,
+              autoplay: true,
+              arrows: false,
               breakpoints: {
                 768: {
-                  perMove: 2,
+                  gap: 24,
+                  perMove: 1,
                   perPage: 2,
                 },
                 640: {
+                  gap: 18,
                   perMove: 1,
                   perPage: 1,
+                  focus: "center",
                 },
               },
-              // pagination: false,
-              // arrows:false,
             }}
           >
             {ourServices.map((item) => {
               return (
                 <SplideSlide
                   key={item.id}
-                  className="min-w-[280px] bg-transparent shadow-md h-auto"
+                  className="min-w-[280px] bg-transparent py-10 max-w-[280px] md:max-w-none"
                 >
-                  {/* <div className="px-5 h-full bg-white flex flex-col justify-between">
-                    <div>
-                      <div className="relative mb-7">
-                        <Image
-                          src={item.mainImage}
-                          alt=""
-                          className="w-full"
-                          width={280}
-                          height={280}
-                        />
-                        <Image
-                          className="absolute -bottom-[30px] right-4"
-                          src={item.image}
-                          alt=""
-                          width={60}
-                          height={60}
-                        />
-                      </div>
-                      <h1 className="mb-4">{item.title}</h1>
-                      <p>{item.shortDetail}</p>
+                  <div className="bg-white shadow-card h-full-20 relative mt-5 flex flex-col">
+                    <div className="relative -translate-y-5 px-5 mb-2">
+                      <Image
+                        src={item.mainImage}
+                        alt=""
+                        className="w-full"
+                        width={234}
+                        height={144}
+                      />
+                      <Image
+                        src={item.image}
+                        alt=""
+                        className="absolute -bottom-[33px] right-10"
+                        width={75}
+                        height={75}
+                      />
                     </div>
-                  </div> */}
-                  <div className="bg-white h-full">
-                    <div className="px-5">
-                      <div className="relative">
-                        <Image
-                          src={item.mainImage}
-                          alt=""
-                          className="w-full mt-5"
-                          width={260}
-                          height={260}
-                        />
-                        <Image
-                          src={item.image}
-                          alt=""
-                          className="absolute bottom-0 right-0"
-                          width={70}
-                          height={70}
-                        />
-                      </div>
-                      <h1>{item.title}</h1>
-                      <p>{item.shortDetail}</p>
+                    <div className="px-5 mb-[20px]">
+                      <h5 className="text-lg mb-3">{item.title}</h5>
+                      <p className="font-pop400 text-sm text-gret">
+                        {item.shortDetail}
+                      </p>
                     </div>
                     <SlideColorButton
-                      className={`${button.icon} my-auto bg-white before:bg-red text-primary hover:text-secondary justify-start`}
+                      className={`${button.icon} mb-0 mt-auto bg-white before:bg-red text-red hover:text-secondary justify-start`}
                     >
                       READ MORE{" "}
                       <svg
@@ -129,21 +115,12 @@ const WhatWeOffer = () => {
             })}
           </Splide>
         </div>
-        {/* <div className="flex space-x-4">
-          <div className="w-6 flex items-center">
-            <button>{"<"}</button>
-          </div>
-          <div className="w-full flex flex-nowrap space-x-[40px] overflow-x-auto justify-left">
-            <div className="bg-white min-w-[280px] h-[334px] shadow-md shadow-red"></div>
-            <div className="bg-white min-w-[280px] h-[334px] shadow-md"></div>
-            <div className="bg-white min-w-[280px] h-[334px] shadow-md"></div>
-            <div className="bg-white min-w-[280px] h-[334px] shadow-md"></div>
-            <div className="bg-white min-w-[280px] h-[334px] shadow-md"></div>
-          </div>
-          <div className="w-6 flex items-center">
-            <button>{">"}</button>
-          </div>
-        </div> */}
+        <div className="bg-red relative py-[72px] px-6 rounded-[20px] text-center" >
+          <h1 className="text-5xl text-secondary"><span className="decoration-2">Download</span> Our Guide</h1>
+          <p className="text-[16px] font-pop text-secondary">{"Unlock valuable insights and expertise by downloading our guide for free – your gateway to knowledge awaits!"}</p>
+          <HorizontalGuideForm />
+          <Image src="/images/shapes.svg" className="w-[45%] absolute -top-[40px] right-0" alt="" width={496} height={454} />
+        </div>
       </FullWidthContent>
     </section>
   );

@@ -15,6 +15,10 @@
   src: url("../../public/fonts/Poppins-Medium.ttf");
 }
 @font-face {
+  font-family: poppins-600;
+  src: url("../../public/fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
   font-family: poppins-700;
   src: url("../../public/fonts/Poppins-SemiBold.ttf");
 }
@@ -36,7 +40,7 @@
   --color-whitesmoke: #f9f9f9;
   --color-black: #000000;
   --color-black-content: #1e1e1e;
-  --color-black-45: rgba(0,0,0,0.45);
+  --color-black-45: rgba(0, 0, 0, 0.45);
   --color-gret: #858185;
   --color-white: #ffffff;
   --color-white-200: rgba(255, 255, 255, 0.2);
@@ -70,7 +74,7 @@
     @apply font-pop700;
   }
   h5 {
-    @apply font-pop400;
+    @apply font-pop600;
   }
   h6 {
     @apply font-pop400;
@@ -89,6 +93,9 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .text-shadow{
+    text-shadow: whitesmoke, 0, 3px, whitesmoke;
   }
 
   /* .button-red::before {

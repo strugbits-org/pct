@@ -7,6 +7,7 @@ export const DesignProvider = ({ children }) => {
   const [theme, setTheme] = useState({
     button: {
       red: "bg-red text-secondary",
+      black: "bg-primary text-secondary",
       icon: "flex gap-x-2 items-center justify-center group",
     },
   })
