@@ -3,39 +3,19 @@ import { AnimateButton } from "../Buttons";
 import { cn } from "@/lib/utils";
 import { useContext } from "react";
 import { DesignContext } from "@/context/design";
+import Input from "../Input";
 
 const HorizontalGuideForm = ({ className }) => {
   const { button } = useContext(DesignContext);
   return (
     <div className="w-full">
-      <form className="flex gap-x-4 items-center">
-        <div className="w-full">
-          <input
-            type="text"
-            id="name"
-            className="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
-            placeholder="Name"
-          />
-        </div>
-        <div className="w-full">
-          <input
-            type="email"
-            id="email"
-            className="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
-            placeholder="Email*"
-          />
-        </div>
-        <div className="w-full">
-          <input
-            type="text"
-            id="phoneNumber"
-            className="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
-            placeholder="Phone Number"
-          />
-        </div>
+      <form className="flex flex-col lg:flex-row gap-4 items-center">
+        <Input type="text" id="name" placeholder="Name" />
+        <Input type="email" id="email" placeholder="Email*" />
+        <Input type="text" id="phoneNumber" placeholder="Phone Number" />
 
         <AnimateButton
-          className={`${button.icon} ${button.black} w-full ml-4 p-4 before:bg-gret hover:bg-gret`}
+          className={`${button.icon} ${button.black} w-full lg:ml-3 p-4 before:bg-gret hover:bg-gret`}
         >
           Download
           <svg

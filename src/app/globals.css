@@ -95,7 +95,8 @@
     text-wrap: balance;
   }
   .text-shadow{
-    text-shadow: whitesmoke, 0, 3px, whitesmoke;
+    color: black;
+    /* text-shadow:  6, 6, yellowgreen; */
   }
 
   /* .button-red::before {

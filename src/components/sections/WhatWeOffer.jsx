@@ -116,10 +116,10 @@ const WhatWeOffer = () => {
           </Splide>
         </div>
         <div className="bg-red relative py-[72px] px-6 rounded-[20px] text-center" >
-          <h1 className="text-5xl text-secondary"><span className="decoration-2">Download</span> Our Guide</h1>
-          <p className="text-[16px] font-pop text-secondary">{"Unlock valuable insights and expertise by downloading our guide for free – your gateway to knowledge awaits!"}</p>
+          <h1 className="text-5xl text-secondary"><span className="text-shadow">Download</span> Our Guide</h1>
+          <p className="text-[16px] font-pop text-secondary mb-12 md:mb-20">{"Unlock valuable insights and expertise by downloading our guide for free – your gateway to knowledge awaits!"}</p>
           <HorizontalGuideForm />
-          <Image src="/images/shapes.svg" className="w-[45%] absolute -top-[40px] right-0" alt="" width={496} height={454} />
+          <Image src="/images/shapes.svg" className="w-auto h-full absolute top-0 right-0 max-w-[663px]" alt="" width={663} height={377} />
         </div>
       </FullWidthContent>
     </section>
