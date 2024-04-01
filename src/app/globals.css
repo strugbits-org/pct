@@ -37,6 +37,7 @@
 
 :root {
   --color-red: #dc1d28;
+  --color-red-32: rgba(220, 29, 40, 3.2);
   --color-whitesmoke: #f9f9f9;
   --color-black: #000000;
   --color-black-content: #1e1e1e;
@@ -63,7 +64,7 @@
 @layer base {
   h1 {
     @apply font-rob800;
-  }
+   }
   h2 {
     @apply font-rob400;
   }
@@ -94,10 +95,26 @@
   .text-balance {
     text-wrap: balance;
   }
-  .text-shadow{
-    color: black;
-    /* text-shadow:  6, 6, yellowgreen; */
+  .text-shadow {
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: white;
+    color: transparent;
   }
+  .h-line{
+    position: relative;
+  }
+  .h-line::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+/* 
+  .vertical-lines-background {
+    background: linear-gradient(90deg, #fff calc(100% - 1px), #e7e7e7 0);
+    background-size: calc((100% - 1 * 50px) / 5 + 50px) 100%;
+  } */
 
   /* .button-red::before {
     position: absolute;

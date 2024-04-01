@@ -22,21 +22,54 @@ module.exports = {
         primary45: "var(--color-black-45)",
         secondary: "var(--color-whitesmoke)",
         red: "var(--color-red)",
+        red32: "var(--color-red-32)",
         ["black-content"]: "var(--color-black-content)",
         gret: "var(--color-gret)",
         white: "var(--color-white)",
         white200: "var(--color-white-200)",
         gray: "var(--color-borderGray)",
       },
-      screens:{
-        lg: "1124px"
+      screens: {
+        lg: "1124px",
       },
-      height:{
-        ["full-20"]: "calc(100% - 20px)"
+      height: {
+        ["full-20"]: "calc(100% - 20px)",
       },
-      boxShadow:{
-        card: "0px 4px 24px rgba(0,0,0,0.16)"
-      }
+      boxShadow: {
+        card: "0px 4px 24px rgba(0,0,0,0.16)",
+      },
+      animation: {
+        ["from-top"]: "topToBottom 1s ease-in-out",
+        ["from-right"]: "rightToLeft 1s ease-in-out",
+      },
+      keyframes: {
+        topToBottom: {
+          "0%": {
+            opacity: 0,
+            transform: "scale(20%)",
+            // ["animation-timing-function"]: "cubic-bezier(0, 0, 1, 1)",
+            ["transform-origin"]: "40px 40px",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "scale(100%)",
+            // ["animation-timing-function"]: "cubic-bezier(0, 0, 0.2, 1)",
+            ["transform-origin"]: "40px 40px",
+          },
+        },
+        rightToLeft: {
+          "0%": {
+            opacity: 0.5,
+            // ["animation-timing-function"]: "cubic-bezier(0, 0, 1, 1)",
+            transform: "translateX(40%)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0%)",
+            // ["animation-timing-function"]: "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
+      },
     },
   },
   plugins: [],

@@ -13,7 +13,7 @@ const WhatWeOffer = () => {
   const { button } = useContext(DesignContext);
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white pt-16 pb-9 lg:pb-0">
       <FullWidthContent>
         <div className="text-center max-w-[1082px] mx-auto">
           <h2 className="text-red text-xs md:text-[16px] mb-1 tracking-widest">
@@ -115,11 +115,27 @@ const WhatWeOffer = () => {
             })}
           </Splide>
         </div>
-        <div className="bg-red relative py-[72px] px-6 rounded-[20px] text-center" >
-          <h1 className="text-5xl text-secondary"><span className="text-shadow">Download</span> Our Guide</h1>
-          <p className="text-[16px] font-pop text-secondary mb-12 md:mb-20">{"Unlock valuable insights and expertise by downloading our guide for free – your gateway to knowledge awaits!"}</p>
+        </FullWidthContent>
+        <FullWidthContent className="px-2">
+        <div className="bg-red relative py-[72px] px-6 rounded-[20px] text-center">
+          <h1 className="text-5xl text-secondary">
+            <span className="text-shadow">Download</span> Our Guide
+          </h1>
+          <p className="text-[16px] font-pop text-secondary mb-12 md:mb-20">
+            {
+              "Unlock valuable insights and expertise by downloading our guide for free – your gateway to knowledge awaits!"
+            }
+          </p>
           <HorizontalGuideForm />
-          <Image src="/images/shapes.svg" className="w-auto h-full absolute top-0 right-0 max-w-[663px]" alt="" width={663} height={377} />
+          <div className="">
+            <Image
+              src="/images/shapes.svg"
+              className="w-auto h-full absolute top-0 right-0 max-w-[440px] md:max-w-[663px]"
+              alt=""
+              width={663}
+              height={377}
+            />
+          </div>
         </div>
       </FullWidthContent>
     </section>

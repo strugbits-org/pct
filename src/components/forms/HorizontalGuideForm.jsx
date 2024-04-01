@@ -28,19 +28,19 @@ const HorizontalGuideForm = ({ className }) => {
           >
             <path
               d="M9.5 12.75V2.25"
-              className="stroke-secondary transition-all duration-500"
+              className="stroke-white transition-all duration-500"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M5 8.25L9.5 12.75L14 8.25"
-              className="stroke-secondary transition-all duration-500"
+              className="stroke-white transition-all duration-500"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M14.75 15.75H4.25"
-              className="stroke-secondary transition-all duration-500"
+              className="stroke-white transition-all duration-500"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
