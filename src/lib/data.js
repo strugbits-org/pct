@@ -121,3 +121,26 @@ export const industriesServed = [
         shortDetail: "PCB performance can degrade swiftly due to environmental factors like temperature and moisture.",
     },
 ]
+
+export const ourAchievements = [
+    {
+        id:0,
+        value: "14",
+        shortDetail: "Years of Experience"
+    },
+    {
+        id:1,
+        value: "3671",
+        shortDetail: "Miles of Masking Tapes Used"
+    },
+    {
+        id:2,
+        value: "1.5M",
+        shortDetail: "Parts Coated"
+    },
+    {
+        id:3,
+        value: "5",
+        shortDetail: "Certifications"
+    },
+]

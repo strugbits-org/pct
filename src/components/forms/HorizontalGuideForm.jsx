@@ -6,7 +6,7 @@ import { DesignContext } from "@/context/design";
 import Input from "../Input";
 
 const HorizontalGuideForm = ({ className }) => {
-  const { button } = useContext(DesignContext);
+  const { theme:{button} } = useContext(DesignContext);
   return (
     <div className="w-full">
       <form className="flex flex-col lg:flex-row gap-4 items-center">

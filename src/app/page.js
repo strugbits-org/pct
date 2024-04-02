@@ -3,6 +3,7 @@ import { GuideForm } from "@/components/forms";
 import HeroSection from "@/components/sections/HeroSection";
 import WhatWeOffer from "@/components/sections/WhatWeOffer";
 import AboutPCT from "@/components/sections/AboutPCT";
+import OurAchievements from "@/components/sections/OurAchievements";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       </HeroSection>
       <WhatWeOffer />
       <AboutPCT />
+      <OurAchievements />
     </main>
   );
 }

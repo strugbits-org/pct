@@ -8,10 +8,10 @@ import { AnimateButton } from "../Buttons";
 import { motion } from "framer-motion";
 
 const AboutPCT = () => {
-  const { button } = useContext(DesignContext);
+  const { theme:{button} } = useContext(DesignContext);
 
   return (
-    <section className="bg-white">
+    <section className="bg-white pb-12">
       <FullWidthContent>
         <div className="flex-column lg:flex lg:gap-x-16">
           <motion.div

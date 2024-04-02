@@ -31,13 +31,23 @@
   src: url("../../public/fonts/Roboto-Regular.ttf");
 }
 @font-face {
+  font-family: roboto-500;
+  src: url("../../public/fonts/Roboto-Medium.ttf");
+}
+@font-face {
   font-family: roboto-800;
   src: url("../../public/fonts/Roboto-Black.ttf");
 }
+@font-face {
+  font-family: play-fair-700;
+  src: url("../../public/fonts/PlayfairDisplay-Bold.ttf");
+}
+
 
 :root {
   --color-red: #dc1d28;
   --color-red-32: rgba(220, 29, 40, 3.2);
+  --color-red-80: #dc1d28cf; /*rgba(220, 29, 40, 8) */
   --color-whitesmoke: #f9f9f9;
   --color-black: #000000;
   --color-black-content: #1e1e1e;
@@ -51,6 +61,7 @@
   --font-poppins-500: poppins-500;
   --font-poppins-700: poppins-700;
   --font-roboto-800: roboto-800;
+  --font-roboto-500: roboto-500;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -64,7 +75,7 @@
 @layer base {
   h1 {
     @apply font-rob800;
-   }
+  }
   h2 {
     @apply font-rob400;
   }
@@ -100,17 +111,27 @@
     -webkit-text-stroke-color: white;
     color: transparent;
   }
-  .h-line{
+  .h-line {
     position: relative;
   }
-  .h-line::before{
+  .h-line::before {
     content: "";
     position: absolute;
     left: 0px;
     top: 50%;
     transform: translateY(-50%);
   }
-/* 
+
+  .bg-clip-path-1{
+    clip-path: polygon(50% 7%, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+  @media screen(md) {
+    .bg-clip-path-1{
+      clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+    
+  }
+  /* 
   .vertical-lines-background {
     background: linear-gradient(90deg, #fff calc(100% - 1px), #e7e7e7 0);
     background-size: calc((100% - 1 * 50px) / 5 + 50px) 100%;

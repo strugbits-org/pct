@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { DesignContext } from "@/context/design";
 
 const HeroContentBox = ({ customH1, title, detail, className }) => {
-  const { button } = useContext(DesignContext);
+  const { theme:{button} } = useContext(DesignContext);
   return (
     <div
       className={cn(

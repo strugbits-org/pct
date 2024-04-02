@@ -10,7 +10,7 @@ const HeroSection = ({
   children,
   videoSrc,
 }) => {
-  const { button } = useContext(DesignContext);
+  const { theme:{button} } = useContext(DesignContext);
 
   return (
     <section className="min-h-[628px] flex relative py-10 items-center justify-center">

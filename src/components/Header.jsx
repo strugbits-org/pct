@@ -22,7 +22,7 @@ import { IndustriesSubMenu, MobIndustriesSubMenu } from "./IndustiresSubMenu";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
-  const {button} = useContext(DesignContext)
+  const {theme:{button}} = useContext(DesignContext)
   console.log(button);
   const pathName = usePathname();
   const [change, setChanges] = useState(0);

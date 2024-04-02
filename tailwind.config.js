@@ -15,7 +15,9 @@ module.exports = {
         pop700: ["poppins-700"],
         rob300: ["roboto-300"],
         rob400: ["roboto-400"],
+        rob500: ["roboto-500"],
         rob800: ["roboto-800"],
+        playFair700: ["play-fair-700"],
       },
       colors: {
         primary: "var(--color-black)",
@@ -23,6 +25,7 @@ module.exports = {
         secondary: "var(--color-whitesmoke)",
         red: "var(--color-red)",
         red32: "var(--color-red-32)",
+        red80: "var(--color-red-80)",
         ["black-content"]: "var(--color-black-content)",
         gret: "var(--color-gret)",
         white: "var(--color-white)",
@@ -38,6 +41,8 @@ module.exports = {
       boxShadow: {
         card: "0px 4px 24px rgba(0,0,0,0.16)",
       },
+      
+      
       animation: {
         ["from-top"]: "topToBottom 1s ease-in-out",
         ["from-right"]: "rightToLeft 1s ease-in-out",

@@ -10,7 +10,7 @@ import { DesignContext } from "@/context/design";
 import { useContext } from "react";
 import { HorizontalGuidForm, HorizontalGuideForm } from "../forms";
 const WhatWeOffer = () => {
-  const { button } = useContext(DesignContext);
+  const { theme:{button} } = useContext(DesignContext);
 
   return (
     <section className="bg-white pt-16 pb-9 lg:pb-0">
