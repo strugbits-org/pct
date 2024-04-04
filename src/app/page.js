@@ -5,6 +5,7 @@ import WhatWeOffer from "@/components/sections/WhatWeOffer";
 import AboutPCT from "@/components/sections/AboutPCT";
 import OurAchievements from "@/components/sections/OurAchievements";
 import OurCertifications from "@/components/sections/OurCertifications";
+import ContactUs from "@/components/sections/ContactUs";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
       <AboutPCT />
       <OurAchievements />
       <OurCertifications />
+      <ContactUs />
     </main>
   );
 }
