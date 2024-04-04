@@ -144,3 +144,31 @@ export const ourAchievements = [
         shortDetail: "Certifications"
     },
 ]
+
+export const ourCertifications = [
+    {
+        id:0,
+        logo: "/images/iso.png",
+        bgImage: "/images/esd-bg.png"
+    },
+    {
+        id:1,
+        logo: "/images/iso2.png",
+        bgImage: "/images/esd-bg.png"
+    },
+    {
+        id:2,
+        logo: "/images/itar.png",
+        bgImage: "/images/esd-bg.png"
+    },
+    {
+        id:3,
+        logo: "/images/esd.png",
+        bgImage: "/images/esd-bg.png"
+    },
+    {
+        id:4,
+        logo: "/images/mwbe.png",
+        bgImage: "/images/esd-bg.png"
+    },
+]

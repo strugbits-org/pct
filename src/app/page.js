@@ -4,6 +4,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import WhatWeOffer from "@/components/sections/WhatWeOffer";
 import AboutPCT from "@/components/sections/AboutPCT";
 import OurAchievements from "@/components/sections/OurAchievements";
+import OurCertifications from "@/components/sections/OurCertifications";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       <WhatWeOffer />
       <AboutPCT />
       <OurAchievements />
+      <OurCertifications />
     </main>
   );
 }

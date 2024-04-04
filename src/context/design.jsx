@@ -5,7 +5,8 @@ import {
   headerSocialList,
   ourServices,
   industriesServed,
-  ourAchievements
+  ourAchievements,
+  ourCertifications,
 } from "@/lib/data";
 import React, { createContext, createElement, useState } from "react";
 export const DesignContext = createContext();
@@ -24,7 +25,8 @@ export const DesignProvider = ({ children }) => {
     headerSocialList,
     ourServices,
     industriesServed,
-    ourAchievements
+    ourAchievements,
+    ourCertifications
   });
 
   return (

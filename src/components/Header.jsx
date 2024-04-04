@@ -23,7 +23,6 @@ import { cn } from "@/lib/utils";
 
 const Header = () => {
   const {theme:{button}} = useContext(DesignContext)
-  console.log(button);
   const pathName = usePathname();
   const [change, setChanges] = useState(0);
   const [toggleServices, setToggleServices] = useState(false);
@@ -45,7 +44,6 @@ const Header = () => {
     setToggleIndustries(false);
   };
   const handleIndustriesServed = (e) => {
-    console.log("handle instries served 123 132");
     setToggleIndustries(!toggleIndustries);
     setToggleServices(false);
   };
