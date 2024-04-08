@@ -24,7 +24,7 @@ const Footer = () => {
             height={37}
             className="w-[17px] md:w-[27px] h-auto"
           />
-          <p>17 John's Street Johnstown, PA 15901</p>
+          <p>{"17 John's Street Johnstown, PA 15901"}</p>
         </div>
         <div className="flex gap-4 items-center justify-start md:justify-center border-gret border-b py-3 md:py-4 px-3 md:border-b-0 md:border-l md:border-r ">
           <Image
