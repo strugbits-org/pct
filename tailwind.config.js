@@ -27,6 +27,7 @@ module.exports = {
         red32: "var(--color-red-32)",
         red80: "var(--color-red-80)",
         ["black-content"]: "var(--color-black-content)",
+        ["white-content"]: "var(--color-white-content)",
         gret: "var(--color-gret)",
         gret28: "var(--color-gret-28)",
         white: "var(--color-white)",

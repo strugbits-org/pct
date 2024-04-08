@@ -172,3 +172,37 @@ export const ourCertifications = [
         bgImage: "/images/esd-bg.png"
     },
 ]
+
+export const footerSocialList = [
+    {
+        id:0,
+        value: "",
+        href: "#",
+        icon: "/images/icons/social/fb.svg"
+    },
+    {
+        id:1,
+        value: "",
+        href: "#",
+        icon: "/images/icons/social/linkedIn.svg"
+    },
+    {
+        id:2,
+        value: "",
+        href: "#",
+        icon: "/images/icons/social/skype.svg"
+    },
+    {
+        id:3,
+        value: "",
+        href: "#",
+        icon: "/images/icons/social/twitter.svg"
+    },
+    {
+        id:4,
+        value: "",
+        href: "#",
+        icon: "/images/icons/social/insta.svg"
+    },
+
+]
