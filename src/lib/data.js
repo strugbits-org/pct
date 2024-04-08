@@ -184,7 +184,7 @@ export const footerSocialList = [
         id:1,
         value: "",
         href: "#",
-        icon: "/images/icons/social/linkedIn.svg"
+        icon: "/images/icons/social/linkedin.svg"
     },
     {
         id:2,
