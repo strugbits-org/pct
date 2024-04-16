@@ -2,8 +2,10 @@ import { ourServices } from "@/lib/data";
 import Image from "next/image";
 import { FullWidthContent } from "./Sections";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export const SubMenu = () => {
+  const route = useRouter()
   return (
     <div className="absolute z-10 mt-6 left-0 w-full mx-auto overflow-hidden bg-primary px-6 py-8">
       <FullWidthContent>
@@ -13,7 +15,8 @@ export const SubMenu = () => {
             return (
               <div
                 key={item.id}
-                className="group relative w-[30vw] max-w-[440px] flex items-center justify-center ring-1 ring-red gap-x-6 rounded-s p-6 text-sm hover:bg-red"
+                className="group relative w-[30vw] max-w-[440px] flex items-center justify-center ring-1 ring-red gap-x-6 rounded-s p-6 text-sm hover:bg-red cursor-pointer"
+                onClick={() => route.push(`/services/${item.slug}`)}
               >
                 <div className="flex-auto text-white max-w-[234px]">
                   <h4 className="text-base">{item.title}</h4>
@@ -43,7 +46,7 @@ export const MobServicesSubMenu = () => {
       {ourServices.map((item) => {
         return (
           <Link
-            href="#"
+            href={`/services/${item.slug}`}
             className="block text-sm font-rob300 leading-6 text-white"
             key={item.id}
           >

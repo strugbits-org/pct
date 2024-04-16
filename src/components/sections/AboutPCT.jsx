@@ -11,7 +11,7 @@ const AboutPCT = () => {
   const { theme:{button} } = useContext(DesignContext);
 
   return (
-    <section className="bg-white pb-12">
+    <section className="bg-white pb-12 bg-[url('/images/lines.svg')] bg-cover bg-center bg-no-repeat">
       <FullWidthContent>
         <div className="flex-column lg:flex lg:gap-x-16">
           <motion.div

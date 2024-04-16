@@ -1,34 +1,36 @@
-"use client"
-
-import { HeroContentBox } from "../containers";
 import { FullWidthContent } from "../Sections";
-import { GuideForm } from "../forms";
-import { useContext } from "react";
-import { DesignContext } from "@/context/design";
+import { cn } from "@/lib/utils";
 
-const HeroSection = ({
-  children,
-  videoSrc,
-}) => {
-  const { theme:{button} } = useContext(DesignContext);
+const HeroSection = ({ children, videoSrc, bgImage }) => {
+  console.log(bgImage);
+  const style = bgImage ? {background: `url(${bgImage})`} : {};
+  const background = bgImage ? `bg-cover bg-no-repeat bg-center` : "";
 
   return (
-    <section className="min-h-[628px] flex relative py-10 items-center justify-center">
+    <section
+      style={style}
+      className={cn(
+        "min-h-[628px] flex relative py-10 items-center justify-center ",
+        background
+      )}
+    >
       <FullWidthContent className={"w-full"}>
         <div className="text-xl grid lg:grid-cols-5 gap-x-24 gap-y-6 place-content-center items-center text-center lg:text-left">
           {children}
         </div>
       </FullWidthContent>
 
-      <div className="w-full h-full absolute top-0 -z-10">
-        <video loop muted autoPlay className="w-full h-full object-cover">
-          <source src={`${videoSrc}`} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="bg-primary45 w-full h-full absolute top-0"></div>
-      </div>
+      {videoSrc && (
+        <div className="w-full h-full absolute top-0 -z-10">
+          <video loop muted autoPlay className="w-full h-full object-cover">
+            <source src={`${videoSrc}`} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="bg-primary45 w-full h-full absolute top-0"></div>
+        </div>
+      )}
     </section>
-  )
+  );
 };
 
 export default HeroSection;
