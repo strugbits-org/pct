@@ -1,8 +1,12 @@
+"use client"
+
 import { industriesServed } from "@/lib/data";
 import { FullWidthContent } from "./Sections";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export const IndustriesSubMenu = () => {
+  const route = useRouter()
   return (
     <div className="absolute z-10 mt-6 left-0 w-full mx-auto overflow-hidden bg-primary px-6 py-8">
       <FullWidthContent>
@@ -13,6 +17,7 @@ export const IndustriesSubMenu = () => {
               <div
                 key={item.id}
                 className="group relative w-[23vw] max-w-[324px] flex items-center justify-center ring-1 ring-red gap-x-6 rounded-s p-6 text-sm hover:bg-red"
+                onClick={() => route.push(`/industries-served/${item.slug}`)}
               >
                 <div className="flex-auto text-white">
                   <h4 className="text-base">{item.title}</h4>
@@ -33,7 +38,7 @@ export const MobIndustriesSubMenu = () => {
         {industriesServed.map((item) => {
           return (
             <Link
-              href="#"
+              href={`/industries-served/${item.slug}`}
               className="block text-sm font-rob300 text-white"
               key={item.id}
             >

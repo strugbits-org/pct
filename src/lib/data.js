@@ -89,36 +89,43 @@ export const industriesServed = [
         id:0,
         title:"AUTOMOTIVE",
         shortDetail: "Conforming coatings safeguard electronic parts and complex auto components due to necessity.",
+        slug:"automotive"
     },
     {
         id:1,
         title:"CONSUMER ELECTRONICS",
         shortDetail: "Para-Coat and Vapor Armor innovate water-resistant tech, altering perceptions of electronics.",
+        slug:"consumer-electronics"
     },
     {
         id:2,
         title:"DEFENSE & AEROSPACE",
         shortDetail: "Choosing correct conformal coating crucial for long-lasting mission-critical devices.",
+        slug:"defense-and-aerospace"
     },
     {
         id:3,
         title:"ELASTOMERS",
         shortDetail: "Para-Coat provides Parylene coating for elastomer parts in various industries for protection.",
+        slug:"elastomers"
     },
     {
         id:4,
         title:"LEDs",
         shortDetail: "LEDs gain popularity for adaptability, energy efficiency, and enduring performance benefits.",
+        slug:"leds"
     },
     {
         id:5,
         title:"MEDICAL",
         shortDetail: "Parylene coatings gain value for medical devices due to precise molecular-level deposition.",
+        slug:"medical"
     },
     {
         id:6,
         title:"PRINTED CIRCUIT BOARDS",
         shortDetail: "PCB performance can degrade swiftly due to environmental factors like temperature and moisture.",
+        slug:"printed-circuit-boards"
     },
 ]
 
