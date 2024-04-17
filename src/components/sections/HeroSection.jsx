@@ -15,7 +15,7 @@ const HeroSection = ({ children, videoSrc, bgImage }) => {
       )}
     >
       <FullWidthContent className={"w-full"}>
-        <div className="text-xl grid lg:grid-cols-5 gap-x-24 gap-y-6 place-content-center items-center text-center lg:text-left">
+        <div className="flex flex-col-reverse text-xl lg:grid lg:grid-cols-5 gap-x-24 gap-y-6 lg:place-content-center items-center text-center lg:text-left">
           {children}
         </div>
       </FullWidthContent>

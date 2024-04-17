@@ -25,8 +25,6 @@ export default function Service({ slug }) {
     return data;
   }, [ourServices, slug]);
 
-  console.log(service);
-
   return (
     <div>
       <HeroSection bgImage="/images/services/bg-parylene.jpg">

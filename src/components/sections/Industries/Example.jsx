@@ -14,18 +14,14 @@ const IndustryExamples = () => {
     <section className="bg-white py-12 lg:py-20">
       <FullWidthContent>
         <div className="flex w-full flex-col gap-y-4 text-center justify-center items-center lg:text-left lg:flex-row lg:gap-x-4 lg:justify-between lg:items-center">
-          <div className="w-full md:w-[80%] lg:min-w-[461px] lg:w-[32vw] space-y-3 md:space-y-5 mx-auto lg:ml-0">
-            <h1 className="text-3xl md:text-5xl">
-              <span className="text-red">Our</span> Certifications
-            </h1>
+          <div className="w-full md:w-[80%] lg:min-w-[461px] lg:w-[32vw] md:space-y-5 mx-auto lg:ml-0">
+            <h2 className="text-sm text-red tracking-widest mb-1">EXAMPLES</h2>
+            <h1 className="text-3xl md:text-5xl mb-2">Elastomer Applications</h1>
             <p className="font-pop400 text-[13px] md:text-[15px]">
-              Backed by a portfolio of industry-recognized certifications, we
-              affirm our commitment to delivering conformal coating solutions of
-              the highest standard, ensuring your trust in reliability and
-              quality is well-placed.
+              These are the example of applications.
             </p>
           </div>
-          <div className="flex md:flex-wrap justify-start md:justify-center w-full gap-x-0 md:gap-6 overflow-x-auto p-2">
+          <div className="flex flex-wrap justify-center w-full gap-5 overflow-x-auto p-2">
             {ourCertifications.map((item) => {
               return (
                 <div
