@@ -35,6 +35,10 @@
   src: url("../../public/fonts/Roboto-Medium.ttf");
 }
 @font-face {
+  font-family: roboto-700;
+  src: url("../../public/fonts/Roboto-Bold.ttf");
+}
+@font-face {
   font-family: roboto-800;
   src: url("../../public/fonts/Roboto-Black.ttf");
 }

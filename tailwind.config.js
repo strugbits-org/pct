@@ -16,6 +16,7 @@ module.exports = {
         rob300: ["roboto-300"],
         rob400: ["roboto-400"],
         rob500: ["roboto-500"],
+        rob700: ["roboto-700"],
         rob800: ["roboto-800"],
         playFair700: ["play-fair-700"],
       },

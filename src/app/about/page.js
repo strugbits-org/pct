@@ -4,6 +4,9 @@ import { HeroContentBox } from "@/components/containers";
 import { GuideForm } from "@/components/forms";
 import AboutEachService from "@/components/sections/Service/AboutEachService";
 import HeroSection from "@/components/sections/HeroSection";
+import TeamCard from "@/components/TeamCard";
+import { FullWidthContent } from "@/components/Sections";
+import ContactUs from "@/components/sections/ContactUs";
 
 export default function AboutUs() {
   return (
@@ -32,6 +35,19 @@ export default function AboutUs() {
         buttonText={"Contact Us Now"}
         image={"/images/about-us-story.jpg"}
       />
+      <FullWidthContent className="py-12 md:py-20">
+        <h2 className="text-xs text-center md:text-sm mb-1 text-red tracking-widest">
+          TEAM
+        </h2>
+        <h1 className="mb-5 md:mb-9 text-[28px] text-center md:text-5xl">Meet The Team</h1>
+        <div className="flex justify-center flex-wrap gap-7">
+          <TeamCard />
+          <TeamCard />
+          <TeamCard />
+          <TeamCard />
+        </div>
+      </FullWidthContent>
+      <ContactUs />
     </div>
   );
 }
