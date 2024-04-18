@@ -3,6 +3,7 @@ import { HeroContentBox } from "@/components/containers";
 import DimerProperties from "@/components/sections/DimerProperties";
 import HeroSection from "@/components/sections/HeroSection";
 import Image from "next/image";
+import ParyleneDimer from "@/components/sections/ParyleneDimer";
 
 export default function DimerAndMachineSales() {
   return (
@@ -30,6 +31,7 @@ export default function DimerAndMachineSales() {
         </div>
       </HeroSection>
       <DimerProperties />
+      <ParyleneDimer />
     </Fragment>
   );
 }
