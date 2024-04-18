@@ -11,7 +11,7 @@ import ContactUs from "@/components/sections/ContactUs";
 export default function AboutUs() {
   return (
     <div>
-      <HeroSection bgImage="/images/services/bg-parylene.jpg">
+      <HeroSection bgImage="/images/about-us-banner.jpg">
         <HeroContentBox
           title={"About Us"}
           detail={

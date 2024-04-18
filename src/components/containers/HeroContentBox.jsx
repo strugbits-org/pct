@@ -1,12 +1,23 @@
-'use client'
+"use client";
 
 import { cn } from "@/lib/utils";
 import { AnimateButton } from "../Buttons";
 import { useContext } from "react";
 import { DesignContext } from "@/context/design";
+import Link from "next/link";
 
-const HeroContentBox = ({ customH1, title, detail, className }) => {
-  const { theme:{button} } = useContext(DesignContext);
+const HeroContentBox = ({
+  customH1,
+  title,
+  detail,
+  className,
+  buttonText,
+  buttonLink,
+  guide,
+}) => {
+  const {
+    theme: { button },
+  } = useContext(DesignContext);
   return (
     <div
       className={cn(
@@ -21,11 +32,14 @@ const HeroContentBox = ({ customH1, title, detail, className }) => {
       )}
 
       <p className="font-pop400 text-xs md:text-sm mb-10">{detail}</p>
-      <AnimateButton
-        className={`${button.red} before:bg-secondary hover:bg-secondary hover:text-primary`}
-      >
-        Get in Touch
-      </AnimateButton>
+      <Link href={buttonLink ? buttonLink : "#"}>
+        <AnimateButton
+          className={`${button.red} before:bg-secondary hover:bg-secondary hover:text-primary mb-1`}
+        >
+          {buttonText ? buttonText : "Get in Touch"}
+        </AnimateButton>
+      </Link>
+      {guide && <p className="font-pop400 text-xs md:text-sm mb-10">{guide}</p>}
     </div>
   );
 };
