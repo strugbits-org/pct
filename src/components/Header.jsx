@@ -49,7 +49,7 @@ const Header = () => {
   };
   return (
     <header className="bg-primary">
-      <FullWidthContent>
+      <FullWidthContent className="max-w-[1920px]">
         <div className="hidden lg:flex gap-x-6 items-center justify-between py-2">
           <div className="flex gap-x-6 items-center">
             {headerContactList.map((item) => {

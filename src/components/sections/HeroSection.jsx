@@ -1,26 +1,32 @@
 import { FullWidthContent } from "../Sections";
 import { cn } from "@/lib/utils";
 
-const HeroSection = ({ children, videoSrc, bgImage ,className, col}) => {
+const HeroSection = ({ children, videoSrc, bgImage, className, col }) => {
   console.log(bgImage);
-  const style = bgImage ? {background: `url(${bgImage})`} : {};
-  const background = bgImage ? `bg-cover bg-no-repeat bg-center` : "";
+  const style = bgImage
+    ? {
+        background: `url(${bgImage})`,
+        backgroundRepeat: "no-repeat",
+        backgrondPosition: "center",
+        backgroundSize: "cover",
+      }
+    : {};
 
   return (
     <section
       style={style}
       className={cn(
-        "min-h-[628px] flex relative py-10 items-center justify-center ",
+        "min-h-[628px] flex relative py-10 items-center justify-center",
         className && className,
-        background
       )}
     >
       <FullWidthContent className={"w-full"}>
-        <div className={cn(
-          "flex flex-col-reverse text-xl lg:grid lg:grid-cols-5 gap-x-24 gap-y-6 lg:place-content-center items-center text-center lg:text-left",
-          col && col
-        )
-        }>
+        <div
+          className={cn(
+            "flex flex-col-reverse text-xl lg:grid lg:grid-cols-5 gap-x-24 gap-y-6 lg:place-content-center items-center text-center lg:text-left",
+            col && col
+          )}
+        >
           {children}
         </div>
       </FullWidthContent>
