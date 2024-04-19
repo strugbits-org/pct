@@ -11,8 +11,8 @@ export default function AboutMachineSales() {
   } = useContext(DesignContext);
   return (
     <section className="pt-8 lg:pt-14 bg-white">
-      <FullWidthContent>
-        <div className="flex flex-col items-center justify-center gap-y-12 lg:flex lg:gap-x-16">
+      <FullWidthContent className="">
+        <div className="flex flex-col items-center justify-center md:flex-row gap-y-12 lg:flex lg:gap-x-16">
           <div className="flex-1 mt-auto mb-auto text-center lg:text-left py-0 lg:py-16 ">
             <h2 className="inline h-line text-xs md:text-sm mb-1 before:bg-red before:w-[30px] before:h-[2px] pl-[36px] text-red">
               MACHINE SALES

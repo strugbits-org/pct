@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <FullWidthContent>
+      <FullWidthContent className="max-w-[1920px]">
         <div className="flex flex-col md:flex-row md:flex-wrap md:justify-between lg:grid lg:grid-cols-3 gap-x-5 gap-y-6 py-10">
           {/* Grid 1 - Logo */}
           <div className="h-[max-content]">
