@@ -18,7 +18,6 @@ export default function Service({ slug }) {
   const service = useMemo(() => {
     const getService = () => ourServices.filter((item) => item.slug === slug);
     const data = getService()
-    console.log(data);
     if (data.length === 0) {
       notFound();
     }

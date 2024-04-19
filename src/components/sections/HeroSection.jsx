@@ -2,7 +2,6 @@ import { FullWidthContent } from "../Sections";
 import { cn } from "@/lib/utils";
 
 const HeroSection = ({ children, videoSrc, bgImage, className, col }) => {
-  console.log(bgImage);
   const style = bgImage
     ? {
         background: `url(${bgImage})`,

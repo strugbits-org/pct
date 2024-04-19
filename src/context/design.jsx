@@ -9,7 +9,8 @@ import {
   ourCertifications,
   footerSocialList,
   testinmonials,
-  whyJoinTeams
+  whyJoinTeams,
+  MeetTheTeam
 } from "@/lib/data";
 import React, { createContext, createElement, useState } from "react";
 export const DesignContext = createContext();
@@ -32,7 +33,8 @@ export const DesignProvider = ({ children }) => {
     ourCertifications,
     footerSocialList,
     testinmonials,
-    whyJoinTeams
+    whyJoinTeams,
+    MeetTheTeam
   });
 
   return (

@@ -272,3 +272,31 @@ export const whyJoinTeams = [
   
 ];
 
+export const MeetTheTeam = [
+  {
+    id: 0,
+    name: "Dominic Antonini",
+    designation: "Co-Founder & CEO",
+    image: "/images/DominicAntonini.jpg",
+  },
+  {
+    id: 1,
+    name: "Mike Rager",
+    designation: "Co-Founder & COO",
+    image: "/images/MikeRager.jpg",
+  },
+  {
+    id: 2,
+    name: "Dave Pribish",
+    designation: "General Manager",
+    image: "/images/DavePribish.jpg",
+  },
+  {
+    id: 3,
+    name: "Ben Haynes",
+    designation: "Opperations Manager",
+    image: "/images/BenHaynes.jpg",
+  },
+  
+];
+

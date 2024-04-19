@@ -22,7 +22,6 @@ export default function Industry({ slug }) {
     const getIndustry = () =>
       industriesServed.filter((item) => item.slug === slug);
     const data = getIndustry();
-    console.log(data);
     if (data.length === 0) {
       notFound();
     }

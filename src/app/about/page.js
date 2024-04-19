@@ -7,8 +7,13 @@ import HeroSection from "@/components/sections/HeroSection";
 import TeamCard from "@/components/TeamCard";
 import { FullWidthContent } from "@/components/Sections";
 import ContactUs from "@/components/sections/ContactUs";
+import { useContext } from "react";
+import { DesignContext } from "@/context/design";
 
 export default function AboutUs() {
+  const {
+    data: { MeetTheTeam },
+  } = useContext(DesignContext);
   return (
     <div>
       <HeroSection bgImage="/images/about-us-banner.jpg">
@@ -39,12 +44,20 @@ export default function AboutUs() {
         <h2 className="text-xs text-center md:text-sm mb-1 text-red tracking-widest">
           TEAM
         </h2>
-        <h1 className="mb-5 md:mb-9 text-[28px] text-center md:text-5xl">Meet The Team</h1>
+        <h1 className="mb-5 md:mb-9 text-[28px] text-center md:text-5xl">
+          Meet The Team
+        </h1>
         <div className="flex justify-center flex-wrap gap-7">
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
+          {MeetTheTeam.map((item) => {
+            return (
+              <TeamCard
+                key={item.id}
+                image={item.image}
+                name={item.name}
+                position={item.designation}
+              />
+            );
+          })}
         </div>
       </FullWidthContent>
       <ContactUs />

@@ -18,7 +18,6 @@ const GetInTouchForm = ({ title, detail, className }) => {
   const handleFileChnage = (e) => {
     const file = e.target.files[0];
     setQuoteFile(file);
-    console.log(file);
   };
   const handleRemove = (e) => {
     setQuoteFile(null);
