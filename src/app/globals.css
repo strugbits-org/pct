@@ -136,12 +136,12 @@
   }
 
   .bg-clip-path-1 {
-    clip-path: polygon(50% 7%, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
   }
   
-  @media screen(md) {
+  @media screen(lg) {
     .bg-clip-path-1 {
-      clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0 100%, 0 0);
+      clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
     }
   }
   /* 
