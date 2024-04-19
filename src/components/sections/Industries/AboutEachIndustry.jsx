@@ -15,7 +15,6 @@ const AboutEachIndustry = ({
   detail2,
   buttonText,
   image,
-  imageClass,
 }) => {
   const {
     theme: { button },
@@ -26,14 +25,11 @@ const AboutEachIndustry = ({
       <FullWidthContent>
         <div className="flex flex-col items-center justify-center lg:flex lg:gap-x-11">
           <Image
-            className={cn(
-              "w-full h-auto mb-5 max-w-[565px] mx-auto lg:max-h-none lg:mb-0 lg:w-[46vw] lg:max-w-[665px] object-contain",
-              imageClass && imageClass
-            )}
+            className="w-full h-auto mb-5 max-w-[565px] mx-auto lg:max-h-none lg:mb-0 lg:w-[46vw] lg:max-w-[665px] object-contain"
             src={image}
             alt={title}
-            width={imageWidth ? imageWidth : 665}
-            height={imageHeight ? imageHeight : 701}
+            width={665}
+            height={701}
           />
           <div className="flex-1 mt-auto mb-auto text-center lg:text-left py-0 lg:py-16">
             <h2 className="inline h-line text-xs md:text-sm mb-1 before:bg-red before:w-[30px] before:h-[2px] pl-[36px] text-red">
