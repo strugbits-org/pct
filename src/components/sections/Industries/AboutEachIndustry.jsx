@@ -5,6 +5,7 @@ import { FullWidthContent } from "../../Sections";
 import { DesignContext } from "@/context/design";
 import Image from "next/image";
 import { AnimateButton } from "../../Buttons";
+import { cn } from "@/lib/utils";
 
 const AboutEachIndustry = ({
   title,
@@ -14,6 +15,7 @@ const AboutEachIndustry = ({
   detail2,
   buttonText,
   image,
+  imageClass,
 }) => {
   const {
     theme: { button },
@@ -22,13 +24,16 @@ const AboutEachIndustry = ({
   return (
     <section className="pt-8 lg:pt-14 bg-white">
       <FullWidthContent>
-        <div className="flex-column lg:flex lg:gap-x-11">
+        <div className="flex flex-col items-center justify-center lg:flex lg:gap-x-11">
           <Image
-            className="w-full h-auto mb-5 max-w-[665px] mx-auto lg:max-h-none lg:mb-0 lg:w-[46vw] lg:max-w-[665px] object-contain"
+            className={cn(
+              "w-full h-auto mb-5 max-w-[565px] mx-auto lg:max-h-none lg:mb-0 lg:w-[46vw] lg:max-w-[665px] object-contain",
+              imageClass && imageClass
+            )}
             src={image}
             alt={title}
-            width={665}
-            height={701}
+            width={imageWidth ? imageWidth : 665}
+            height={imageHeight ? imageHeight : 701}
           />
           <div className="flex-1 mt-auto mb-auto text-center lg:text-left py-0 lg:py-16">
             <h2 className="inline h-line text-xs md:text-sm mb-1 before:bg-red before:w-[30px] before:h-[2px] pl-[36px] text-red">

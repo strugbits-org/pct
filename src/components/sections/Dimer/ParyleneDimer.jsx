@@ -1,10 +1,10 @@
 "use client";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import { FullWidthContent } from "../Sections";
+import { FullWidthContent } from "../../Sections";
 import Image from "next/image";
-import PCTDimerCard from "./PCTDimerCard";
-import { AnimateButton } from "../Buttons";
+import PCTDimerCard from "../PCTDimerCard";
+import { AnimateButton } from "../../Buttons";
 import { DesignContext } from "@/context/design";
 import { useContext } from "react";
 
@@ -19,7 +19,7 @@ const ParyleneDimer = () => {
         <div className="flex flex-col lg:flex-row lg:gap-x-16">
           <div className="flex-1">
             <Image
-              className="w-full h-auto mb-5 max-w-[696px] mx-auto lg:max-h-none lg:mb-0 lg:w-[48vw] lg:max-w-[696px] object-cover"
+              className="w-full h-auto mb-5 max-w-[596px] mx-auto lg:max-h-none lg:mb-0 lg:w-[48vw] lg:max-w-[696px] object-cover"
               src={"/images/parylene-dimer.png"}
               alt={"parylene-dimer"}
               width={696}
@@ -31,22 +31,22 @@ const ParyleneDimer = () => {
               PARYLENE DIMER{" "}
             </h2>
             <h1 className="mb-4 text-[28px] md:text-5xl">{"Type | N"}</h1>
-            <p className="mb-5 md:mb-8 text-[13px] md:text-[15px]">
+            <p className="mb-5 md:mb-8 text-[13px] md:text-[15px] max-w-[652px]">
               The base structure of the parylene group. Parylene N offers the
               highest dielectric control that does not vary with changes in
               frequency.
             </p>
-            <ul className="inline-block space-y-2 mb-5 pl-2 list-image-[url(/images/icons/list-check.svg)]">
-              <li className="relative bg-red">
-                <p className="top-1 absolute w-[max-content]">
+            <ul className="inline-block mx-auto max-w-[260px] md:max-w-[320px] lg:max-w-none text-left space-y-2 mb-5 pl-2 list-image-[url(/images/icons/list-check.svg)]">
+              <li className="ml-8">
+                <p className="-translate-y-2">
                   Crevice Penetration
                 </p>
               </li>
-              <li className="relative">
-                <p className="top-1 absolute w-[max-content]">Dry Lubricity</p>
+              <li className="ml-8">
+                <p className="-translate-y-2">Dry Lubricity</p>
               </li>
-              <li className="relative">
-                <p className="top-1 absolute w-[max-content]">
+              <li className="ml-8">
+                <p className="-translate-y-2">
                   High Dielectric Strength{" "}
                 </p>
               </li>
@@ -115,10 +115,10 @@ const ParyleneDimer = () => {
         </FullWidthContent>
       </div>
       <FullWidthContent>
-        <div className="flex flex-col lg:flex-row lg:gap-x-16 pt-6">
+        <div className="flex flex-col-reverse lg:flex-row lg:gap-x-16 pt-6">
           <div className="flex-1">
             <Image
-              className="w-full h-auto mb-5 max-w-[496px] mx-auto lg:max-h-none lg:mb-0 lg:w-[48vw] lg:max-w-[696px] object-cover"
+              className="w-full h-auto mb-5 max-w-[445px] mx-auto lg:max-h-none lg:mb-0 lg:w-[37vw] lg:max-w-[545px] object-cover"
               src={"/images/dimer-type-c-single.png"}
               alt={"parylene-dimer"}
               width={696}
@@ -130,24 +130,24 @@ const ParyleneDimer = () => {
               PARYLENE DIMER{" "}
             </h2>
             <h1 className="mb-4 text-[28px] md:text-5xl">Type | C</h1>
-            <p className="mb-5 md:mb-8 text-[13px] md:text-[15px]">
+            <p className="mb-5 md:mb-8 text-[13px] md:text-[15px] max-w-[652px]">
               The most common type of dimer, providing a useful combination of
               barrier and dielectric properties while also having the fastest
               deposition rate.
             </p>
-            <ul className="inline-block text-left space-y-2 mb-5 pl-2 list-image-[url(/images/icons/list-check.svg)]">
-              <li className="">
+            <ul className="inline-block mx-auto max-w-[260px] md:max-w-[320px] lg:max-w-none text-left space-y-2 mb-5 pl-2 list-image-[url(/images/icons/list-check.svg)]">
+              <li className="ml-8">
                 <p className="-translate-y-2">
-                  Low permeability to moisture, chemicals, and corrosive gasses
+                  {
+                    "Low permeability to moisture, chemicals, and corrosive gassessssss"
+                  }
                 </p>
               </li>
-              <li className="">
+              <li className="ml-8">
                 <p className="-translate-y-2">Most Versatile</p>
               </li>
-              <li className="">
-                <p className="-translate-y-2">
-                  Pressure Resistant
-                </p>
+              <li className="ml-8">
+                <p className="-translate-y-2">Pressure Resistant</p>
               </li>
             </ul>
             <br />

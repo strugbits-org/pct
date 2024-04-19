@@ -1,6 +1,6 @@
-import { FullWidthContent } from "../Sections";
+import { FullWidthContent } from "../../Sections";
 import Image from "next/image";
-import PCTDimerCard from "./PCTDimerCard";
+import PCTDimerCard from "../PCTDimerCard";
 
 const DimerProperties = () => {
   return (
@@ -18,7 +18,7 @@ const DimerProperties = () => {
       </FullWidthContent>
       <div className="pt-28 pb-16 bg-clip-path-1 text-secondary bg-[url('/images/bg_our_achievements.jpg')] bg-no-repeat bg-cover bg-bottom">
         <FullWidthContent className="max-w-[1400px] flex items-center justify-between flex-col md:flex-row gap-x-44">
-          <div className="space-y-2 text-center md:text-left pt-10 pb-6 md:pt-16 md:pb-8 gap-y-4">
+          <div className="space-y-2 text-center md:text-left lg:pt-10 pb-6 md:pt-16 md:pb-8 gap-y-4">
             <h4 className="text-2xl lg:text-4xl">Reliability That Lasts.</h4>
             <p className="text-xs lg:text-[16px]">
               Coatings and Dimers produced by PCT are certified biocompatible
@@ -29,7 +29,7 @@ const DimerProperties = () => {
             <Image
               src={"/images/usp.png"}
               alt="USP"
-              className="mr-0"
+              className="mr-0 max-w-[166px] lg:w-[14vw] lg:max-w-[206px]"
               width={206}
               height={177}
             />
