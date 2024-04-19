@@ -243,3 +243,32 @@ export const testinmonials = [
     image: "/images/testimonial_3.png",
   },
 ];
+
+export const whyJoinTeams = [
+  {
+    id: 0,
+    title: "Growth Opportunities",
+    detail: "Access learning programs for personal and professional growth enhancement.",
+    image: "/images/career/growth.svg",
+  },
+  {
+    id: 1,
+    title: "Work-Life Balance",
+    detail: "We prioritize work-life balance & offer flexible schedules.",
+    image: "/images/career/work-balance.svg",
+  },
+  {
+    id: 2,
+    title: "Competitive Compensation",
+    detail: "Get competitive compensation recognizing your contributions and dedication.",
+    image: "/images/career/compensation.svg",
+  },
+  {
+    id: 3,
+    title: "Collaborative Environment",
+    detail: "Join collaborative team where ideas welcomed, teamwork celebrated.",
+    image: "/images/career/collaborative.svg",
+  },
+  
+];
+

@@ -1,10 +1,19 @@
+"use client";
 import React from "react";
 import HeroSection from "../HeroSection";
 import { HeroContentBox } from "@/components/containers";
 import ContactUs from "../ContactUs";
 import { GuideForm } from "@/components/forms";
+import { FullWidthContent } from "@/components/Sections";
+import { AllBlogs } from "./AllBlogs";
+import { AnimateButton } from "@/components/Buttons";
+import { useContext } from "react";
+import { DesignContext } from "@/context/design";
 
 export default function Blogs() {
+  const {
+    theme: { button },
+  } = useContext(DesignContext);
   return (
     <React.Fragment>
       <HeroSection
@@ -27,6 +36,28 @@ export default function Blogs() {
           }
         />
       </HeroSection>
+      <section className="py-20">
+        <FullWidthContent className="flex flex-col items-center md:items-start lg:flex-row gap-x-10">
+          <AllBlogs />
+          <div className="pt-12 px-3 w-full md:w-[354px] mx-auto">
+            <div className="text-center text-secondary bg-black rounded-2xl px-4 py-9 max-w-[424px] lg:max-w-[324px] mx-auto shadow-[0px_4px_29px_0px] shadow-gret28">
+              <h2 className="font-rob700 md:text-3xl mb-3 mx-2">
+                Schedule a Call With Us
+              </h2>
+              <p className="mb-9 text-xs">
+                Ready to discuss your project or have questions about our
+                services? Book a call with us! Our team is here to help and
+                provide guidance tailored to your needs.
+              </p>
+              <AnimateButton
+                className={`${button.red} before:bg-secondary hover:bg-secondary hover:text-primary`}
+              >
+                Schedule a Call
+              </AnimateButton>
+            </div>
+          </div>
+        </FullWidthContent>
+      </section>
 
       <ContactUs />
     </React.Fragment>

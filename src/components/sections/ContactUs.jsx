@@ -4,8 +4,8 @@ import Image from "next/image";
 import { GetInTouchForm } from "../forms";
 const ContactUs = () => {
   return (
-    <section className="bg-white py-12 lg:py-20">
-      <FullWidthContent className="flex flex-col-reverse  gap-10 md:gap-16 md:flex-row">
+    <section className="bg-secondary py-12 lg:py-20">
+      <FullWidthContent className="flex flex-col-reverse gap-10 md:gap-16 md:flex-row">
         <div className="flex-1 bg-gret">
           <Image
             src={"/images/map.jpg"}

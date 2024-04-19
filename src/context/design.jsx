@@ -8,7 +8,8 @@ import {
   ourAchievements,
   ourCertifications,
   footerSocialList,
-  testinmonials
+  testinmonials,
+  whyJoinTeams
 } from "@/lib/data";
 import React, { createContext, createElement, useState } from "react";
 export const DesignContext = createContext();
@@ -30,7 +31,8 @@ export const DesignProvider = ({ children }) => {
     ourAchievements,
     ourCertifications,
     footerSocialList,
-    testinmonials
+    testinmonials,
+    whyJoinTeams
   });
 
   return (
