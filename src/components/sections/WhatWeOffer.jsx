@@ -9,8 +9,13 @@ import { SlideColorButton } from "../Buttons";
 import { DesignContext } from "@/context/design";
 import { useContext } from "react";
 import { HorizontalGuidForm, HorizontalGuideForm } from "../forms";
+import { useRouter } from "next/navigation";
+
 const WhatWeOffer = () => {
-  const { theme:{button} } = useContext(DesignContext);
+  const {
+    theme: { button },
+  } = useContext(DesignContext);
+  const router = useRouter();
 
   return (
     <section className="bg-white pt-16 pb-9 lg:pb-0">
@@ -31,24 +36,26 @@ const WhatWeOffer = () => {
             aria-label="What We Offers"
             tag="div"
             options={{
-              gap: 40,
+              type: "loop",
               fixedHeight: "auto",
+              focus: "left",
+              padding: { left: "0px", right: "120px" },
+              gap: 40,
               pagination: false,
-              perPage: 4.2,
-              perMove: 1,
-              autoplay: true,
               arrows: false,
+              perPage: 4,
               breakpoints: {
                 768: {
                   gap: 24,
                   perMove: 1,
-                  perPage: 2,
+                  perPage: 3,
+                  padding: { left: "0px", right: "80px" },
                 },
                 640: {
                   gap: 18,
                   perMove: 1,
                   perPage: 1,
-                  focus: "center",
+                  padding: { left: "0px", right: "0px" },
                 },
               },
             }}
@@ -84,6 +91,7 @@ const WhatWeOffer = () => {
                     </div>
                     <SlideColorButton
                       className={`${button.icon} mb-0 mt-auto bg-white before:bg-red text-red hover:text-secondary justify-start`}
+                      onClick={(e) => router.push(`/services/${item.slug}`)}
                     >
                       READ MORE{" "}
                       <svg
@@ -115,8 +123,8 @@ const WhatWeOffer = () => {
             })}
           </Splide>
         </div>
-        </FullWidthContent>
-        <FullWidthContent className="px-2">
+      </FullWidthContent>
+      <FullWidthContent className="px-2">
         <div className="bg-red relative py-[72px] px-6 rounded-[20px] text-center">
           <h1 className="text-5xl text-secondary">
             <span className="text-shadow">Download</span> Our Guide

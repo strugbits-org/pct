@@ -15,7 +15,7 @@ export const AnimateButton = ({ children, className }) => {
   );
 };
 
-export const SlideColorButton = ({ children, className }) => {
+export const SlideColorButton = ({ children, className, ...props }) => {
   return (
     <button
       className={cn(
@@ -24,6 +24,7 @@ export const SlideColorButton = ({ children, className }) => {
         "before:absolute before:w-full before:h-full before:-bottom-[98%] before:left-0 before:transition-all before:duration-300 before:-z-[1]",
         "hover:before:bottom-0"
       )}
+      {...props}
     >
       {children}
     </button>
