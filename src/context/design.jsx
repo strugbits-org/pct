@@ -3,15 +3,15 @@
 import {
   headerContactList,
   headerSocialList,
-  industriesServed,
   ourAchievements,
   ourCertifications,
   footerSocialList,
   testinmonials,
   whyJoinTeams,
-  MeetTheTeam
+  MeetTheTeam,
 } from "@/lib/data";
 import { ourServices } from "@/lib/service-data";
+import { industriesServed } from "@/lib/industries-served-data";
 import React, { createContext, createElement, useState } from "react";
 export const DesignContext = createContext();
 
@@ -34,7 +34,7 @@ export const DesignProvider = ({ children }) => {
     footerSocialList,
     testinmonials,
     whyJoinTeams,
-    MeetTheTeam
+    MeetTheTeam,
   });
 
   return (

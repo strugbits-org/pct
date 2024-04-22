@@ -1,12 +1,15 @@
 "use client"
 
-import { industriesServed } from "@/lib/data";
 import { FullWidthContent } from "./Sections";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { DesignContext } from "@/context/design";
+import { useContext } from "react";
 
 export const IndustriesSubMenu = () => {
   const route = useRouter()
+  const {data: {industriesServed}} = useContext(DesignContext)
+
   return (
     <div className="absolute z-10 mt-6 left-0 w-full mx-auto overflow-hidden bg-primary px-6 py-8">
       <FullWidthContent>
