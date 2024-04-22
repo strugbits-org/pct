@@ -23,22 +23,22 @@ const OurCertifications = () => {
               quality is well-placed.
             </p>
           </div>
-          <div className="flex md:flex-wrap justify-start md:justify-center w-full gap-x-0 md:gap-6 overflow-x-auto p-2">
+          <div className="flex flex-wrap justify-center items-center md:justify-center w-full gap-4 md:gap-6 overflow-x-auto p-2">
             {ourCertifications.map((item) => {
               return (
                 <div
                   key={item.id}
-                  className="grid ring-1 ring-gret28 shrink-0 place-content-center w-[114px] h-[114px] lg:w-[158px] lg:h-[158px] relative group"
+                  className="grid ring-2 ring-gret28 shrink-0 place-content-center w-[114px] h-[114px] lg:w-[158px] lg:h-[158px] transition-all duration-500 relative group origin-center  hover:w-36 hover:h-36 md:hover:w-40 md:hover:h-40  lg:hover:w-48 lg:hover:h-48"
                 >
                   <Image
                     src={item.bgImage}
-                    className="absolute w-8 h-8 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+                    className="absolute w-8 h-8 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] transition-all duration-500 origin-center group-hover:w-full group-hover:h-full opacity-40"
                     alt=""
                     width={212}
                     height={212}
 
                   />
-                  <div className="w-[106px] h-[106px] grid place-content-center p-3 relative bg-white rounded-[4px]">
+                  <div className="w-20 h-20 grid place-content-center relative bg-white rounded-[4px]">
                     <Image src={item.logo} className="w-auto h-auto" alt="" width={75} height={75} unoptimized/>
                   </div>
                 </div>
