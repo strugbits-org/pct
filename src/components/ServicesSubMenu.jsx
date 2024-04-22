@@ -1,11 +1,17 @@
-import { ourServices } from "@/lib/data";
+"use client";
+
 import Image from "next/image";
 import { FullWidthContent } from "./Sections";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { DesignContext } from "@/context/design";
+import { useContext } from "react";
 
 export const SubMenu = () => {
-  const route = useRouter()
+  const {
+    data:{ourServices}
+  } = useContext(DesignContext);
+  const route = useRouter();
   return (
     <div className="absolute z-10 mt-6 left-0 w-full mx-auto overflow-hidden bg-primary px-6 py-8">
       <FullWidthContent>

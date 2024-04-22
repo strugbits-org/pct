@@ -4,7 +4,6 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { FullWidthContent } from "../Sections";
 import Image from "next/image";
-import { ourServices } from "@/lib/data";
 import { SlideColorButton } from "../Buttons";
 import { DesignContext } from "@/context/design";
 import { useContext } from "react";
@@ -14,6 +13,7 @@ import { useRouter } from "next/navigation";
 const WhatWeOffer = () => {
   const {
     theme: { button },
+    data: {ourServices}
   } = useContext(DesignContext);
   const router = useRouter();
 

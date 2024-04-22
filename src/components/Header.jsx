@@ -32,12 +32,12 @@ const Header = () => {
     "text-sm font-semibold leading-6 text-secondary font-rob400";
   const mobMenuClass =
     "block py-3 text-base font-rob400 leading-6 text-white border-solid border-0 border-b-[1px] border-secondary";
-
   useEffect(() => {
     setChanges((prev) => prev++);
     setToggleIndustries(false)
     setToggleServices(false)
     setMenuModal(false)
+
   }, [pathName]);
   const handleServices = (e) => {
     setToggleServices(!toggleServices);
@@ -115,13 +115,13 @@ const Header = () => {
           </div>
 
           <div className="hidden lg:flex lg:gap-x-8">
-            <Link href="/" className={linkClassValues}>
+            <Link href="/" className={`${linkClassValues} ${pathName === "/" ? "text-red" : ""}`}>
               Home
             </Link>
             <div>
               <Link
                 href=""
-                className={linkClassValues}
+                className={`${linkClassValues} ${pathName.search("services") ? "text-red" : ""}`}
                 onClick={handleServices}
               >
                 Services
@@ -129,13 +129,13 @@ const Header = () => {
 
               {toggleServices ? <SubMenu /> : ""}
             </div>
-            <Link href="/about" className={linkClassValues}>
+            <Link href="/about" className={`${linkClassValues} ${pathName === "/about" ? "text-red" : ""}`}>
               About Us
             </Link>
             <div>
               <Link
                 href=""
-                className={linkClassValues}
+                className={`${linkClassValues} ${pathName.search("industries-served") ? "text-red" : ""}`}
                 onClick={handleIndustriesServed}
               >
                 Industries Served
@@ -143,13 +143,13 @@ const Header = () => {
 
               {toggleIndustries ? <IndustriesSubMenu /> : ""}
             </div>
-            <Link href="/blog" className={linkClassValues}>
+            <Link href="/blog" className={`${linkClassValues} ${pathName === "/blog" ? "text-red" : ""}`}>
               Blog
             </Link>
-            <Link href="/careers" className={linkClassValues}>
+            <Link href="/careers" className={`${linkClassValues} ${pathName === "/careers" ? "text-red" : ""}`}>
               Careers
             </Link>
-            <Link href="/dimer-and-machine-sales" className={linkClassValues}>
+            <Link href="/dimer-and-machine-sales" className={`${linkClassValues} ${pathName === "/dimer-and-machine-sales" ? "text-red" : ""}`}>
               Dimer & Machine Sales
             </Link>
           </div>
@@ -204,10 +204,10 @@ const Header = () => {
               <div className="mt-6 flow-root">
                 <div className="">
                   <div className="">
-                    <Link href="/" className={mobMenuClass}>
+                    <Link href="/"  className={`${linkClassValues} ${pathName === "/" ? "active" : ""}`}>
                       Home
                     </Link>
-                    <Link href="/about" className={mobMenuClass}>
+                    <Link href="/about" className={`${linkClassValues} ${pathName === "/about" ? "active" : ""}`}>
                       About Us
                     </Link>
                     <div className="py-3 border-solid border-0 border-b-[1px] border-secondary">
@@ -270,15 +270,15 @@ const Header = () => {
                         {toggleIndustries && <MobIndustriesSubMenu />}
                       </div>
                     </div>
-                    <Link href="/blog" className={mobMenuClass}>
+                    <Link href="/blog" className={`${linkClassValues} ${pathName === "/blog" ? "active" : ""}`}>
                       Blog
                     </Link>
-                    <Link href="/careers" className={mobMenuClass}>
+                    <Link href="/careers" className={`${linkClassValues} ${pathName === "/careers" ? "active" : ""}`}>
                       Careers
                     </Link>
                     <Link
                       href="/dimer-and-machine-sales"
-                      className={mobMenuClass}
+                      className={`${linkClassValues} ${pathName === "/dimer-and-machine-sales" ? "active" : ""}`}
                     >
                       Dimer & Machine Sales
                     </Link>

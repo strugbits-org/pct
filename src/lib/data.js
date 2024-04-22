@@ -40,53 +40,6 @@ export const headerSocialList = [
   },
 ];
 
-export const ourServices = [
-  {
-    id: 0,
-    title: "PARYLENE",
-    shortDetail:
-      "Parylene is a common generic name for a unique series of polymers based on paraxylene.",
-    image: "/images/parylene.png",
-    mainImage: "/images/parylene.jpg",
-    slug: "parylene",
-  },
-  {
-    id: 1,
-    title: "POLYURETHANE",
-    shortDetail:
-      "Polyurethane coatings are available as either single or two-component formulations.",
-    image: "/images/polyurethane.png",
-    mainImage: "/images/polyurethene.jpg",
-    slug: "polyurethane",
-  },
-  {
-    id: 2,
-    title: "EPOXY",
-    shortDetail:
-      "Epoxy resins exhibit good abrasive and chemical resistance, as well as reasonable humidity resistance.",
-    image: "/images/epoxy.png",
-    mainImage: "/images/epoxy.jpg",
-    slug: "epoxy",
-  },
-  {
-    id: 3,
-    title: "SILICONE",
-    shortDetail:
-      "Silicone provides good chemical resistance, salt spray resistance and are very flexible. ",
-    image: "/images/silicone.png",
-    mainImage: "/images/silicone.jpg",
-    slug: "silicone",
-  },
-  {
-    id: 4,
-    title: "ACRYLIC",
-    shortDetail:
-      "Acrylic conformal coatings are perhaps the most popular of all conformal coating.",
-    image: "/images/acrylic.png",
-    mainImage: "/images/acrylic.jpg",
-    slug: "acrylic",
-  },
-];
 export const industriesServed = [
   {
     id: 0,
@@ -248,7 +201,8 @@ export const whyJoinTeams = [
   {
     id: 0,
     title: "Growth Opportunities",
-    detail: "Access learning programs for personal and professional growth enhancement.",
+    detail:
+      "Access learning programs for personal and professional growth enhancement.",
     image: "/images/career/growth.svg",
   },
   {
@@ -260,16 +214,17 @@ export const whyJoinTeams = [
   {
     id: 2,
     title: "Competitive Compensation",
-    detail: "Get competitive compensation recognizing your contributions and dedication.",
+    detail:
+      "Get competitive compensation recognizing your contributions and dedication.",
     image: "/images/career/compensation.svg",
   },
   {
     id: 3,
     title: "Collaborative Environment",
-    detail: "Join collaborative team where ideas welcomed, teamwork celebrated.",
+    detail:
+      "Join collaborative team where ideas welcomed, teamwork celebrated.",
     image: "/images/career/collaborative.svg",
   },
-  
 ];
 
 export const MeetTheTeam = [
@@ -297,6 +252,4 @@ export const MeetTheTeam = [
     designation: "Opperations Manager",
     image: "/images/BenHaynes.jpg",
   },
-  
 ];
-

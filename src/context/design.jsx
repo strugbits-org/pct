@@ -3,7 +3,6 @@
 import {
   headerContactList,
   headerSocialList,
-  ourServices,
   industriesServed,
   ourAchievements,
   ourCertifications,
@@ -12,6 +11,7 @@ import {
   whyJoinTeams,
   MeetTheTeam
 } from "@/lib/data";
+import { ourServices } from "@/lib/service-data";
 import React, { createContext, createElement, useState } from "react";
 export const DesignContext = createContext();
 
