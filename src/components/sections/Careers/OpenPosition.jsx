@@ -3,24 +3,33 @@ import { Button } from "@/components/Buttons";
 import { FullWidthContent } from "@/components/Sections";
 import { useContext } from "react";
 import { DesignContext } from "@/context/design";
+import { useRouter } from "next/navigation";
 
 export default function OpenPositions() {
   const {
     theme: { button },
   } = useContext(DesignContext);
+  const route = useRouter();
   return (
     <section className="pt-20 bg-secondary bg-[url('/images/lines.svg')] bg-contain bg-center">
       <FullWidthContent>
         <h2 className="text-xs md:text-sm text-red text-center mb-1">JOBS</h2>
-        <h1 className="text-[28px] md:text-5xl text-center mb-9">Open Positions</h1>
+        <h1 className="text-[28px] md:text-5xl text-center mb-9">
+          Open Positions
+        </h1>
         <div className="rounded-2xl bg-white shadow-[0px_8px_40px_0px] shadow-primary05">
           {/* Job 1 */}
           <div className="px-4 py-9 flex justify-between items-start gap-x-4 border-gret28 border-b-[1px]">
             <div className="flex-1 w-full">
-              <h4 className="text-[16px] md:text-[20px] mb-1">Conformal Coating Technician</h4>
+              <h4 className="text-[16px] md:text-[20px] mb-1">
+                Conformal Coating Technician
+              </h4>
               <p className="text-gret text-xs">Full Time</p>
             </div>
             <Button
+              onClick={() =>
+                route.push("/open-position/conformal-coating-technician")
+              }
               className={`${button.red} overflow-hidden w-[162px] h-[46px] md:w-[220px] md:h-[52px] font-rob500 text-[16px] rounded-2xl flex items-center justify-between`}
             >
               <span className="flex-1 text-left pl-4">View Opening</span>
@@ -43,7 +52,9 @@ export default function OpenPositions() {
           {/* Job 2 */}
           <div className="px-4 py-9 flex justify-between items-start gap-x-4 border-gret28 border-b-[1px]">
             <div>
-              <h4 className="text-[16px] md:text-[20px] mb-1">Parylene Machine Technician</h4>
+              <h4 className="text-[16px] md:text-[20px] mb-1">
+                Parylene Machine Technician
+              </h4>
               <p className="text-gret text-xs">Full Time</p>
             </div>
             <Button
@@ -69,7 +80,9 @@ export default function OpenPositions() {
           {/* Job 3 */}
           <div className="px-4 py-9 flex justify-between items-start gap-x-4 border-gret28 border-b-[1px]">
             <div>
-              <h4 className="text-[16px] md:text-[20px] mb-1">Shipping and Receiving Coordinator</h4>
+              <h4 className="text-[16px] md:text-[20px] mb-1">
+                Shipping and Receiving Coordinator
+              </h4>
               <p className="text-gret text-xs">Full Time</p>
             </div>
             <Button
@@ -121,7 +134,9 @@ export default function OpenPositions() {
           {/* Job 5 */}
           <div className="px-4 py-9 flex justify-between items-start gap-x-4 border-b-0">
             <div>
-              <h4 className="text-[16px] md:text-[20px] mb-1">Conformal Coating Spray Technician</h4>
+              <h4 className="text-[16px] md:text-[20px] mb-1">
+                Conformal Coating Spray Technician
+              </h4>
               <p className="text-gret text-xs">Full Time</p>
             </div>
             <Button

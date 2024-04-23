@@ -3,6 +3,7 @@ import { AnimateButton } from "@/components/Buttons";
 import { FullWidthContent } from "@/components/Sections";
 import { DesignContext } from "@/context/design";
 import Image from "next/image";
+import Link from "next/link";
 import { useContext } from "react";
 
 export default function AboutMachineSales() {
@@ -24,11 +25,13 @@ export default function AboutMachineSales() {
               Static deposition machines offer the possibility of in house
               coating for any business. Fully compatible with our dimer as well!
             </p>
-            <AnimateButton
-              className={`${button.red} shadow-[0_1px_8px_0px_rgba(0,0,0,0.0)] shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
-            >
-              Contact Us Now
-            </AnimateButton>
+            <Link href={"#contact"}>
+              <AnimateButton
+                className={`${button.red} shadow-[0_1px_8px_0px_rgba(0,0,0,0.0)] shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
+              >
+                Contact Us Now
+              </AnimateButton>
+            </Link>
           </div>
           <Image
             className="w-full h-auto mb-5 max-w-[483px] mx-auto lg:mb-0 lg:w-[40vw] lg:max-w-[583px] object-contain"

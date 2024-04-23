@@ -7,6 +7,7 @@ import PCTDimerCard from "../PCTDimerCard";
 import { AnimateButton } from "../../Buttons";
 import { DesignContext } from "@/context/design";
 import { useContext } from "react";
+import Link from "next/link";
 
 const ParyleneDimer = () => {
   const {
@@ -38,25 +39,23 @@ const ParyleneDimer = () => {
             </p>
             <ul className="inline-block mx-auto max-w-[260px] md:max-w-[320px] lg:max-w-none text-left space-y-2 mb-5 pl-2 list-image-[url(/images/icons/list-check.svg)]">
               <li className="ml-8">
-                <p className="-translate-y-2">
-                  Crevice Penetration
-                </p>
+                <p className="-translate-y-2">Crevice Penetration</p>
               </li>
               <li className="ml-8">
                 <p className="-translate-y-2">Dry Lubricity</p>
               </li>
               <li className="ml-8">
-                <p className="-translate-y-2">
-                  High Dielectric Strength{" "}
-                </p>
+                <p className="-translate-y-2">High Dielectric Strength </p>
               </li>
             </ul>
             <br />
-            <AnimateButton
-              className={`${button.red} mb-2 shadow-[1px_1px_8px_0px] shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
-            >
-              {"Purchase Now"}
-            </AnimateButton>
+            <Link href="#contact">
+              <AnimateButton
+                className={`${button.red} mb-2 shadow-[1px_1px_8px_0px] shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
+              >
+                {"Purchase Now"}
+              </AnimateButton>
+            </Link>
             <p className="mb-7 md:mb-8 text-[13px] md:text-[15px]">
               {"Contact us directly to complete your purchase."}
             </p>
@@ -151,11 +150,13 @@ const ParyleneDimer = () => {
               </li>
             </ul>
             <br />
-            <AnimateButton
-              className={`${button.red} mb-2 shadow-[1px_1px_8px_0px] shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
-            >
-              {"Purchase Now"}
-            </AnimateButton>
+            <Link href={"#contact"}>
+              <AnimateButton
+                className={`${button.red} mb-2 shadow-[1px_1px_8px_0px] shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
+              >
+                {"Purchase Now"}
+              </AnimateButton>
+            </Link>
             <p className="mb-7 md:mb-8 text-[13px] md:text-[15px]">
               {"Contact us directly to complete your purchase."}
             </p>

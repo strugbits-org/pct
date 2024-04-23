@@ -77,11 +77,13 @@ const AboutEachIndustry = ({
             ) : (
               ""
             )}
-            <AnimateButton
-              className={`${button.red} mt-4 shadow-[0_1px_8px_0px_rgba(0,0,0,0.0)] shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
-            >
-              {buttonText}
-            </AnimateButton>
+            <Link href="#contact">
+              <AnimateButton
+                className={`${button.red} mt-4 shadow-[0_1px_8px_0px_rgba(0,0,0,0.0)] shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
+              >
+                {buttonText}
+              </AnimateButton>
+            </Link>
           </div>
         </div>
       </FullWidthContent>

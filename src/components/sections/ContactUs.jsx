@@ -14,13 +14,16 @@ const ContactUs = () => {
             width={698}
             height={600}
           />
+
           {/* <iframe
-            width="100%"
-            height="100%"
-            frameborder="0"
-            style={{border: "0"}}
+            width="600"
+            height="450"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
             referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed/v1/MAP_MODE?key=&callback=initMap"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyApyqYnG-WCRQyutTsWlVe7322a6RBhppk
+    &q=Space+Needle,Seattle+WA"
           ></iframe> */}
         </div>
         <div className="flex-1 mb-auto mt-auto">

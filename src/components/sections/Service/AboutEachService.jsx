@@ -5,6 +5,7 @@ import { FullWidthContent } from "../../Sections";
 import { DesignContext } from "@/context/design";
 import Image from "next/image";
 import { AnimateButton } from "../../Buttons";
+import Link from "next/link";
 
 const AboutEachService = ({
   title,
@@ -38,11 +39,13 @@ const AboutEachService = ({
             <p className="mb-7 md:mb-8 text-[13px] md:text-[15px]">{detail}</p>
             <h2 className="text-[28px] md:text-3xl">{subTitle2}</h2>
             <p className="mb-7 md:mb-8 text-[13px] md:text-[15px]">{detail2}</p>
-            <AnimateButton
-              className={`${button.red} shadow-[0_1px_8px_0px_rgba(0,0,0,0.0)]  shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
-            >
-              {buttonText}
-            </AnimateButton>
+            <Link href="#contact">
+              <AnimateButton
+                className={`${button.red} shadow-[0_1px_8px_0px_rgba(0,0,0,0.0)]  shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
+              >
+                {buttonText}
+              </AnimateButton>
+            </Link>
           </div>
         </div>
       </FullWidthContent>

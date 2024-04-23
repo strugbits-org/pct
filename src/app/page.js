@@ -7,6 +7,11 @@ import OurAchievements from "@/components/sections/OurAchievements";
 import OurCertifications from "@/components/sections/OurCertifications";
 import ContactUs from "@/components/sections/ContactUs";
 
+export const metadata = {
+  title: "PCT Conformal Coating",
+  // description: "PCT Conformal Coating",
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen">

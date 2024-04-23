@@ -6,8 +6,16 @@ import { DesignContext } from "@/context/design";
 import Image from "next/image";
 import { AnimateButton, Button } from "../../Buttons";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
-const AboutEachIndustry2 = ({ title, detail, buttonText, details, image, slug }) => {
+const AboutEachIndustry2 = ({
+  title,
+  detail,
+  buttonText,
+  details,
+  image,
+  slug,
+}) => {
   const {
     theme: { button },
   } = useContext(DesignContext);
@@ -56,7 +64,9 @@ const AboutEachIndustry2 = ({ title, detail, buttonText, details, image, slug })
                     );
                   })}
                 </div>
-                <p className="mb-7 md:mb-8 text-[13px] md:text-[15px]">{manualDetail}</p>
+                <p className="mb-7 md:mb-8 text-[13px] md:text-[15px]">
+                  {manualDetail}
+                </p>
               </>
             )}
             {/* If section have multiple details */}
@@ -65,11 +75,13 @@ const AboutEachIndustry2 = ({ title, detail, buttonText, details, image, slug })
                 {detail}
               </p>
             )}
-            <AnimateButton
-              className={`${button.red} shadow-[0_1px_8px_0px_rgba(0,0,0,0.0)] shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
-            >
-              {buttonText}
-            </AnimateButton>
+            <Link href="#contact">
+              <AnimateButton
+                className={`${button.red} shadow-[0_1px_8px_0px_rgba(0,0,0,0.0)] shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
+              >
+                {buttonText}
+              </AnimateButton>
+            </Link>
           </div>
           <Image
             className="w-full h-auto mb-5 max-w-[674px] mx-auto lg:max-h-none lg:mb-0 lg:w-[46vw] lg:max-w-[674px] object-contain"
