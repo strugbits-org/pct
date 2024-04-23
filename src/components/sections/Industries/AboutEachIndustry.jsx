@@ -23,7 +23,7 @@ const AboutEachIndustry = ({
   return (
     <section className="pt-8 lg:pt-14 bg-white">
       <FullWidthContent>
-        <div className="flex flex-col items-center justify-center lg:flex lg:gap-x-11">
+        <div className="flex flex-col items-center justify-center lg:flex-row lg:gap-x-11">
           <Image
             className="w-full h-auto mb-5 max-w-[565px] mx-auto lg:max-h-none lg:mb-0 lg:w-[46vw] lg:max-w-[665px] object-contain"
             src={image}
