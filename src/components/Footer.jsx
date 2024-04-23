@@ -6,6 +6,7 @@ import { Context, useContext } from "react";
 import { DesignContext } from "@/context/design";
 import Input from "./Input";
 import { Button } from "./Buttons";
+import { MobServicesSubMenu } from "./ServicesSubMenu";
 
 const Footer = () => {
   const {
@@ -76,20 +77,21 @@ const Footer = () => {
                 <Link href="/">Home</Link>
                 <Link href="/about">About Us</Link>
                 <Link href="/blog">Blog</Link>
-                <Link href="/career">Career</Link>
+                <Link href="/career">Careers</Link>
                 <Link href="/dimer-and-machine-sales">
                   Dinner & Machine Sales
                 </Link>
               </div>
               <div className="flex flex-col gap-y-4">
                 <h2 className="text-[22px] mb-1 text-white">Services</h2>
-                {ourServices.map((item) => {
+                <MobServicesSubMenu addClass="font-rob500 text-white-content"/>
+                {/* {ourServices.map((item) => {
                   return (
                     <Link key={item.id} href="#">
                       {item.title}
                     </Link>
                   );
-                })}
+                })} */}
               </div>
             </div>
           </div>

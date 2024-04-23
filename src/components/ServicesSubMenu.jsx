@@ -6,11 +6,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { DesignContext } from "@/context/design";
 import { useContext } from "react";
+import { cn } from "@/lib/utils";
 
 export const SubMenu = () => {
   const {
-    data:{ourServices}
+    data: { ourServices },
   } = useContext(DesignContext);
+  console.log({ ourServices });
   const route = useRouter();
   return (
     <div className="absolute z-10 mt-6 left-0 w-full mx-auto overflow-hidden bg-primary px-6 py-8">
@@ -46,14 +48,23 @@ export const SubMenu = () => {
   );
 };
 
-export const MobServicesSubMenu = () => {
+export const MobServicesSubMenu = ({ addClass }) => {
+  const {
+    data: { ourServices },
+  } = useContext(DesignContext);
   return (
-    <div className="w-full flex gap-1 flex-col overflow-hidden mt-3">
+    <div className={cn(
+      "w-full flex gap-1 flex-col overflow-hidden mt-3",
+      addClass && "gap-y-4 mt-0"
+    )}>
       {ourServices.map((item) => {
         return (
           <Link
             href={`/services/${item.slug}`}
-            className="block text-sm font-rob300 leading-6 text-white"
+            className={cn(
+              "block text-sm font-rob300 leading-6 text-white",
+              addClass && addClass
+            )}
             key={item.id}
           >
             {item.title}

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { FullWidthContent } from "./Sections";
 import Link from "next/link";
@@ -7,8 +7,10 @@ import { DesignContext } from "@/context/design";
 import { useContext } from "react";
 
 export const IndustriesSubMenu = () => {
-  const route = useRouter()
-  const {data: {industriesServed}} = useContext(DesignContext)
+  const route = useRouter();
+  const {
+    data: { industriesServed },
+  } = useContext(DesignContext);
 
   return (
     <div className="absolute z-10 mt-6 left-0 w-full mx-auto overflow-hidden bg-primary px-6 py-8">
@@ -36,19 +38,22 @@ export const IndustriesSubMenu = () => {
 };
 
 export const MobIndustriesSubMenu = () => {
+  const {
+    data: { industriesServed },
+  } = useContext(DesignContext);
   return (
     <div className="w-full flex gap-1 flex-col overflow-hidden mt-3">
-        {industriesServed.map((item) => {
-          return (
-            <Link
-              href={`/industries-served/${item.slug}`}
-              className="block text-sm font-rob300 text-white"
-              key={item.id}
-            >
-              {item.title}
-            </Link>
-          );
-        })}
+      {industriesServed.map((item) => {
+        return (
+          <Link
+            href={`/industries-served/${item.slug}`}
+            className="block text-sm font-rob300 text-white"
+            key={item.id}
+          >
+            {item.title}
+          </Link>
+        );
+      })}
     </div>
   );
 };
