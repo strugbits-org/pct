@@ -35,7 +35,7 @@ const Footer = () => {
             height={21}
             className="w-[22px] md:w-[29px] h-auto"
           />
-          <p>info@example.com</p>
+          <p><Link href="mailto:info@paracoattechnology.ca">info@paracoattechnology.ca</Link></p>
         </div>
         <div className="flex items-center justify-start md:justify-center gap-x-4 py-3 md:py-4 px-3">
           <Image
@@ -46,8 +46,8 @@ const Footer = () => {
             className="w-[20px] md:w-[33px] h-auto"
           />
           <div className="flex items-center justify-start md:justify-center flex-wrap gap-x-4 gap-y-1">
-            <p className="w-[max-content]">Tel: (814) 254-4376</p>
-            <p>Fax: (814) 254-4057</p>
+            <p className="w-[max-content]"><Link href={"tel:8142544376"}>Tel: (814) 254-4376</Link></p>
+            <p><Link href={"fax:8142544057"}></Link></p>
           </div>
         </div>
       </div>
