@@ -49,13 +49,13 @@
 
 :root {
   --color-red: #dc1d28;
-  --color-dark-red: #91131B;
+  --color-dark-red: #91131b;
   --color-red-32: rgba(220, 29, 40, 3.2);
   --color-red-80: #dc1d28cf; /*rgba(220, 29, 40, 8) */
   --color-whitesmoke: #f9f9f9;
   --color-black: #000000;
   --color-black-content: #1e1e1e;
-  --color-white-content: #8E939F;
+  --color-white-content: #8e939f;
   --color-black-45: rgba(0, 0, 0, 0.45);
   --color-black-05: rgba(0, 0, 0, 0.05);
   --color-black-10: rgba(0, 0, 0, 0.1);
@@ -108,6 +108,11 @@
   input:focus {
     outline: none;
   }
+
+  * {
+    scroll-behavior: smooth;
+  }
+
   /* ul{
     padding: 0;
     margin: 0;
@@ -140,7 +145,7 @@
   .bg-clip-path-1 {
     clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
   }
-  
+
   @media screen(lg) {
     .bg-clip-path-1 {
       clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);

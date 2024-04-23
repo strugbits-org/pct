@@ -2,19 +2,19 @@ export const headerContactList = [
   {
     id: 0,
     value: "info@paracoattechnology.ca",
-    href: "#",
+    href: "mailto:info@paracoattechnology.ca",
     icon: "/images/icons/envelope.svg",
   },
   {
     id: 1,
     value: "(814) 254-4376",
-    href: "#",
-    icon: "/images/icons/envelope.svg",
+    href: "tel:(814) 254-4376",
+    icon: "/images/icons/phone.svg",
   },
   {
     id: 2,
     value: "17 John’s Street Johnstown, PA 15901",
-    href: "#",
+    href: "#contact",
     icon: "/images/icons/location.svg",
   },
 ];
@@ -23,20 +23,20 @@ export const headerSocialList = [
   {
     id: 0,
     value: "",
-    href: "#",
+    href: "https://www.facebook.com/ParaCoat/",
     icon: "/images/icons/facebook.svg",
   },
   {
     id: 1,
     value: "",
-    href: "#",
-    icon: "/images/icons/twitter.svg",
+    href: "https://www.linkedin.com/company/para-coat-technologies-inc-",
+    icon: "/images/icons/linkedin-fill.svg",
   },
   {
     id: 2,
     value: "",
-    href: "#",
-    icon: "/images/icons/insta.svg",
+    href: "https://twitter.com/paracoattech?lang=en",
+    icon: "/images/icons/twitter.svg",
   },
 ];
 
@@ -95,32 +95,20 @@ export const footerSocialList = [
   {
     id: 0,
     value: "",
-    href: "#",
+    href: "https://www.facebook.com/ParaCoat/",
     icon: "/images/icons/social/fb.svg",
   },
   {
     id: 1,
     value: "",
-    href: "#",
+    href: "https://www.linkedin.com/company/para-coat-technologies-inc-",
     icon: "/images/icons/social/linkedin.svg",
-  },
-  {
-    id: 2,
-    value: "",
-    href: "#",
-    icon: "/images/icons/social/skype.svg",
   },
   {
     id: 3,
     value: "",
-    href: "#",
+    href: "https://twitter.com/paracoattech?lang=en",
     icon: "/images/icons/social/twitter.svg",
-  },
-  {
-    id: 4,
-    value: "",
-    href: "#",
-    icon: "/images/icons/social/insta.svg",
   },
 ];
 
@@ -178,26 +166,87 @@ export const whyJoinTeams = [
 export const MeetTheTeam = [
   {
     id: 0,
-    name: "Dominic Antonini",
+    name: "Krista Rager",
     designation: "Co-Founder & CEO",
     image: "/images/DominicAntonini.jpg",
+    social:[
+      {
+        id: 0,
+        icon: "/images/icons/linkedin-outline.svg",
+        href: "https://www.linkedin.com/in/krista-rager-2794482a?trk=author_mini-profile_title"
+      }
+    ]
   },
   {
     id: 1,
     name: "Mike Rager",
     designation: "Co-Founder & COO",
     image: "/images/MikeRager.jpg",
+    social:[]
   },
   {
     id: 2,
     name: "Dave Pribish",
     designation: "General Manager",
     image: "/images/DavePribish.jpg",
+    social:[
+      {
+        id: 0,
+        icon: "/images/icons/linkedin-outline.svg",
+        href: "https://www.linkedin.com/in/david-pribish-a89619133?trk=public_profile_browsemap-profile"
+      }
+    ]
   },
   {
     id: 3,
     name: "Ben Haynes",
     designation: "Opperations Manager",
     image: "/images/BenHaynes.jpg",
+    social:[
+      {
+        id: 0,
+        icon: "/images/icons/linkedin-outline.svg",
+        href: "https://www.linkedin.com/in/bhaynes99"
+      }
+    ]
+  },
+];
+
+export const Blogs = [
+  {
+    id: 0,
+    title: "Conformal Coating for Extreme Environments: Challenges and Solutions",                   
+    detail: "Extreme environments pose unique challenges to electronic components. In this blog post, we delve into the world of conformal coating in extreme conditions, exploring the challenges faced, the significance of effective coating, and the role Parylene plays in providing robust solutions.",
+    date:"January 16, 2024",
+    readTime:"1 min read",
+    buttonLink: "#",
+    image: "/images/blogs/blog-1.png",
+  },
+  {
+    id: 1,
+    title: "Conformal Coating for Extreme Environments: Challenges and Solutions",                   
+    detail: "Extreme environments pose unique challenges to electronic components. In this blog post, we delve into the world of conformal coating in extreme conditions, exploring the challenges faced, the significance of effective coating, and the role Parylene plays in providing robust solutions.",
+    date:"January 16, 2024",
+    readTime:"1 min read",
+    buttonLink: "#",
+    image: "/images/blogs/blog-2.jpg",
+  },
+  {
+    id: 2,
+    title: "Conformal Coating for Extreme Environments: Challenges and Solutions",                   
+    detail: "Extreme environments pose unique challenges to electronic components. In this blog post, we delve into the world of conformal coating in extreme conditions, exploring the challenges faced, the significance of effective coating, and the role Parylene plays in providing robust solutions.",
+    date:"January 16, 2024",
+    readTime:"1 min read",
+    buttonLink: "#",
+    image: "/images/blogs/blog-3.jpg",
+  },
+  {
+    id: 3,
+    title: "Conformal Coating for Extreme Environments: Challenges and Solutions",                   
+    detail: "Extreme environments pose unique challenges to electronic components. In this blog post, we delve into the world of conformal coating in extreme conditions, exploring the challenges faced, the significance of effective coating, and the role Parylene plays in providing robust solutions.",
+    date:"January 16, 2024",
+    readTime:"1 min read",
+    buttonLink: "#",
+    image: "/images/blogs/blog-4.jpg",
   },
 ];

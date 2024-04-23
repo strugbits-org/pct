@@ -20,7 +20,8 @@ export default function Career() {
             "Join our team and embark on a rewarding career where innovation meets impact. We foster a dynamic and collaborative work environment, empowering individuals to unleash their potential and drive meaningful change. With"
           }
           buttonText={"Download Employee Application"}
-          buttonLink="#"
+          buttonLink="/docs/Employee Application.pdf"
+          buttonTarget = {"_blank"}
           guide={
             "Downloadable employee application – Please email pdf to dpribish@pctcc.com and jruiz@pctcc.com"
           }

@@ -6,9 +6,11 @@ import { DesignContext } from "@/context/design";
 import Image from "next/image";
 import { AnimateButton } from "../Buttons";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const AboutPCT = () => {
   const { theme:{button} } = useContext(DesignContext);
+  const route = useRouter()
 
   return (
     <section className="bg-white pb-12 bg-[url('/images/lines.svg')] bg-cover bg-center bg-no-repeat">
@@ -66,6 +68,7 @@ const AboutPCT = () => {
               </p>
               <AnimateButton
                 className={`${button.red} w-[180px] h-[52px] shadow-[0_1px_8px_0px_rgba(0,0,0,0.0)]  shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
+                onClick={() => route.push("/about")}
               >
                 Learn More
               </AnimateButton>

@@ -14,6 +14,7 @@ const HeroContentBox = ({
   buttonText,
   buttonLink,
   guide,
+  buttonTarget
 }) => {
   const {
     theme: { button },
@@ -32,7 +33,7 @@ const HeroContentBox = ({
       )}
 
       <p className="font-pop400 text-xs md:text-sm mb-10">{detail}</p>
-      <Link href={buttonLink ? buttonLink : "#"}>
+      <Link href={buttonLink ? buttonLink : "#"} target={buttonTarget ? buttonTarget : "_self"}>
         <AnimateButton
           className={`${button.red} before:bg-secondary hover:bg-secondary hover:text-primary mb-1`}
         >

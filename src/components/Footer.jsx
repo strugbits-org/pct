@@ -10,7 +10,7 @@ import { MobServicesSubMenu } from "./ServicesSubMenu";
 
 const Footer = () => {
   const {
-    data: { ourServices, footerSocialList },
+    data: { footerSocialList },
     theme: { button },
   } = useContext(DesignContext);
   return (
@@ -84,14 +84,8 @@ const Footer = () => {
               </div>
               <div className="flex flex-col gap-y-4">
                 <h2 className="text-[22px] mb-1 text-white">Services</h2>
-                <MobServicesSubMenu addClass="font-rob500 text-white-content"/>
-                {/* {ourServices.map((item) => {
-                  return (
-                    <Link key={item.id} href="#">
-                      {item.title}
-                    </Link>
-                  );
-                })} */}
+                <MobServicesSubMenu addClass="font-rob500 text-white-content" />
+                
               </div>
             </div>
           </div>
@@ -141,8 +135,11 @@ const Footer = () => {
         <div className="bg-gret28 h-[1px]"></div>
         {/* Copyright */}
         <div className="flex flex-col md:flex-row justify-between items-start px-0 py-4 md:p6 text-white-content gap-x-4">
-          <p>Privacy Policy | Terms of Service</p>
-          <p className="text-right">Copyright © 2023. All rights reserved.</p>
+          <p>
+            <Link href={"#"}>Privacy Policy</Link>
+            {" | "} <Link href={"/docs/Para-Coat Technologies Terms and Conditions_Rev F.docx.pdf"} target="_blank" download>Terms of Service</Link>
+          </p>
+          <p className="text-right">Copyright © 2024. All rights reserved.</p>
         </div>
       </FullWidthContent>
     </div>

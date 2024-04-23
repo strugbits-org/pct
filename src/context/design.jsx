@@ -9,6 +9,7 @@ import {
   testinmonials,
   whyJoinTeams,
   MeetTheTeam,
+  Blogs
 } from "@/lib/data";
 import { ourServices } from "@/lib/service-data";
 import { industriesServed } from "@/lib/industries-served-data";
@@ -35,6 +36,7 @@ export const DesignProvider = ({ children }) => {
     testinmonials,
     whyJoinTeams,
     MeetTheTeam,
+    Blogs
   });
 
   return (

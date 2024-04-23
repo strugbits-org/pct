@@ -6,6 +6,7 @@ import { DesignContext } from "@/context/design";
 import Image from "next/image";
 import { AnimateButton } from "../Buttons";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const OurAchievements = () => {
   const {
@@ -72,9 +73,9 @@ const OurAchievements = () => {
               />
               <div className="">
                 <h1 className="font-playFair700 text-[20px] lg:text-4xl mb-3">
-                  CALL NOW: (814) 254 - 4376
+                  <Link href="tel:8142544376">CALL NOW: (814) 254 - 4376</Link>
                 </h1>
-                <p className="text-sm lg:text-[16px]">Or <a href="mailto:pct@test.com" className="underline">Email Us.</a></p>
+                <p className="text-sm lg:text-[16px]">Or <a href="mailto:info@paracoattechnology.ca" className="underline">Email Us.</a></p>
               </div>
             </div>
           </FullWidthContent>

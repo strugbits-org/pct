@@ -8,6 +8,7 @@ import { useContext, useEffect, useState } from "react";
 import { DesignContext } from "@/context/design";
 import { TextWithIcon } from ".";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 
 import {
@@ -22,6 +23,7 @@ import { IndustriesSubMenu, MobIndustriesSubMenu } from "./IndustiresSubMenu";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
+  const route = useRouter()
   const {theme:{button}} = useContext(DesignContext)
   const pathName = usePathname();
   const [change, setChanges] = useState(0);
@@ -54,7 +56,7 @@ const Header = () => {
           <div className="flex gap-x-6 items-center">
             {headerContactList.map((item) => {
               return (
-                <Link href="#" key={item.id}>
+                <Link href={item.href} key={item.id}>
                   <TextWithIcon leftIcon={item.icon} text={item.value} />
                 </Link>
               );
@@ -63,7 +65,7 @@ const Header = () => {
           <div className="flex gap-x-6 items-center">
             {headerSocialList.map((item) => {
               return (
-                <Link href="#" key={item.id}>
+                <Link href={item.href} key={item.id} target="_blank">
                   <TextWithIcon
                     leftIcon={item.icon}
                     text={item.value}
@@ -114,7 +116,7 @@ const Header = () => {
             </button>
           </div>
 
-          <div className="hidden lg:flex lg:gap-x-8">
+          <div className="hidden lg:flex lg:items-center lg:gap-x-8">
             <Link href="/" className={linkClassValues}>
               Home
             </Link>
@@ -155,7 +157,7 @@ const Header = () => {
           </div>
 
           <div className="hidden lg:flex flex-1 justify-end">
-            <AnimateButton className={`${button.red} before:bg-secondary hover:bg-secondary hover:text-primary`}>
+            <AnimateButton onClick={() => route.push("#contact", { scroll: true })} className={`${button.red} before:bg-secondary hover:bg-secondary hover:text-primary`}>
               Contact Us
             </AnimateButton>
           </div>

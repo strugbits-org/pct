@@ -4,7 +4,7 @@ import Image from "next/image";
 import { GetInTouchForm } from "../forms";
 const ContactUs = () => {
   return (
-    <section className="bg-secondary py-12 lg:py-20">
+    <section id="contact" className="bg-secondary py-12 lg:py-20">
       <FullWidthContent className="flex flex-col-reverse gap-10 md:gap-16 md:flex-row">
         <div className="flex-1 bg-gret">
           <Image
@@ -14,6 +14,14 @@ const ContactUs = () => {
             width={698}
             height={600}
           />
+          {/* <iframe
+            width="100%"
+            height="100%"
+            frameborder="0"
+            style={{border: "0"}}
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/MAP_MODE?key=&callback=initMap"
+          ></iframe> */}
         </div>
         <div className="flex-1 mb-auto mt-auto">
           <GetInTouchForm

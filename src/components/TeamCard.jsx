@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function TeamCard({image, name, position}) {
+export default function TeamCard({ image, name, position, social }) {
   return (
     <div className="">
       <Image
@@ -18,39 +18,22 @@ export default function TeamCard({image, name, position}) {
           <p className="font-rob400">{position}</p>
         </div>
         <ul className="flex gap-x-1">
-          <li>
-            <Link href={"#"}>
-              <Image
-                src={"/images/icons/linkedin-outline.svg"}
-                alt="Linkedin"
-                className="w-[20px] h-[20px]"
-                width={20}
-                height={20}
-                />
-            </Link>
-          </li>
-          <li>
-            <Link href={"#"}>
-              <Image
-                src={"/images/icons/facebook-outline.svg"}
-                alt="Facebook"
-                className="w-[20px] h-[20px]"
-                width={20}
-                height={20}
-                />
-            </Link>
-          </li>
-          <li>
-            <Link href={"#"}>
-              <Image
-                src={"/images/icons/twitter-outline.svg"}
-                alt="Twitter"
-                className="w-[20px] h-[20px]"
-                width={20}
-                height={20}
-              />
-            </Link>
-          </li>
+          {social.length ?
+            social.map((item) => {
+              return (
+                <li key={item.id}>
+                  <Link href={item.href} target="_blank">
+                    <Image
+                      src={item.icon}
+                      alt="Social"
+                      className="w-[20px] h-[20px]"
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
+                </li>
+              );
+            }) : ""}
         </ul>
       </div>
     </div>

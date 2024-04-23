@@ -55,6 +55,7 @@ export default function AboutUs() {
                 image={item.image}
                 name={item.name}
                 position={item.designation}
+                social={item.social}
               />
             );
           })}

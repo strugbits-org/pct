@@ -9,11 +9,13 @@ import { AllBlogs } from "./AllBlogs";
 import { AnimateButton } from "@/components/Buttons";
 import { useContext } from "react";
 import { DesignContext } from "@/context/design";
+import { useRouter } from "next/navigation";
 
 export default function Blogs() {
   const {
     theme: { button },
   } = useContext(DesignContext);
+  const route = useRouter();
   return (
     <React.Fragment>
       <HeroSection
@@ -51,6 +53,7 @@ export default function Blogs() {
               </p>
               <AnimateButton
                 className={`${button.red} before:bg-secondary hover:bg-secondary hover:text-primary`}
+                onClick={() => route.push("#contact")}
               >
                 Schedule a Call
               </AnimateButton>
