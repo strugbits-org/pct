@@ -47,7 +47,7 @@ const Footer = () => {
           />
           <div className="flex items-center justify-start md:justify-center flex-wrap gap-x-4 gap-y-1">
             <p className="w-[max-content]"><Link href={"tel:8142544376"}>Tel: (814) 254-4376</Link></p>
-            <p><Link href={"fax:8142544057"}></Link></p>
+            <p><Link href={"fax:8142544057"}>Fax: (814) 254-4057</Link></p>
           </div>
         </div>
       </div>
