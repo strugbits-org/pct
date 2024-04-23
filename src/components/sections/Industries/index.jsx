@@ -50,6 +50,7 @@ export default function Industry({ slug }) {
         detail={reliability.detail}
         buttonText={reliability.buttonText}
         image={reliability.image}
+        slug={slug}
       />
       {reliability2?.title && (
         <AboutEachIndustry2

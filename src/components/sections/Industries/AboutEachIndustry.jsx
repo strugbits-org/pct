@@ -6,6 +6,7 @@ import { DesignContext } from "@/context/design";
 import Image from "next/image";
 import { AnimateButton } from "../../Buttons";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const AboutEachIndustry = ({
   title,
@@ -15,6 +16,7 @@ const AboutEachIndustry = ({
   detail2,
   buttonText,
   image,
+  slug,
 }) => {
   const {
     theme: { button },
@@ -36,11 +38,47 @@ const AboutEachIndustry = ({
               {subTitle}
             </h2>
             <h1 className="mb-5 text-[28px] md:text-5xl">{title}</h1>
-            <p className="mb-7 md:mb-8 text-[13px] md:text-[15px] whitespace-pre-line">{detail}</p>
+            <p className="mb-7 md:mb-8 text-[13px] md:text-[15px] whitespace-pre-line">
+              {detail}
+            </p>
             <h2 className="text-[28px] md:text-3xl">{subTitle2}</h2>
-            <p className="mb-7 md:mb-8 text-[13px] md:text-[15px]">{detail2}</p>
+            <p className="mb-2 md:mb-8 text-[13px] md:text-[15px]">{detail2}</p>
+            {slug === "consumer-electronics" ? (
+              <div className="flex gap-x-2 flex-wrap mb-5">
+                <Link
+                  className="underline text-red text-sm"
+                  href="https://www.youtube.com/watch?v=7jdAVf5V9qs&t=7s"
+                  target="_blank"
+                >
+                  Proof 1
+                </Link>
+                <Link
+                  className="underline text-red text-sm"
+                  href="https://www.youtube.com/watch?v=pQP29l0arsg"
+                  target="_blank"
+                >
+                  Proof 2
+                </Link>
+                <Link
+                  className="underline text-red text-sm"
+                  href="https://www.youtube.com/watch?v=rvDmmnEM8qE"
+                  target="_blank"
+                >
+                  Proof 3
+                </Link>
+                <Link
+                  className="underline text-red text-sm"
+                  href="https://www.youtube.com/watch?v=atBgpwXjzJw"
+                  target="_blank"
+                >
+                  Proof 4
+                </Link>
+              </div>
+            ) : (
+              ""
+            )}
             <AnimateButton
-              className={`${button.red} shadow-[0_1px_8px_0px_rgba(0,0,0,0.0)] shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
+              className={`${button.red} mt-4 shadow-[0_1px_8px_0px_rgba(0,0,0,0.0)] shadow-red32 hover:shadow-none before:bg-primary hover:bg-primary`}
             >
               {buttonText}
             </AnimateButton>

@@ -29,7 +29,7 @@ export default function Blogs() {
             "Explore our diverse range of insightful blogs covering industry trends, tips, and expert advice. Stay informed and inspired with our engaging content."
           }
           buttonText={"Get In Touch"}
-          buttonLink="#"
+          buttonLink=""
         />
         <GuideForm
           title={"Download Our Guide"}

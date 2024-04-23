@@ -19,7 +19,7 @@ export default function Dimer() {
           title={"Dimer & Conformal Machine Sales"}
           detail={"Coating Options For All Your Protective Needs."}
           buttonText={"Buy Now"}
-          buttonLink="#"
+          buttonLink=""
           guide={"Contact us directly to complete your purchase."}
         />
         <div className="lg:col-span-2 text-secondary mx-auto max-w-[496px] md:max-w-none">
