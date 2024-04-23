@@ -36,7 +36,7 @@ const AboutEachIndustry = ({
               {subTitle}
             </h2>
             <h1 className="mb-5 text-[28px] md:text-5xl">{title}</h1>
-            <p className="mb-7 md:mb-8 text-[13px] md:text-[15px]">{detail}</p>
+            <p className="mb-7 md:mb-8 text-[13px] md:text-[15px] whitespace-pre-line">{detail}</p>
             <h2 className="text-[28px] md:text-3xl">{subTitle2}</h2>
             <p className="mb-7 md:mb-8 text-[13px] md:text-[15px]">{detail2}</p>
             <AnimateButton

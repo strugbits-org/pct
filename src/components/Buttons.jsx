@@ -33,14 +33,15 @@ export const SlideColorButton = ({ children, className, ...props }) => {
   );
 };
 
-export const Button = ({ children, className, selected }) => {
+export const Button = ({ children, className, selected, ...props }) => {
   return (
     <button
       className={cn(
         className,
         "text-[16px] transition-all duration-500",
-        selected
+        selected && selected
       )}
+      {...props}
     >
       {children}
     </button>

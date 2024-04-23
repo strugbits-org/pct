@@ -25,16 +25,17 @@ export default function Industry({ slug }) {
     if (data.length === 0) {
       notFound();
     }
-    return data;
+    return data[0];
   }, [industriesServed, slug]);
+
+  const {
+    page: { hero, reliability, reliability2, benefits, examples },
+  } = industry;
 
   return (
     <div>
-      <HeroSection bgImage="/images/industries/bg-automotive.jpg">
-        <HeroContentBox
-          title={"Automotive"}
-          detail={"Coating Options For All Your Protective Needs."}
-        />
+      <HeroSection videoSrc={hero.bgImage}>
+        <HeroContentBox title={hero.title} detail={hero.detail} />
 
         <GuideForm
           title={"Download Our Guide"}
@@ -44,26 +45,36 @@ export default function Industry({ slug }) {
         />
       </HeroSection>
       <AboutEachIndustry
-        title={"Parylene Conformal Coating for Automotive"}
-        subTitle={"RELIABILITY THAT LASTS"}
-        detail={`Due to the advances in automotive technology, modern vehicles are relying more and more on sophisticated computers and electronic systems to function properly. Providing protective conformal coating for sensitive electronic assemblies and complex components in automobiles have become increasingly necessary. The automotive industry routinely turns to Parylene coatings to provide enhanced protection for all kinds of electronic circuitry. \n
-          Parylene coating forms an ultra-thin polymer layer on almost any surface, penetrating every crevice and providing a uniform coat that is unequaled by any other coating material. Parylene creates a protective, nonconductive dielectric layer that’s added to a circuit board or electronic device. Parylene conformal coatings provide a superior pinhole-free, uniform barrier to protect against dust, moisture, corrosion, chemicals, solvents, fumes, extreme temperatures and more. \n
-          Vehicles will continue to trend in a more computerized direction as the years go by. Therefore, automotive companies need high-tech electronics to perform for decades inside their vehicles. Parylene is well-suited for applications that may be used in harsh automotive environments.`}
-        buttonText={"Contact Us Now"}
-        image={"/images/industries/about-automotive.png"}
+        title={reliability.title}
+        subTitle={reliability.subTitle}
+        detail={reliability.detail}
+        buttonText={reliability.buttonText}
+        image={reliability.image}
       />
-      <AboutEachIndustry2
-        title={"Parylene Conformal Coating for Automotive"}
-        subTitle={"RELIABILITY THAT LASTS"}
-        detail={`Due to the advances in automotive technology, modern vehicles are relying more and more on sophisticated computers and electronic systems to function properly. Providing protective conformal coating for sensitive electronic assemblies and complex components in automobiles have become increasingly necessary. The automotive industry routinely turns to Parylene coatings to provide enhanced protection for all kinds of electronic circuitry. \n
-          Parylene coating forms an ultra-thin polymer layer on almost any surface, penetrating every crevice and providing a uniform coat that is unequaled by any other coating material. Parylene creates a protective, nonconductive dielectric layer that’s added to a circuit board or electronic device. Parylene conformal coatings provide a superior pinhole-free, uniform barrier to protect against dust, moisture, corrosion, chemicals, solvents, fumes, extreme temperatures and more. \n
-          Vehicles will continue to trend in a more computerized direction as the years go by. Therefore, automotive companies need high-tech electronics to perform for decades inside their vehicles. Parylene is well-suited for applications that may be used in harsh automotive environments.`}
-        buttonText={"Contact Us Now"}
-        image={"/images/industries/spray.jpg"}
+      {reliability2?.title && (
+        <AboutEachIndustry2
+          title={reliability2.title}
+          detail={reliability2.detail}
+          buttonText={reliability2.buttonText}
+          image={reliability2.image}
+          slug={slug}
+        />
+      )}
+      <IndustryBenefits
+        benefits={benefits.benefits}
+        title={benefits.title}
+        subTitle={benefits.subTitle}
+        detail={benefits.detail}
       />
-      <IndustryBenefits />
 
-      <IndustryExamples />
+      {examples?.examples && (
+        <IndustryExamples
+          examples={examples.examples}
+          title={examples.title}
+          subTitle={examples.subTitle}
+          detail={examples.detail}
+        />      
+      )}
     </div>
   );
 }
