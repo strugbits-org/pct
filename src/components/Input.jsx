@@ -1,12 +1,23 @@
 import { cn } from "@/lib/utils";
 
-const Input = ({ type, placeholder, id, className, ...props }) => {
+const Input = ({
+  type,
+  placeholder,
+  id,
+  className,
+  boxClassName,
+  ...props
+}) => {
   return (
-    <div className="w-full">
+    <div className={cn("w-full", boxClassName && boxClassName)}>
       <div className="flex flex-col space-y-1 text-left">
         {props.label && (
-          <label className="text-secondary" forHtml={props.id}>
+          <label
+            className={props.labelColor ? props.labelColor : "text-secondary"}
+            forHtml={props.id}
+          >
             {props.label}
+            {props.required && <span className="text-red">{" *"}</span>}
           </label>
         )}
         <input
@@ -20,7 +31,14 @@ const Input = ({ type, placeholder, id, className, ...props }) => {
           {...props}
         />
         {props.errorMessage && (
-          <small className="text-secondary w-full">{props.errorMessage}</small>
+          <small
+            className={cn(
+              "text-secondary w-full",
+              props.errorColor && props.errorColor
+            )}
+          >
+            {props.errorMessage}
+          </small>
         )}
       </div>
     </div>

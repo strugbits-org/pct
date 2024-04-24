@@ -6,6 +6,8 @@ import AboutPCT from "@/components/sections/AboutPCT";
 import OurAchievements from "@/components/sections/OurAchievements";
 import OurCertifications from "@/components/sections/OurCertifications";
 import ContactUs from "@/components/sections/ContactUs";
+import HomeModal from "@/components/Modals/WelcomeModal/HomeModal";
+import { WelcomeFormModal } from "@/components/WelcomeFormModal";
 
 export const metadata = {
   title: "PCT Conformal Coating",
@@ -41,6 +43,7 @@ export default function Home() {
       <OurAchievements />
       <OurCertifications />
       <ContactUs />
+      <WelcomeFormModal />
     </main>
   );
 }

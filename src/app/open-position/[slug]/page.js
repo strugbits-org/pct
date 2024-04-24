@@ -1,12 +1,19 @@
 "use client";
 import { AnimateButton, Button } from "@/components/Buttons";
 import { FullWidthContent } from "@/components/Sections";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { DesignContext } from "@/context/design";
+import Modal from "@/components/Modals/ApplyModals/ApplyModal";
+import ApplyModalData from "@/components/Modals/ApplyModals/ApplyModalData";
 export default function CareerDetails() {
   const {
     theme: { button },
   } = useContext(DesignContext);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const handleOnClose = () => {
+    setIsOpen(false);
+  };
   return (
     <section className="pt-20 ">
       <FullWidthContent>
@@ -90,11 +97,16 @@ export default function CareerDetails() {
           </div>
           <AnimateButton
             className={`${button.red} w-full before:bg-primary hover:bg-primary my-6`}
+            onClick = {() => setIsOpen(true)}
           >
             Apply Now
           </AnimateButton>
         </div>
       </FullWidthContent>
+
+      <Modal isOpen={isOpen} onClose={handleOnClose}>
+        <ApplyModalData title={"Conformal Coating Technician"}/>
+      </Modal>
     </section>
   );
 }
