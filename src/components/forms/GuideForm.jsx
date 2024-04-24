@@ -4,50 +4,62 @@ import { cn } from "@/lib/utils";
 import { useContext, useState } from "react";
 import { DesignContext } from "@/context/design";
 import { downloadGuideSchema } from "@/lib/forms/downloadGuideSchema";
+import { Form } from "./Form";
 
 const GuideForm = ({ title, detail, className }) => {
   const {
     theme: { button },
+    form,
   } = useContext(DesignContext);
-  const [message, setMessage] = useState("");
-  const [isDisabled, setIsDisabled] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = {
-      firstName: e.target.firstName.value,
-      lastName: e.target.lastName.value,
-      email: e.target.email.value,
-      phoneNumber: e.target.phoneNumber.value.trim(),
-    };
+  // const [isDisabled, setIsDisabled] = useState(false);
+  // const [message, setMessage] = useState("");
 
-    try {
-      setIsDisabled(true);
-      setMessage("");
-      downloadGuideSchema.parse(formData);
-      const response = await fetch("/api/downloadGuide", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
-      if (data.message) {
-        setMessage(data.message);
-        setIsDisabled(false);
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   const formData = {
+  //     firstName: e.target.firstName.value,
+  //     lastName: e.target.lastName.value,
+  //     email: e.target.email.value,
+  //     phoneNumber: e.target.phoneNumber.value.trim(),
+  //   };
 
-        e.target.reset();
-        setTimeout(() => {
-          setMessage("");
-        }, 3000);
-      }
-    } catch (e) {
-      const error = JSON.parse(e);
-      setMessage(error[0].message);
-      setIsDisabled(false);
-    }
-  };
+  //   try {
+  //     setIsDisabled(true);
+  //     setMessage("");
+  //     downloadGuideSchema.parse(formData);
+  //     const response = await fetch("/api/downloadGuide", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
+  //     console.log(response.body);
+  //     const data = await response.text();
+  //     if (data.message) {
+  //       setMessage(data.message);
+  //       setIsDisabled(false);
+
+  //       e.target.reset();
+  //       setTimeout(() => {
+  //         setMessage("");
+  //       }, 3000);
+  //     }
+  //   } catch (e) {
+  //     console.log(e);
+  //     const error = JSON.parse(e);
+  //     setMessage(error[0].message);
+  //     setIsDisabled(false);
+  //   }
+  // };
+
+  const getFormValues = (form) => ({
+    firstName: form.firstName.value,
+    lastName: form.lastName.value,
+    email: form.email.value,
+    phoneNumber: form.phoneNumber.value.trim(),
+  });
 
   return (
     <div
@@ -58,7 +70,13 @@ const GuideForm = ({ title, detail, className }) => {
     >
       <h1 className="text-2xl lg:text-4xl mb-1">{title}</h1>
       <p className="font-pop400 text-xs lg:text-sm mb-3">{detail}</p>
-      <form onSubmit={handleSubmit}>
+      <Form
+        formSchema={downloadGuideSchema}
+        getFormValues={getFormValues}
+        url="/api/downloadGuide"
+        title={title}
+      >
+      {/* <form onSubmit={handleSubmit}> */}
         <div className="mb-4">
           <input
             type="text"
@@ -96,19 +114,18 @@ const GuideForm = ({ title, detail, className }) => {
           />
         </div>
         <div className="mb-3">
-          {message && (
+          {form?.message && (
             <small className="text-secondary w-full text-center">
-              {message}
+              {form.message}
             </small>
           )}
         </div>
-
         <AnimateButton
-          disabled={isDisabled}
+          disabled={form.disabled}
           className={`${button.icon} ${button.red} w-full before:bg-secondary hover:bg-secondary hover:text-primary`}
         >
           Download Guide
-          {!isDisabled && (
+          {form?.disabled === false && (
             <svg
               width="19"
               height="18"
@@ -138,7 +155,11 @@ const GuideForm = ({ title, detail, className }) => {
             </svg>
           )}
         </AnimateButton>
-      </form>
+        {/* </form> */}
+      </Form>
+      {/* <form onSubmit={handleSubmit}>
+        
+      </form> */}
     </div>
   );
 };

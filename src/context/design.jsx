@@ -9,7 +9,7 @@ import {
   testinmonials,
   whyJoinTeams,
   MeetTheTeam,
-  Blogs
+  Blogs,
 } from "@/lib/data";
 import { ourServices } from "@/lib/service-data";
 import { industriesServed } from "@/lib/industries-served-data";
@@ -36,11 +36,16 @@ export const DesignProvider = ({ children }) => {
     testinmonials,
     whyJoinTeams,
     MeetTheTeam,
-    Blogs
+    Blogs,
   });
 
+  const [form, setForm] = useState({});
+  const updateForm = (form) => {
+    setForm(form);
+  };
+
   return (
-    <DesignContext.Provider value={{ theme, data }}>
+    <DesignContext.Provider value={{ theme, data, form, updateForm }}>
       {children}
     </DesignContext.Provider>
   );
