@@ -136,7 +136,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="flex flex-col md:flex-row justify-between items-start px-0 py-4 md:p6 text-white-content gap-x-4">
           <p>
-            <Link href={"#"}>Privacy Policy</Link>
+            <Link href={"/privacy-policy"}>Privacy Policy</Link>
             {" | "} <Link href={"/docs/Para-Coat Technologies Terms and Conditions_Rev F.docx.pdf"} target="_blank" download>Terms of Service</Link>
           </p>
           <p className="text-right">Copyright © 2024. All rights reserved.</p>

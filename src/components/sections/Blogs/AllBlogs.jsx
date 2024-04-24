@@ -3,12 +3,15 @@ import { Button } from "@/components/Buttons";
 import Image from "next/image";
 import { useContext } from "react";
 import { DesignContext } from "@/context/design";
+import { useRouter } from "next/navigation";
 
 export function AllBlogs() {
   const {
     theme: { button },
     data: { Blogs },
   } = useContext(DesignContext);
+  const route = useRouter();
+
   return (
     <div className="flex-1">
       <h2 className="inline h-line text-xs md:text-sm mb-1 before:bg-red before:w-[30px] before:h-[2px] pl-[36px] text-red">
@@ -38,6 +41,7 @@ export function AllBlogs() {
                 </p>
                 <Button
                   className={`${button.red} py-3 px-5 text-[10px] rounded-md mb-2`}
+                  onClick={() => route.push(`/read-blog/${item.title}`)}
                 >
                   READ MORE
                 </Button>
