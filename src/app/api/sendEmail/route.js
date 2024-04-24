@@ -52,7 +52,7 @@
 
 // // const sgMail = require("@sendgrid/mail");
 // // sgMail.setApiKey(
-// //   "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"
+// //   ""
 // // );
 // // const msg = {
 // //   to: "test@example.com",
