@@ -40,7 +40,6 @@ export const Form = ({ children, formSchema, getFormValues, url }) => {
         }, 3000);
       }
     } catch (e) {
-      console.log(e);
       updateForm({
         message: "Something went wrong",
         disabled: false,

@@ -8,7 +8,6 @@ export async function POST(req) {
 
   try {
     // const validated = downloadGuideSchema.parse(body);
-    console.log(body);
 
 
     return NextResponse.json({ message: "Form Submitted Successfully" });
