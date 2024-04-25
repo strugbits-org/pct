@@ -1,6 +1,9 @@
 import { FullWidthContent } from "@/components/Sections";
 import Link from "next/link";
-
+export const metadata = {
+  title: "Privacy Policy",
+  // description: "About PCT Conformal Coating",
+}
 export default function PrivacyPolicy() {
   const contentTable = [
     `WHAT INFORMATION DO WE COLLECT?`,
