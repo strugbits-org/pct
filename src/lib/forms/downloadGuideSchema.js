@@ -24,3 +24,8 @@ export const downloadHorizontalGuideSchema = z.object({
     .max(15, "Phone number is not valid")
     .regex(phoneValidation, "Phone number is not valid"),
 });
+
+export const newsLetterGuide = z.object({
+  email: z.string().email("Email is not valid"),
+
+});

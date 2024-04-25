@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useMemo } from "react";
 import HeroSection from "../HeroSection";
@@ -13,11 +12,14 @@ import { notFound, useRouter } from "next/navigation";
 import Input from "@/components/Input";
 import { BlogSection } from "./blogSection";
 import RecentBlogs from "./RecentBlogs";
+import { newsLetterGuide } from "@/lib/forms/downloadGuideSchema";
+import { Form } from "@/components/forms/Form";
 
-export default function ReadBlog({slug}) {
+export default function ReadBlog({ slug }) {
   const {
     theme: { button },
-    data: {BlogsContent}
+    data: { BlogsContent },
+    form,
   } = useContext(DesignContext);
   const route = useRouter();
 
@@ -25,19 +27,23 @@ export default function ReadBlog({slug}) {
     const getBlog = () => BlogsContent.filter((item) => item.slug === slug);
     const data = getBlog();
     if (data.length === 0) {
-      notFound()
+      notFound();
     }
     return data[0];
   }, [BlogsContent, slug]);
-  
+
   const recentBlogs = useMemo(() => {
     const getBlog = () => BlogsContent.filter((item) => item.slug !== slug);
     const data = getBlog();
     if (data.length === 0) {
-      notFound()
+      notFound();
     }
     return data;
   }, [BlogsContent, slug]);
+
+  const getFormValues = (form) => ({
+    email: form.email.value,
+  });
   return (
     <React.Fragment>
       <HeroSection
@@ -65,7 +71,7 @@ export default function ReadBlog({slug}) {
 
       <section className="py-20 bg-secondary">
         <FullWidthContent className="flex flex-col items-center md:items-start lg:flex-row gap-x-10">
-          <BlogSection blog={eachBlog}/>
+          <BlogSection blog={eachBlog} />
           <div className="pt-12 px-3 w-full md:w-[354px] mx-auto">
             <div className="text-center text-secondary bg-black rounded-2xl px-4 py-9 max-w-[424px] lg:max-w-[324px] mx-auto shadow-[0px_4px_29px_0px] shadow-gret28">
               <h2 className="font-rob700 md:text-3xl mb-3 mx-2">
@@ -75,24 +81,39 @@ export default function ReadBlog({slug}) {
                 Join our community and receive exclusive updates, latest news,
                 and exciting content straight to your inbox
               </p>
-              <div className="rounded-[20px] gap-y-2 bg-transparent md:bg-secondary w-full flex flex-wrap md:flex-nowrap items-center justify-center mb-4">
-                <Input
-                  className="w-auto ring-0 rounded-md md:rounded-[20px] text-secondary md:text-primary h-[36px] md:h-[42px] border-none bg-secondary md:bg-transparent  placeholder:text-gret"
-                  type="email"
-                  id={"email"}
-                  name={"email"}
-                  placeholder="demomail@gmail.com"
-                />
-                <Button
-                  className={`w-full md:w-[118px] h-[36px] md:h-[42px] text-xs bg-red ${button.icon} rounded-md md:rounded-[20px]`}
-                >
-                  Subscribe
-                </Button>
-              </div>
+              <Form
+                formSchema={newsLetterGuide}
+                getFormValues={getFormValues}
+                url="/api/downloadGuide"
+                subject={"Stay Connected with Us"}
+                subjectForAdmin="New Subscriber"
+              >
+                <div className="rounded-[20px] gap-y-2 bg-transparent md:bg-secondary w-full flex flex-wrap md:flex-nowrap items-center justify-center mb-4">
+                  <Input
+                    className="w-auto ring-0 rounded-md md:rounded-[20px] text-secondary md:text-primary h-[36px] md:h-[42px] border-none bg-secondary md:bg-transparent  placeholder:text-gret"
+                    type="email"
+                    id={"email"}
+                    name={"email"}
+                    required
+                    placeholder="demomail@gmail.com"
+                  />
+                  <Button
+                    disabled={form.disabled}
+                    className={`w-full md:w-[118px] h-[36px] md:h-[42px] text-xs bg-red ${button.icon} rounded-md md:rounded-[20px]`}
+                  >
+                    Subscribe
+                  </Button>
+                </div>
+                {form?.message && (
+                  <p className="text-secondary w-full text-center mt-2">
+                    {form.message}
+                  </p>
+                )}
+              </Form>
             </div>
           </div>
         </FullWidthContent>
-        <RecentBlogs recentBlogs={recentBlogs}/>
+        <RecentBlogs recentBlogs={recentBlogs} />
       </section>
 
       <ContactUs />
