@@ -22,7 +22,7 @@ const ContactUs = () => {
             loading="lazy"
             allowFullscreen
             referrerPolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_API_KEY}&q=senior+assisted+care+near+me&zoom=9`}
+            src={`https://www.google.com/maps/embed/v1/place?key=${"AIzaSyBI9tlb2yGJ0YTPBvzFzs9TONYJSBmvcJM"}&q=senior+assisted+care+near+me&zoom=9`}
           ></iframe>
         </div>
         <div className="flex-1 mb-auto mt-auto">
