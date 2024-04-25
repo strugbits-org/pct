@@ -16,7 +16,7 @@ export const downloadGuideSchema = z.object({
 });
 
 export const downloadHorizontalGuideSchema = z.object({
-  name: z.string().min(1, "First name is required"),
+  name: z.string().min(1, "Name is required"),
   email: z.string().email("Email is not valid"),
   phoneNumber: z
     .string()
@@ -27,5 +27,13 @@ export const downloadHorizontalGuideSchema = z.object({
 
 export const newsLetterGuide = z.object({
   email: z.string().email("Email is not valid"),
+  
+});
 
+export const contactSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Email is not valid"),
+  subject: z.string().min(1, "Subhect is required"),
+  message: z.string().min(1, "Message is required"),
+  
 });

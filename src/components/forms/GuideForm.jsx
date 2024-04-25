@@ -76,7 +76,6 @@ const GuideForm = ({ title, detail, className }) => {
         url="/api/downloadGuide"
         subject={title}
         subjectForAdmin="Download Guide"
-
       >
       {/* <form onSubmit={handleSubmit}> */}
         <div className="mb-4">
