@@ -18,7 +18,7 @@ const ContactUs = () => {
           <iframe
             width="600"
             height="450"
-            style={{border: "0px"}}
+            style={{border: "0px", width: "100%", height: "100%", minHeight: "300px"}}
             loading="lazy"
             allowFullscreen
             referrerPolicy="no-referrer-when-downgrade"
