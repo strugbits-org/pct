@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 const HeroSection = ({ children, videoSrc, bgImage, className, col }) => {
   const style = bgImage
     ? {
+      backgroundColor: "var(--color-black)",
         background: `url(${bgImage})`,
         backgroundRepeat: "no-repeat",
         backgrondPosition: "center",
