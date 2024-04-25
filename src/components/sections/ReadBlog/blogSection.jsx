@@ -2,99 +2,119 @@ import { Button } from "@/components/Buttons";
 import Image from "next/image";
 import Link from "next/link";
 
-export const BlogSection = () => {
+export const BlogSection = ({ blog }) => {
+  const { title, author, date, readTime, tableOfContent } = blog;
   return (
     <div className="w-full">
-      <h1 className="font-rob700 text-4xl mb-2">
-        Conformal Coating for Extreme Environments: Challenges and Solutions
-      </h1>
+      <h1 className="font-rob700 text-4xl mb-2">{title}</h1>
       <p className="font-pop500 text-[15px] mb-7">
         {"By "}
-        <span className="text-red">Mjubas</span> | mar 01, 2023 | 01 min read
+        <span className="text-red">{author}</span> | {date} | {readTime}
       </p>
       <div className="mb-8">
         <h2 className="text-2xl font-rob500 mb-3">Table of Content</h2>
         <ul className="list-disc space-y-1 ml-5">
-          <li>
-            <Link href={"#Introduction"}>Introduction</Link>
-          </li>
+          {tableOfContent.length
+            ? tableOfContent.map((content) => {
+                return (
+                  <li key={content.id}>
+                    <Link href={`#${content.title}`}>{content.title}</Link>
+                  </li>
+                );
+              })
+            : ""}
         </ul>
       </div>
       <div>
-        <div className="mb-6">
-          <Image
-            src={"/images/white-concrete-building-1838640.jpg"}
-            alt=""
-            className="w-auto max-h-[375px] object-cover mb-8 "
-            width={782}
-            height={375}
-          />
-          <h2 className="text-2xl font-rob500 mb-3">Introduction</h2>
-          <p className="text-[13px] md:text-[15px]">
-            Extreme environments pose unique challenges to electronic
-            components. In this blog post, we delve into the world of conformal
-            coating in extreme conditions, exploring the challenges faced, the
-            significance of effective coating, and the role Parylene plays in
-            providing robust solutions.{" "}
-          </p>
-
-          <div id="Introduction mb-7">
-            <h2>Introduction</h2>
-            <p>
-              Extreme environments pose unique challenges to electronic
-              components. In this blog post, we delve into the world of
-              conformal coating in extreme conditions, exploring the challenges
-              faced, the significance of effective coating, and the role
-              Parylene plays in providing robust solutions.{" "}
-            </p>
-            <Image
-              src={"/images/white-concrete-building-1838640.jpg"}
-              alt=""
-              className="w-auto max-h-[375px] object-cover my-8 "
-              width={782}
-              height={375}
-            />
-          </div>
-          <div id="Introduction mb-7">
-            <h2>Introduction</h2>
-            <p>
-              Extreme environments pose unique challenges to electronic
-              components. In this blog post, we delve into the world of
-              conformal coating in extreme conditions, exploring the challenges
-              faced, the significance of effective coating, and the role
-              Parylene plays in providing robust solutions.{" "}
-            </p>
-          </div>
-          <div id="Introduction mb-7">
-            <h2>Introduction</h2>
-            <p>
-              Extreme environments pose unique challenges to electronic
-              components. In this blog post, we delve into the world of
-              conformal coating in extreme conditions, exploring the challenges
-              faced, the significance of effective coating, and the role
-              Parylene plays in providing robust solutions.{" "}
-            </p>
-          </div>
-          <div id="Introduction mb-7">
-            <h2>Introduction</h2>
-            <p>
-              Extreme environments pose unique challenges to electronic
-              components. In this blog post, we delve into the world of
-              conformal coating in extreme conditions, exploring the challenges
-              faced, the significance of effective coating, and the role
-              Parylene plays in providing robust solutions.{" "}
-            </p>
-          </div>
-          <div id="Introduction mb-7">
-            <h2>Introduction</h2>
-            <p>
-              Extreme environments pose unique challenges to electronic
-              components. In this blog post, we delve into the world of
-              conformal coating in extreme conditions, exploring the challenges
-              faced, the significance of effective coating, and the role
-              Parylene plays in providing robust solutions.{" "}
-            </p>
-          </div>
+        <div>
+          {/* For Introduction */}
+          {tableOfContent.length ? (
+            <div
+              id={tableOfContent[0].title}
+              key={tableOfContent[0].id}
+              className="mb-6"
+            >
+              <h2 className="text-2xl font-rob500 mb-3">
+                {tableOfContent[0].title}
+              </h2>
+              <p className="text-[13px] md:text-[15px]">
+                {tableOfContent[0].detail}
+              </p>
+              {tableOfContent[0]?.list?.length ? (
+                <ul>
+                  {tableOfContent[0].list.map((item) => {
+                    return (
+                      <li key={item.id}>
+                        <p className="text-[13px] md:text-[15px]">
+                          {item.detail}
+                        </p>
+                      </li>
+                    );
+                  })}
+                </ul>
+              ) : (
+                ""
+              )}
+              {tableOfContent[0]?.image ? (
+                <Image
+                  src={tableOfContent[0].image}
+                  alt={tableOfContent[0].image}
+                  className="w-auto max-h-[375px] object-cover my-8 "
+                  width={782}
+                  height={375}
+                />
+              ) : (
+                ""
+              )}
+            </div>
+          ) : (
+            ""
+          )}
+          {/* FUurther Table of COntent Sections */}
+          {tableOfContent.length
+            ? tableOfContent.slice(1).map((content) => {
+                return (
+                  <div
+                    id={`${content.title}`}
+                    key={content.id}
+                    className="mb-6"
+                  >
+                    <h2 className="text-2xl font-rob500 mb-3">
+                      {content.title}
+                    </h2>
+                    <p className="text-[13px] md:text-[15px]">
+                      {content.detail}
+                    </p>
+                    {content?.list?.length ? (
+                      <ul className="list-disc ml-5 mt-3">
+                        {content.list.map((item) => {
+                          return (
+                            <li key={item.id}>
+                              <p className="text-[13px] md:text-[15px]">
+                                {item.detail}
+                              </p>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    ) : (
+                      ""
+                    )}
+                    {content?.image ? (
+                      <Image
+                        src={content.image}
+                        alt={content.title}
+                        className="w-auto max-h-[375px] object-cover my-8 "
+                        width={782}
+                        height={375}
+                      />
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                );
+              })
+            : ""}
         </div>
         {/* Line */}
         <div className="h-[1px] bg-gret28 w-full mb-6"></div>

@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 export function AllBlogs() {
   const {
     theme: { button },
-    data: { Blogs },
+    data: { BlogsContent },
   } = useContext(DesignContext);
   const route = useRouter();
 
@@ -19,11 +19,11 @@ export function AllBlogs() {
       </h2>
       <h1 className="text-[28px] md:text-5xl mb-9">All Blogs</h1>
       <div className="flex flex-col w-full gap-y-6 mb-7">
-        {Blogs.map((item) => {
+        {BlogsContent.map((item) => {
           return (
             <div
               key={item.id}
-              className="flex max-w-[440px] md:max-w-none flex-col md:flex-row rounded-xl shadow-[1px_2px_15px_0px] shadow-gray "
+              className="flex max-w-[440px] md:max-w-none flex-col md:flex-row md:items-center rounded-xl shadow-[1px_2px_15px_0px] shadow-gray "
             >
               <Image
                 src={item.image}
@@ -36,19 +36,17 @@ export function AllBlogs() {
                 <h4 className="font-rob700 text-[16px] md:text-[20px] mb-2">
                   {item.title}
                 </h4>
-                <p className="text-xs md:text-gret mb-11">
-                  {item.detail}
-                </p>
+                <p className="text-xs md:text-gret mb-11">{item.excerption}</p>
                 <Button
                   className={`${button.red} py-3 px-5 text-[10px] rounded-md mb-2`}
-                  onClick={() => route.push(`/read-blog/${item.title}`)}
+                  onClick={() => route.push(`/read-blog/${item.slug}`)}
                 >
                   READ MORE
                 </Button>
                 <div className="flex gap-2 items-center text-xs md:text-sm">
                   <p className="">{item.date}</p>
                   <ul className="list-disc pl-8">
-                    <li>{"1 min read"}</li>
+                    <li>{item.readTime}</li>
                   </ul>
                 </div>
               </div>
@@ -56,11 +54,11 @@ export function AllBlogs() {
           );
         })}
       </div>
-      <Button
+      {/* <Button
         className={`${button.red} block py-3 px-8 lg:px-12 text-[10px] rounded-md ring-1 ring-red bg-transparent text-red mb-2 mx-auto`}
       >
         Load More
-      </Button>
+      </Button> */}
     </div>
   );
 }

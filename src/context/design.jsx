@@ -11,6 +11,7 @@ import {
   MeetTheTeam,
   Blogs,
 } from "@/lib/data";
+import { BlogsContent } from "@/lib/blogs";
 import { ourServices } from "@/lib/service-data";
 import { industriesServed } from "@/lib/industries-served-data";
 import React, { createContext, createElement, useState } from "react";
@@ -37,6 +38,7 @@ export const DesignProvider = ({ children }) => {
     whyJoinTeams,
     MeetTheTeam,
     Blogs,
+    BlogsContent
   });
 
   const [form, setForm] = useState({});

@@ -1,24 +1,46 @@
+
 "use client";
-import React from "react";
+import React, { useMemo } from "react";
 import HeroSection from "../HeroSection";
 import { HeroContentBox } from "@/components/containers";
 import ContactUs from "../ContactUs";
 import { GuideForm } from "@/components/forms";
 import { FullWidthContent } from "@/components/Sections";
-import { AllBlogs } from "../Blogs/AllBlogs";
-import { AnimateButton, Button } from "@/components/Buttons";
+import { Button } from "@/components/Buttons";
 import { useContext } from "react";
 import { DesignContext } from "@/context/design";
-import { useRouter } from "next/navigation";
+import { notFound, useRouter } from "next/navigation";
 import Input from "@/components/Input";
 import { BlogSection } from "./blogSection";
 import RecentBlogs from "./RecentBlogs";
 
-export default function ReadBlog() {
+export default function ReadBlog({slug}) {
+  console.log(slug);
   const {
     theme: { button },
+    data: {BlogsContent}
   } = useContext(DesignContext);
   const route = useRouter();
+
+  const eachBlog = useMemo(() => {
+    const getBlog = () => BlogsContent.filter((item) => item.slug === slug);
+    const data = getBlog();
+    console.log(data);
+    if (data.length === 0) {
+      notFound()
+    }
+    return data[0];
+  }, [BlogsContent, slug]);
+  
+  const recentBlogs = useMemo(() => {
+    const getBlog = () => BlogsContent.filter((item) => item.slug !== slug);
+    const data = getBlog();
+    console.log(data);
+    if (data.length === 0) {
+      notFound()
+    }
+    return data;
+  }, [BlogsContent, slug]);
   return (
     <React.Fragment>
       <HeroSection
@@ -43,9 +65,10 @@ export default function ReadBlog() {
           }
         />
       </HeroSection>
+
       <section className="py-20 bg-secondary">
         <FullWidthContent className="flex flex-col items-center md:items-start lg:flex-row gap-x-10">
-            <BlogSection />
+          <BlogSection blog={eachBlog}/>
           <div className="pt-12 px-3 w-full md:w-[354px] mx-auto">
             <div className="text-center text-secondary bg-black rounded-2xl px-4 py-9 max-w-[424px] lg:max-w-[324px] mx-auto shadow-[0px_4px_29px_0px] shadow-gret28">
               <h2 className="font-rob700 md:text-3xl mb-3 mx-2">
@@ -72,7 +95,7 @@ export default function ReadBlog() {
             </div>
           </div>
         </FullWidthContent>
-        <RecentBlogs />
+        <RecentBlogs recentBlogs={recentBlogs}/>
       </section>
 
       <ContactUs />
