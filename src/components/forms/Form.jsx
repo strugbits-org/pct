@@ -37,7 +37,6 @@ export const Form = ({
 
       // For Admin
       const toAdminEmail = process.env.NEXT_PUBLIC_TO_ADMIN_EMAIL;
-      console.log({ toAdminEmail });
       const formAdmin = {
         email: toAdminEmail,
         title: subjectForAdmin,

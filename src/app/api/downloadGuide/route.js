@@ -8,7 +8,6 @@ export async function POST(req) {
   const body = await req.json();
   const apiKey = process.env.SENDGRID_API_KEY
   const senderEmail = process.env.SENDER_EMAIL_ADDRESS
-  console.log({body});
   sgMail.setApiKey(apiKey);
   //
   const msg = {
