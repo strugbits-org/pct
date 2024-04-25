@@ -14,3 +14,13 @@ export const downloadGuideSchema = z.object({
     .max(15, "Phone number is not valid")
     .regex(phoneValidation, "Phone number is not valid"),
 });
+
+export const downloadHorizontalGuideSchema = z.object({
+  name: z.string().min(1, "First name is required"),
+  email: z.string().email("Email is not valid"),
+  phoneNumber: z
+    .string()
+    .min(1, "Phone number is required")
+    .max(15, "Phone number is not valid")
+    .regex(phoneValidation, "Phone number is not valid"),
+});

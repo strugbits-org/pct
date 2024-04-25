@@ -74,7 +74,9 @@ const GuideForm = ({ title, detail, className }) => {
         formSchema={downloadGuideSchema}
         getFormValues={getFormValues}
         url="/api/downloadGuide"
-        title={title}
+        subject={title}
+        subjectForAdmin="Download Guide"
+
       >
       {/* <form onSubmit={handleSubmit}> */}
         <div className="mb-4">
