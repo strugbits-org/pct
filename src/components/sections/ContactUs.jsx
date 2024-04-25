@@ -20,7 +20,7 @@ const ContactUs = () => {
             height="450"
             style={{border: "0px", width: "100%", height: "100%", minHeight: "300px"}}
             loading="lazy"
-            allowFullscreen
+            allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
             src={`https://www.google.com/maps/embed/v1/place?key=${"AIzaSyBI9tlb2yGJ0YTPBvzFzs9TONYJSBmvcJM"}&q=senior+assisted+care+near+me&zoom=9`}
           ></iframe>

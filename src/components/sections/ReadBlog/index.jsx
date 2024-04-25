@@ -15,7 +15,6 @@ import { BlogSection } from "./blogSection";
 import RecentBlogs from "./RecentBlogs";
 
 export default function ReadBlog({slug}) {
-  console.log(slug);
   const {
     theme: { button },
     data: {BlogsContent}
@@ -25,7 +24,6 @@ export default function ReadBlog({slug}) {
   const eachBlog = useMemo(() => {
     const getBlog = () => BlogsContent.filter((item) => item.slug === slug);
     const data = getBlog();
-    console.log(data);
     if (data.length === 0) {
       notFound()
     }
@@ -35,7 +33,6 @@ export default function ReadBlog({slug}) {
   const recentBlogs = useMemo(() => {
     const getBlog = () => BlogsContent.filter((item) => item.slug !== slug);
     const data = getBlog();
-    console.log(data);
     if (data.length === 0) {
       notFound()
     }

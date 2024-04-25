@@ -1,9 +1,12 @@
+"use-client";
 import { Button } from "@/components/Buttons";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const BlogSection = ({ blog }) => {
   const { title, author, date, readTime, tableOfContent } = blog;
+  const path = usePathname();
   return (
     <div className="w-full">
       <h1 className="font-rob700 text-4xl mb-2">{title}</h1>
@@ -122,33 +125,44 @@ export const BlogSection = ({ blog }) => {
         <div className="flex justify-between gap-6 items-center flex-wrap">
           <div className="flex gap-3 items-center">
             <p>Share</p>
-            <Button className="w-9 h-9 grid place-content-center rounded-md ring-red ring-1">
-              <Image
-                src={"/images/icons/facebook-red.svg"}
-                className="w-[18px] h-auto"
-                alt="Facebook"
-                width={18}
-                height={20}
-              />
-            </Button>
-            <Button className="w-9 h-9 grid place-content-center rounded-md ring-red ring-1">
-              <Image
-                src={"/images/icons/twitter-red.svg"}
-                className="w-[17px] h-auto"
-                alt="Twitter"
-                width={18}
-                height={20}
-              />
-            </Button>
-            <Button className="w-9 h-9 grid place-content-center rounded-md ring-red ring-1">
-              <Image
-                src={"/images/icons/mail-red.svg"}
-                className="w-[18px] h-auto"
-                alt="Mail"
-                width={18}
-                height={16}
-              />
-            </Button>
+            <Link
+              href={`https://www.facebook.com/sharer.php?u=${window.location.href}`}
+              target="_blank"
+            >
+              <Button className="w-9 h-9 grid place-content-center rounded-md ring-red ring-1">
+                <Image
+                  src={"/images/icons/facebook-red.svg"}
+                  className="w-[18px] h-auto"
+                  alt="Facebook"
+                  width={18}
+                  height={20}
+                />
+              </Button>
+            </Link>
+            <Link
+              href={`https://twitter.com/share?url=${window.location.href}&text=${title}&via=pct`}
+            >
+              <Button className="w-9 h-9 grid place-content-center rounded-md ring-red ring-1">
+                <Image
+                  src={"/images/icons/twitter-red.svg"}
+                  className="w-[17px] h-auto"
+                  alt="Twitter"
+                  width={18}
+                  height={20}
+                />
+              </Button>
+            </Link>
+            {/* <Link href={`$email = 'mailto:?subject=' . $[${title}] . '&body=Check out this site: '. $[${window.location.href}] .'" title="Share by Email';`}>
+              <Button className="w-9 h-9 grid place-content-center rounded-md ring-red ring-1">
+                <Image
+                  src={"/images/icons/mail-red.svg"}
+                  className="w-[18px] h-auto"
+                  alt="Mail"
+                  width={18}
+                  height={16}
+                />
+              </Button>
+            </Link> */}
           </div>
 
           <p className="w-full md:w-auto text-right">02 Views</p>

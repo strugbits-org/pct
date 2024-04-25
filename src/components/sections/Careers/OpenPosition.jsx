@@ -27,11 +27,11 @@ export default function OpenPositions() {
                     <h4 className="text-[16px] md:text-[20px] mb-1">
                       {career.title}
                     </h4>
-                    <p className="text-gret text-xs">{career.jobType.detail}</p>
+                    <p className="text-gret text-xs">{career.jobType}</p>
                   </div>
                   <Button
                     onClick={() =>
-                      route.push(`/open-positions/${career.slug}`)
+                      route.push(`/open-position/${career.slug}`)
                     }
                     className={`${button.red} overflow-hidden w-[162px] h-[46px] md:w-[220px] md:h-[52px] font-rob500 text-[16px] rounded-2xl flex items-center justify-between`}
                   >

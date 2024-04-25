@@ -166,7 +166,7 @@ export const BlogsContent = [
   },
 
   {
-    id: 0,
+    id: 1,
     title: "Conformal Coating Time Breakdown: Step-by-Step Guide",
     excerption: `Learn why these pillar page examples
         stand out. And get tips for your own
@@ -248,7 +248,7 @@ export const BlogsContent = [
   },
 
   {
-    id: 0,
+    id: 2,
     title: "Outgassing",
     excerption: `Learn why these pillar page examples
         stand out. And get tips for your own
@@ -294,7 +294,7 @@ export const BlogsContent = [
   },
 
   {
-    id: 0,
+    id: 3,
     title:
       "Conformal Coating for Extreme Environments: Challenges and Solutions",
     excerption: `Learn why these pillar page examples
