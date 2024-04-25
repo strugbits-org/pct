@@ -41,7 +41,7 @@ const GetInTouchForm = ({ title, detail, className }) => {
         const date = new Date().getDate() + 1
         const dateAdd = new Date().setDate(date)
         const afterDate = new Date(dateAdd).toISOString()
-        console.log({afterDate});       
+
         formDataImage.append("file", uploadFile.current.files[0], uploadFile.current.files[0].fileName);
         formDataImage.append("expires", afterDate);
         formDataImage.append("autoDelete", "true");
