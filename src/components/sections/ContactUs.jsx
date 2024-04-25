@@ -7,24 +7,23 @@ const ContactUs = () => {
     <section id="contact" className="bg-secondary py-12 lg:py-20">
       <FullWidthContent className="flex flex-col-reverse gap-10 md:gap-16 md:flex-row">
         <div className="flex-1 bg-gret">
-          <Image
+          {/* <Image
             src={"/images/map.jpg"}
             className="w-full h-auto md:h-full object-cover"
             alt=""
             width={698}
             height={600}
-          />
+          /> */}
 
-          {/* <iframe
+          <iframe
             width="600"
             height="450"
-            style="border:0"
+            style={{border: "0px"}}
             loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyApyqYnG-WCRQyutTsWlVe7322a6RBhppk
-    &q=Space+Needle,Seattle+WA"
-          ></iframe> */}
+            allowFullscreen
+            referrerPolicy="no-referrer-when-downgrade"
+            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_API_KEY}`}
+          ></iframe>
         </div>
         <div className="flex-1 mb-auto mt-auto">
           <GetInTouchForm
@@ -40,3 +39,5 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
+
