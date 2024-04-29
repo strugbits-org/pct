@@ -33,8 +33,7 @@ const Header = () => {
   const [toggleIndustries, setToggleIndustries] = useState(false);
   const [menuModal, setMenuModal] = useState(false);
 
-  const linkClassValues =
-    "text-sm font-semibold leading-6 text-secondary font-rob400";
+  const linkClassValues = "text-sm text-secondary font-rob400";
   const mobMenuClass =
     "block py-3 text-base font-rob400 leading-6 text-white border-solid border-0 border-b-[1px] border-secondary";
 
@@ -124,7 +123,7 @@ const Header = () => {
             </button>
           </div>
 
-          <div className="hidden lg:flex lg:items-center lg:gap-x-8">
+          <div className="hidden lg:flex items-center lg:gap-x-8">
             {headerNavList.length
               ? headerNavList.map((item) => {
                   const isActive = pathName === item.href;
@@ -132,7 +131,7 @@ const Header = () => {
                   // Service Sub Menu
                   if (item.href === "" && item.value === "Services") {
                     return (
-                      <div key={item.id}>
+                      <div className="relative" key={item.id}>
                         <Link
                           href=""
                           className={cn(
@@ -144,7 +143,7 @@ const Header = () => {
                           Services
                         </Link>
 
-                        {toggleServices ? <SubMenu /> : ""}
+                        {toggleServices ? <SubMenu /> : null}
                       </div>
                     );
                   }
@@ -163,22 +162,23 @@ const Header = () => {
                           Industries Served
                         </Link>
 
-                        {toggleIndustries ? <IndustriesSubMenu /> : ""}
+                        {toggleIndustries ? <IndustriesSubMenu /> : null}
                       </div>
                     );
                   }
                   // Other Links
                   return (
-                    <Link
-                      href={item.href}
-                      key={item.id}
-                      className={cn(
-                        linkClassValues,
-                        isActive ? "text-red" : "text-secondary"
-                      )}
-                    >
-                      {item.value}
-                    </Link>
+                    <div key={item.id}>
+                      <Link
+                        href={item.href}
+                        className={cn(
+                          linkClassValues,
+                          isActive ? "text-red" : "text-secondary"
+                        )}
+                      >
+                        {item.value}
+                      </Link>
+                    </div>
                   );
                 })
               : ""}
