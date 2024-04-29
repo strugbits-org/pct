@@ -82,18 +82,16 @@ const GuideForm = ({ title, detail, className }) => {
           <input
             type="text"
             id="firstName"
-            required
             className="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
-            placeholder="First Name *"
+            placeholder="First Name"
           />
         </div>
         <div className="mb-4">
           <input
             type="text"
             id="lastName"
-            required
             className="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
-            placeholder="Last Name *"
+            placeholder="Last Name"
           />
         </div>
         <div className="mb-4">
@@ -109,9 +107,8 @@ const GuideForm = ({ title, detail, className }) => {
           <input
             type="text"
             id="phoneNumber"
-            required
             className="rounded-[4px] w-full px-5 py-3 border border-gray bg-white200 text-sm placeholder:text-secondary"
-            placeholder="Phone Number *"
+            placeholder="Phone Number"
           />
         </div>
         <div className="mb-3">
