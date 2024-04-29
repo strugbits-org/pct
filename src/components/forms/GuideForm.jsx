@@ -126,7 +126,7 @@ const GuideForm = ({ title, detail, className }) => {
           className={`${button.icon} ${button.red} w-full before:bg-secondary hover:bg-secondary hover:text-primary`}
         >
           Download Guide
-          {form?.disabled === false && (
+          {!form?.disabled && (
             <svg
               width="19"
               height="18"
