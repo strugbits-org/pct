@@ -54,7 +54,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-primary">
+    <header className="bg-primary group sticky top-0 lg:-top-9 z-50">
       <FullWidthContent className="max-w-[1920px]">
         <div className="hidden lg:flex gap-x-6 items-center justify-between py-2">
           <div className="flex gap-x-6 items-center">
@@ -79,16 +79,12 @@ const Header = () => {
             {headerSocialList.map((item) => {
               return (
                 <Link href={item.href} key={item.id} target="_blank">
-                  <TextWithIcon
-                    leftIcon={item.icon}
-                    text={item.value}
-                  />
+                  <TextWithIcon leftIcon={item.icon} text={item.value} />
                 </Link>
               );
             })}
           </div>
         </div>
-
         <nav
           className="flex items-center justify-between gap-x-4 py-4 md:py-0"
           aria-label="Global"
@@ -366,5 +362,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
