@@ -3,7 +3,7 @@ import Image from "next/image";
 import WelcomeDownloadGuidForm from "@/components/forms/WelcomeForm";
 const ModalData = ({onClose}) => {
   return (
-    <section className="">
+    <section className="bg-secondary">
       <FullWidthContent className="flex md:pr-0 py-8 max-w-[1920px] flex-col md:gap-10 md:flex-row">
         <div className="hidden md:block md:flex-1 relative ">
           <Image
