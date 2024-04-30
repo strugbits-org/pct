@@ -22,7 +22,7 @@ export const SubMenu = () => {
             return (
               <div
                 key={item.id}
-                className="group relative w-[30vw] max-w-[440px] flex items-center justify-center ring-1 ring-red gap-x-6 rounded-s p-6 text-sm hover:bg-red cursor-pointer"
+                className="group relative w-[27vw] max-w-[440px] flex items-center justify-center ring-1 ring-red gap-x-6 rounded-s p-6 text-sm hover:bg-red cursor-pointer"
                 onClick={() => route.push(`/services/${item.slug}`)}
               >
                 <div className="flex-auto text-white max-w-[234px]">
