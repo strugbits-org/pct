@@ -53,6 +53,7 @@
   --color-red-32: rgba(220, 29, 40, 3.2);
   --color-red-80: #dc1d28cf; /*rgba(220, 29, 40, 8) */
   --color-whitesmoke: #f9f9f9;
+  --color-whitesmoke-input: #D0D0D0;
   --color-black: #000000;
   --color-black-content: #1e1e1e;
   --color-white-content: #8e939f;
@@ -146,11 +147,11 @@
     clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
   }
 
-  @media screen(lg) {
+  /* @media screen(lg) {
     .bg-clip-path-1 {
       clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
     }
-  }
+  } */
   /* 
   .vertical-lines-background {
     background: linear-gradient(90deg, #fff calc(100% - 1px), #e7e7e7 0);
