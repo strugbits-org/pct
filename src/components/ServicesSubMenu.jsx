@@ -47,7 +47,7 @@ export const SubMenu = () => {
   );
 };
 
-export const MobServicesSubMenu = ({ addClass }) => {
+export const MobServicesSubMenu = ({ addClass, capitalize }) => {
   const {
     data: { ourServices },
   } = useContext(DesignContext);
@@ -66,7 +66,7 @@ export const MobServicesSubMenu = ({ addClass }) => {
             )}
             key={item.id}
           >
-            {item.title}
+            {capitalize ? item.title : item.title1}
           </Link>
         );
       })}

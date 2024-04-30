@@ -82,21 +82,25 @@ export const ourAchievements = [
   {
     id: 0,
     value: "14",
+    unit:"",
     shortDetail: "Years of Experience",
   },
   {
     id: 1,
     value: "3671",
+    unit:"",
     shortDetail: "Miles of Masking Tapes Used",
   },
   {
     id: 2,
-    value: "1.5M",
+    value: "1.5",
+    unit:"M",
     shortDetail: "Parts Coated",
   },
   {
     id: 3,
     value: "5",
+    unit:"",
     shortDetail: "Certifications",
   },
 ];

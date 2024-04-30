@@ -2,6 +2,7 @@ export const ourServices = [
   {
     id: 0,
     title: "PARYLENE",
+    title1: "Parylene",
     shortDetail:
       "Parylene is a common generic name for a unique series of polymers based on paraxylene.",
     image: "/images/parylene.png",
@@ -113,6 +114,7 @@ export const ourServices = [
   {
     id: 1,
     title: "POLYURETHANE",
+    title1: "Polyurethane",
     shortDetail:
       "Polyurethane coatings are available as either single or two-component formulations.",
     image: "/images/polyurethane.png",
@@ -184,6 +186,7 @@ export const ourServices = [
   {
     id: 2,
     title: "EPOXY",
+    title1: "Epoxy",
     shortDetail:
       "Epoxy resins exhibit good abrasive and chemical resistance, as well as reasonable humidity resistance.",
     image: "/images/epoxy.png",
@@ -244,6 +247,7 @@ export const ourServices = [
   {
     id: 3,
     title: "SILICONE",
+    title1: "Silicone",
     shortDetail:
       "Silicone provides good chemical resistance, salt spray resistance and are very flexible. ",
     image: "/images/silicone.png",
@@ -304,6 +308,7 @@ export const ourServices = [
   {
     id: 4,
     title: "ACRYLIC",
+    title1: "Acrylic",
     shortDetail:
       "Acrylic conformal coatings are perhaps the most popular of all conformal coating.",
     image: "/images/acrylic.png",

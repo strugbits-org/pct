@@ -131,7 +131,7 @@ const Header = () => {
                   // Service Sub Menu
                   if (item.href === "" && item.value === "Services") {
                     return (
-                      <div className="relative" key={item.id}>
+                      <div key={item.id}>
                         <Link
                           href=""
                           className={cn(
@@ -272,7 +272,7 @@ const Header = () => {
                                 </button>
                                 {/* <!-- 'Product' sub-menu, show/hide based on menu state. --> */}
                                 <div className="mt-0" id="disclosure-1">
-                                  {toggleServices && <MobServicesSubMenu />}
+                                  {toggleServices && <MobServicesSubMenu capitalize={true}/>}
                                 </div>
                               </div>
                             );

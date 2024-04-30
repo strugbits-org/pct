@@ -165,12 +165,28 @@
   .bg-clip-path-1 {
     clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
   }
-
-  /* @media screen(lg) {
+  .bg-clip-path-2 {
+    clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+  
+  @media screen(md) {
     .bg-clip-path-1 {
       clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
     }
-  } */
+    .bg-clip-path-2 {
+      clip-path: polygon(50% 35%, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+  }
+
+  @media screen(lg) {
+    .bg-clip-path-1 {
+      clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+    .bg-clip-path-2 {
+      clip-path: polygon(50% 45%, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+  }
+  
   /* 
   .vertical-lines-background {
     background: linear-gradient(90deg, #fff calc(100% - 1px), #e7e7e7 0);
