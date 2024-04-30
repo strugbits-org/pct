@@ -23,7 +23,7 @@ export const SlideColorButton = ({ children, className, ...props }) => {
       className={cn(
         className,
         "w-full h-auto px-3 py-3 md:px-5 md:py-5 text-sm transition-all duration-300 relative z-[1] overflow-hidden",
-        "before:absolute before:w-full before:h-full before:-bottom-[98%] before:left-0 before:transition-all before:duration-300 before:-z-[1]",
+        "before:absolute before:w-full before:h-full before:-bottom-[99%] before:left-0 before:transition-all before:duration-300 before:-z-[1]",
         "hover:before:bottom-0"
       )}
       {...props}

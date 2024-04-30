@@ -53,7 +53,7 @@
   --color-red-32: rgba(220, 29, 40, 3.2);
   --color-red-80: #dc1d28cf; /*rgba(220, 29, 40, 8) */
   --color-whitesmoke: #f9f9f9;
-  --color-whitesmoke-input: #D0D0D0;
+  --color-whitesmoke-input: #d0d0d0;
   --color-black: #000000;
   --color-black-content: #1e1e1e;
   --color-white-content: #8e939f;
@@ -141,6 +141,25 @@
     left: 0px;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  .splide-what-we-offer > .splide__arrows {
+    width: 107%;
+    position: absolute;
+    margin-inline: auto;
+    /* border: 2px solid green; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .splide-what-we-offer .splide__arrow {
+    background-color: transparent;
+  }
+  .splide-what-we-offer .splide__arrows .splide__arrow--prev {
+    left: -1em;
+  }
+  .splide-what-we-offer .splide__arrows .splide__arrow--next {
+    right: -1em;
   }
 
   .bg-clip-path-1 {
