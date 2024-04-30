@@ -285,7 +285,7 @@ export const ourServices = [
       },
       features: {
         subTitle: "FEATURES",
-        title: "silicone Coating Properties",
+        title: "Silicone Coating Properties",
         image: "/images/services/silicone-coating/feature.jpg",
         properties: [
           {
@@ -346,10 +346,7 @@ export const ourServices = [
         image: "/images/services/acrylic-coating/coating.jpg",
         subTitle: "ACRYLIC COATING",
         title: "Acrylic (Type AR)",
-        detail: `Acrylic conformal coatings are perhaps the most popular of all conformal coating materials due to their ease of application, removal and forgiving nature. Acrylics dry rapidly, reaching optimum physical properties in minutes, are fungus resistant, provide long pot life, and moderate dielectric constant. Additionally, acrylic coating gives off little or no heat during cure, eliminating potential damage to heat-sensitive components. They do not shrink during cure and have good humidity resistance and exhibit low glass transition temperatures. Mil-I-46058C and IPC-CC-830 approved.
-          Acrylic coating protects electric circuit against moisture, dirt, dust, thermal shocks, and scratches that could corrode, short circuit, or otherwise damage the electric component. It insulates against high-voltage arcing, shorts, and static discharges. Additionally, this coating provides a high dielectric withstand voltage that allows traces to be put closer together helping with miniaturization.
-          ​
-          Acrylic Coatings (Typical Thickness: 1-3 mils)`,
+        detail: `Acrylic conformal coatings are perhaps the most popular of all conformal coating materials due to their ease of application, removal and forgiving nature. Acrylics dry rapidly, reaching optimum physical properties in minutes, are fungus resistant, provide long pot life, and moderate dielectric constant. Additionally, acrylic coating gives off little or no heat during cure, eliminating potential damage to heat-sensitive components. They do not shrink during cure and have good humidity resistance and exhibit low glass transition temperatures. Mil-I-46058C and IPC-CC-830 approved.\nAcrylic coating protects electric circuit against moisture, dirt, dust, thermal shocks, and scratches that could corrode, short circuit, or otherwise damage the electric component. It insulates against high-voltage arcing, shorts, and static discharges. Additionally, this coating provides a high dielectric withstand voltage that allows traces to be put closer together helping with miniaturization.\n\nAcrylic Coatings (Typical Thickness: 1-3 mils)`,
         title2: null,
         detail2: null,
         buttonLabel: "Contact Us Now",
