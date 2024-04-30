@@ -24,9 +24,7 @@ export const ourServices = [
         detail:
           "Our Parylene N has been tested to and is certified to USP Class VI for implantable devices.Our Parylene Dimer is more than 99% pure and is MIL-I-46058C Certified and IPC-CC-830 Approved",
         title2: "What is Parylene ?",
-        detail2: `Parylene is a common generic name for a unique series of polymers based on paraxylene. The Parylenes are formed by the pyrolysis of a di-p-xylene (dimer) in a vacuum environment which is then deposited on the cooler, room temperature substrate within the vacuum chamber. Parylene is applied in a vacuum as a gas that disperses evenly throughout the chamber to target surfaces the material forms as a clear polymer (plastic) film.
-          Conformal coatings are generally applied in a liquid phase by spraying, dipping, or brushing. Parylene materials form linear, highly-crystalline polymers can be usefully produced only as coatings and films. The resulting film is thin and highly conformal, has no pinholes, can completely encapsulate a substrate to protect it from many conditions such as environmental attack, moisture, chemicals, fungus, dirt and dust
-          The applications for Parylene coatings are far-reaching and include military devices, automotive parts, circuit boards, elastomers, O-rings and medical implants. (Parylene is biocompatible and FDA approved). In addition, Parylene is electrically insulating, make it perfect for LED signage, which requires lightweight coating that will protect electrical components from the elements. The defect-free coating, once solidified, is as invisible to the eye and is up to 100 times thinner than a human hair. Parylene typically ranges in thickness from 0.25-1 mil.`,
+        detail2: `Parylene is a common generic name for a unique series of polymers based on paraxylene. The Parylenes are formed by the pyrolysis of a di-p-xylene (dimer) in a vacuum environment which is then deposited on the cooler, room temperature substrate within the vacuum chamber. Parylene is applied in a vacuum as a gas that disperses evenly throughout the chamber to target surfaces the material forms as a clear polymer (plastic) film. \nConformal coatings are generally applied in a liquid phase by spraying, dipping, or brushing. Parylene materials form linear, highly-crystalline polymers can be usefully produced only as coatings and films. The resulting film is thin and highly conformal, has no pinholes, can completely encapsulate a substrate to protect it from many conditions such as environmental attack, moisture, chemicals, fungus, dirt and dust. The applications for Parylene coatings are far-reaching and include military devices, automotive parts, circuit boards, elastomers, O-rings and medical implants. (Parylene is biocompatible and FDA approved). In addition, Parylene is electrically insulating, make it perfect for LED signage, which requires lightweight coating that will protect electrical components from the elements. The defect-free coating, once solidified, is as invisible to the eye and is up to 100 times thinner than a human hair. Parylene typically ranges in thickness from 0.25-1 mil.`,
         buttonLabel: "Contact Us Now",
         buttonLink: "",
       },
@@ -124,7 +122,8 @@ export const ourServices = [
       hero: {
         bgImage: "/images/services/polyurethane-coating/hero-bg.jpg",
         title: "Polyurethane Conformal Coating",
-        detail: "Experience unmatched protection and durability with our polyurethane coating services. Our advanced polyurethane coatings offer a resilient barrier against moisture, chemicals, abrasion, and more, ensuring prolonged lifespan and performance for your components.",
+        detail:
+          "Experience unmatched protection and durability with our polyurethane coating services. Our advanced polyurethane coatings offer a resilient barrier against moisture, chemicals, abrasion, and more, ensuring prolonged lifespan and performance for your components.",
         buttonLabel: "Get in touch",
         buttonLink: "",
       },
@@ -147,37 +146,44 @@ export const ourServices = [
           {
             id: 0,
             title: "Good Moisture, Chemical, and Solvent Resistance",
-            property: "Ensure reliable protection against moisture, chemicals, and solvents, safeguarding components from degradation and damage.",
+            property:
+              "Ensure reliable protection against moisture, chemicals, and solvents, safeguarding components from degradation and damage.",
           },
           {
             id: 1,
             title: "Abrasion Resistance and Mechanical Strength",
-            property: "Enhance durability and longevity with superior abrasion resistance and mechanical strength, ensuring robust performance in demanding applications.",
+            property:
+              "Enhance durability and longevity with superior abrasion resistance and mechanical strength, ensuring robust performance in demanding applications.",
           },
           {
             id: 2,
             title: "Resistant to Mold Growth",
-            property: "Prevent mold growth and contamination with coatings that resist fungal development, maintaining component integrity and cleanliness.",
+            property:
+              "Prevent mold growth and contamination with coatings that resist fungal development, maintaining component integrity and cleanliness.",
           },
           {
             id: 3,
             title: "Excellent Adhesion under All Climatic Conditions",
-            property: "Maintain strong adhesion in diverse climates, ensuring reliability and stability across varying environmental conditions.",
+            property:
+              "Maintain strong adhesion in diverse climates, ensuring reliability and stability across varying environmental conditions.",
           },
           {
             id: 4,
             title: "Exceptional Dielectric Properties",
-            property: "Benefit from outstanding dielectric properties, facilitating reliable insulation and electrical performance in critical applications.",
+            property:
+              "Benefit from outstanding dielectric properties, facilitating reliable insulation and electrical performance in critical applications.",
           },
           {
             id: 5,
             title: "UV Traceable for Inspection Purposes",
-            property: "Enable easy inspection and quality control with UV traceable properties.",
+            property:
+              "Enable easy inspection and quality control with UV traceable properties.",
           },
           {
             id: 6,
             title: "High Level of Flexibility, Even at Low Temperatures",
-            property: "Ensure flexibility and performance even in extreme temperatures, providing versatility and reliability.",
+            property:
+              "Ensure flexibility and performance even in extreme temperatures, providing versatility and reliability.",
           },
         ],
       },
@@ -196,7 +202,8 @@ export const ourServices = [
       hero: {
         bgImage: "/images/services/epoxy-coating/hero-bg.jpg",
         title: "Epoxy Conformal Coating",
-        detail: "Discover unparalleled protection and durability with our epoxy coating services. Our advanced epoxy coatings offer a resilient shield against corrosion, abrasion, and chemical damage, ensuring prolonged lifespan and performance for your components.",
+        detail:
+          "Discover unparalleled protection and durability with our epoxy coating services. Our advanced epoxy coatings offer a resilient shield against corrosion, abrasion, and chemical damage, ensuring prolonged lifespan and performance for your components.",
         buttonLabel: "Get in touch",
         buttonLink: "",
       },
@@ -218,28 +225,33 @@ export const ourServices = [
           {
             id: 0,
             title: "Useful to Temperatures up to 150°C",
-            property: "Ensure reliable performance in high-temperature environments, providing stability and protection up to 150°C.",
+            property:
+              "Ensure reliable performance in high-temperature environments, providing stability and protection up to 150°C.",
           },
           {
             id: 1,
             title: "Very Rigid, Offering Superior Abrasion Resistance",
-            property: "Benefit from exceptional rigidity that provides superior abrasion resistance, ensuring durability and longevity in harsh conditions.",
+            property:
+              "Benefit from exceptional rigidity that provides superior abrasion resistance, ensuring durability and longevity in harsh conditions.",
           },
           {
             id: 2,
             title: "Moisture Resistance Along with Good Chemical Resistance",
-            property: "Enjoy comprehensive protection against moisture and chemicals, safeguarding components from corrosion and degradation.",
+            property:
+              "Enjoy comprehensive protection against moisture and chemicals, safeguarding components from corrosion and degradation.",
           },
           {
             id: 3,
             title: "High Dielectric Strength",
-            property: "Facilitate reliable insulation and electrical performance with high dielectric strength, ensuring safety and reliability in electrical applications.",
+            property:
+              "Facilitate reliable insulation and electrical performance with high dielectric strength, ensuring safety and reliability in electrical applications.",
           },
           {
             id: 4,
             title: "Very Robust and Difficult to Remove",
-            property: "Enhance security and longevity with coatings that are robust and difficult to remove, providing long-lasting protection for your components.",
-          }
+            property:
+              "Enhance security and longevity with coatings that are robust and difficult to remove, providing long-lasting protection for your components.",
+          },
         ],
       },
     },
@@ -257,7 +269,8 @@ export const ourServices = [
       hero: {
         bgImage: "/images/services/silicone-coating/hero-bg.jpg",
         title: "Silicone Conformal Coating",
-        detail: "Harness the power of silicone coating for ultimate protection and performance. Our silicone coating services offer a robust shield against moisture, corrosion, and thermal stress, ensuring longevity and reliability for your components.",
+        detail:
+          "Harness the power of silicone coating for ultimate protection and performance. Our silicone coating services offer a robust shield against moisture, corrosion, and thermal stress, ensuring longevity and reliability for your components.",
         buttonLabel: "Get in touch",
         buttonLink: "",
       },
@@ -278,28 +291,35 @@ export const ourServices = [
         properties: [
           {
             id: 0,
-            title: "Stability over a Temperature Range of Usually (-40°C to 200°C)",
-            property: "Ensure consistent performance across extreme temperatures, maintaining stability and reliability in challenging environments.",
+            title:
+              "Stability over a Temperature Range of Usually (-40°C to 200°C)",
+            property:
+              "Ensure consistent performance across extreme temperatures, maintaining stability and reliability in challenging environments.",
           },
           {
             id: 1,
             title: "Soft and Flexible, Providing Minimal Impact Protection",
-            property: "Enjoy flexible yet protective coatings that absorb minimal impact, safeguarding delicate components from damage.",
+            property:
+              "Enjoy flexible yet protective coatings that absorb minimal impact, safeguarding delicate components from damage.",
           },
           {
             id: 2,
             title: "High Dielectric Strength",
-            property: "Benefit from excellent dielectric strength, facilitating reliable insulation and electrical performance in critical applications.",
+            property:
+              "Benefit from excellent dielectric strength, facilitating reliable insulation and electrical performance in critical applications.",
           },
           {
             id: 3,
             title: "Good Moisture, Humidity, and UV Sunlight Barrier",
-            property: "Create a reliable barrier against moisture, humidity, and UV sunlight, preventing corrosion and degradation of components.",
+            property:
+              "Create a reliable barrier against moisture, humidity, and UV sunlight, preventing corrosion and degradation of components.",
           },
           {
             id: 4,
-            title: "Low Surface Energy to Enable Effective Penetration Under Components",
-            property: " Ensure efficient penetration under components with coatings featuring low surface energy, enhancing coverage and protection.",
+            title:
+              "Low Surface Energy to Enable Effective Penetration Under Components",
+            property:
+              " Ensure efficient penetration under components with coatings featuring low surface energy, enhancing coverage and protection.",
           },
         ],
       },

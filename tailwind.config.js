@@ -26,6 +26,7 @@ module.exports = {
         primary05: "var(--color-black-05)",
         primary10: "var(--color-black-10)",
         secondary: "var(--color-whitesmoke)",
+        secondaryInput: "var(--color-whitesmoke-input)",
         red: "var(--color-red)",
         darkRed: "var(--color-dark-red)",
         red32: "var(--color-red-32)",
