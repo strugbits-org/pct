@@ -5,9 +5,9 @@ export const AnimateButton = ({ children, className, ...props }) => {
     <button
       className={cn(
         "px-8 py-2 md:px-12 md:py-3 rounded-md text-[16px] transition-all duration-500 relative z-[1] overflow-hidden",
-        className,
         "before:absolute before:rounded-full before:w-[5px] before:h-[5px] before:-bottom-[20px] before:left-[50%] before:transition-all before:duration-500 before:-z-[1] before:-translate-x-[50%]",
         "hover:before:scale-[50]",
+        className,
         )}
         {...props}
         >
