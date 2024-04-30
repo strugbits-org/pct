@@ -16,13 +16,12 @@ export const downloadGuideSchema = z.object({
 });
 
 export const downloadHorizontalGuideSchema = z.object({
-  name: z.string().min(1, "Name is required"),
+  name: z.string().optional(),
   email: z.string().email("Email is not valid"),
   phoneNumber: z
     .string()
-    .min(1, "Phone number is required")
-    .max(15, "Phone number is not valid")
-    .regex(phoneValidation, "Phone number is not valid"),
+    .regex(phoneValidation, "Phone number is not valid")
+    .optional(),
 });
 
 export const newsLetterGuide = z.object({
