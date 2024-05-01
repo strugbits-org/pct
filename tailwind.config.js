@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundSize:{
+        'full': '100%',
+        halfHeight: '30% 100%'
+      },
+      backgroundPosition:{
+        minusTop180: 'center -240px'
+      },
       fontFamily: {
         pop300: ["poppins-300"],
         pop400: ["poppins-400"],
