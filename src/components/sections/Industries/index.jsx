@@ -40,6 +40,7 @@ export default function Industry({ slug }) {
           customDetail={
             <p className="font-pop500 text-lg md:text-[22px] mb-10">{hero.detail}</p>
           }
+          themeColor={hero?.themeColor}
         />
 
         <GuideForm
@@ -47,6 +48,7 @@ export default function Industry({ slug }) {
           detail={
             "Fill the form to unlock valuable insights and expertise by downloading our guide for free."
           }
+          themeColor={hero?.themeColor}
         />
       </HeroSection>
       <AboutEachIndustry
