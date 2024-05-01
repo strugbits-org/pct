@@ -29,7 +29,7 @@ export const industriesServed = [
       benefits: {
         subTitle: "BENEFITS",
         title: "Benefits of Parylene Coating",
-        detail: `The benefits of parylene coating inclues the following.`,
+        detail: `The benefits of parylene coating includes the following.`,
         benefits: [
           {
             id: 0,
