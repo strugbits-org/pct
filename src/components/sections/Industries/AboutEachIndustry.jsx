@@ -24,17 +24,17 @@ const AboutEachIndustry = ({
   } = useContext(DesignContext);
 
   return (
-    <section className="pt-8 lg:pt-14 bg-white">
+    <section className="pt-8 lg:pt-14 bg-secondary">
       <FullWidthContent>
-        <div className="flex flex-col items-center justify-center lg:flex-row lg:gap-x-8">
+        <div className="flex flex-col items-center justify-center lg:flex-row lg:gap-x-4">
           <Image
-            className="w-full mb-5 max-w-[565px] mx-auto lg:w-[46vw] lg:max-w-[665px]"
+            className="w-full lg:mb-5 max-w-[565px] mx-auto lg:mr-0 lg:w-[46vw] lg:max-w-[665px]"
             src={image}
             alt={title}
             width={665}
             height={701}
           />
-          <div className="flex-1 mt-auto mb-auto text-center lg:text-left py-8 lg:py-10 max-w-[709px]">
+          <div className="flex-1 mt-auto mb-auto text-center lg:text-left py-8 max-w-[709px]">
             <h2 className="inline h-line text-xs md:text-sm mb-1 before:bg-red before:w-[30px] before:h-[2px] pl-[36px] text-red">
               {subTitle}
             </h2>
