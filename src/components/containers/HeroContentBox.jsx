@@ -40,7 +40,7 @@ const HeroContentBox = ({
         customDetail ? (
           customDetail
         ) : (
-          <p className="font-pop400 text-xs md:text-sm mb-10">{detail}</p>
+          <p className="font-pop400 text-sm md:text-[16px] mb-10">{detail}</p>
         )
       }
       <Link href={buttonLink ? buttonLink : "#contact"} target={buttonTarget ? buttonTarget : "_self"}>
@@ -50,7 +50,7 @@ const HeroContentBox = ({
           {buttonText ? buttonText : "Get in Touch"}
         </AnimateButton>
       </Link>
-      {guide && <p className="font-pop400 text-xs md:text-sm mb-10">{guide}</p>}
+      {guide && <p className="font-pop400 text-xs md:text-sm mb-0 md:mb-10">{guide}</p>}
       {customGuide && customGuide}
     </div>
   );
