@@ -40,7 +40,7 @@ const HeroContentBox = ({
         customDetail ? (
           customDetail
         ) : (
-          <p className="font-pop400 text-sm md:text-[16px] mb-10">{detail}</p>
+          <p className="font-pop400 text-sm md:text-[16px] mb-5 md:mb-10">{detail}</p>
         )
       }
       <Link href={buttonLink ? buttonLink : "#contact"} target={buttonTarget ? buttonTarget : "_self"}>
