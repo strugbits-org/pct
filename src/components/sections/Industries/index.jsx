@@ -1,9 +1,7 @@
 "use client";
 
-import { FullWidthContent } from "@/components/Sections";
 import { HeroContentBox } from "@/components/containers";
 import { GuideForm } from "@/components/forms";
-import FetureEachService from "@/components/sections/Service/FeatureEachService";
 import HeroSection from "@/components/sections/HeroSection";
 import { DesignContext } from "@/context/design";
 import { useContext, useMemo } from "react";

@@ -16,7 +16,8 @@ const HeroContentBox = ({
   buttonLink,
   guide,
   buttonTarget,
-  themeColor
+  themeColor,
+  customGuide
 }) => {
   const {
     theme: { button },
@@ -50,6 +51,7 @@ const HeroContentBox = ({
         </AnimateButton>
       </Link>
       {guide && <p className="font-pop400 text-xs md:text-sm mb-10">{guide}</p>}
+      {customGuide && customGuide}
     </div>
   );
 };
