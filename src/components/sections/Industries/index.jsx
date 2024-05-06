@@ -32,11 +32,11 @@ export default function Industry({ slug }) {
 
   return (
     <div>
-      <HeroSection videoSrc={hero.bgImage}>
+      <HeroSection videoSrc={hero.bgImage} className={"py-5 md:py-10"}>
         <HeroContentBox
           title={hero.title}
           customDetail={
-            <p className="font-pop500 text-lg md:text-[22px] mb-10">{hero.detail}</p>
+            <p className="font-pop500 text-[13px] md:text-[22px] mb-5 md:mb-10">{hero.detail}</p>
           }
           themeColor={hero?.themeColor}
         />

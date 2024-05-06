@@ -27,13 +27,13 @@ const HeroContentBox = ({
       className={cn(
         "lg:col-span-3 text-secondary max-w-[740px] lg:max-w-[804px]",
         className && className,
-        themeColor && themeColor 
+        themeColor && "lg:text-primary" 
       )}
     >
       {customH1 ? (
         customH1
       ) : (
-        <h1 className="text-3xl md:text-6xl mb-3">{title}</h1>
+        <h1 className="text-3xl md:text-6xl mb-1 md:mb-3">{title}</h1>
       )}
 
       {
