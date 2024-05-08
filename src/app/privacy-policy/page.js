@@ -1,3 +1,4 @@
+import PolicyListing from "@/components/PolicyListing";
 import { FullWidthContent } from "@/components/Sections";
 import Link from "next/link";
 export const metadata = {
@@ -30,48 +31,54 @@ export default function PrivacyPolicy() {
           <h2 className="mb-4 text-red text-xl md:text-2xl font-rob500">
             PRIVACY NOTICE
           </h2>
-          <p className="whitespace-pre-wrap py-[13px] md:py-[15px]">{`Last updated __________
+          <p className="whitespace-pre-wrap py-[13px] md:py-[15px]">
+            {`Last updated __________
 
 This privacy notice for __________ ("Company," "we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:`}
-<ul className="list-disc ml-5">
-  <li className="whitespace-pre-wrap">
-    {`Visit our website at pctconformalcoating.com, or any website of ours that links to this privacy notice`}
-  </li>
-  <li className="whitespace-pre-wrap">
-    {`Engage with us in other related ways, including any sales, marketing, or events`}
-  </li>
-</ul>
-{`Questions or concerns? Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at __________.`}</p>
+            <PolicyListing
+              list={[
+                `Visit our website at pctconformalcoating.com, or any website of ours that links to this privacy notice`,
+                `Engage with us in other related ways, including any sales, marketing, or events`,
+              ]}
+            />
+            {`Questions or concerns? Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at __________.`}
+          </p>
         </div>
         <div className="mb-6 md:mb-10">
           <h2 className="mb-4 text-red text-xl md:text-2xl font-rob500">
             SUMMARY OF KEY POINTS
           </h2>
-          <p className="whitespace-pre-wrap py-[13px] md:py-[15px]">
-            {`This summary provides key points from our privacy notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our table of contents below to find the section you are looking for. You can also click here to go directly to our table of contents.
+          <p
+            className="whitespace-pre-wrap py-[13px] md:py-[15px]"
+            dangerouslySetInnerHTML={{
+              __html: `<b>This summary provides key points from our privacy notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our table of contents below to find the section you are looking for. You can also <a href="#tableOfContent" class="underline">click here</a> to go directly to our table of contents.</b>
 
-What personal information do we process? When you visit, use, or navigate our Services, we may process personal information depending on how you interact with __________ and the Services, the choices you make, and the products and features you use. Click here to learn more.
-
-Do we process any sensitive personal information? We may process sensitive personal information when necessary with your consent or as otherwise permitted by applicable law. Click here to learn more.
-
-Do we receive any information from third parties? We do not receive any information from third parties.
-
-How do we process your information? We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent. We process your information only when we have a valid legal reason to do so. 
-Click here to learn more.
-
-In what situations and with which parties do we share personal information? We may share information in specific situations and with specific third parties. Click here to learn more.
-
-How do we keep your information safe? We have organizational and technical processes and procedures in place to protect your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information. Click here to learn more.
-
-What are your rights? Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Click here to learn more.
-
-How do you exercise your rights? The easiest way to exercise your rights is by filling out our data subject request form available here, or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws.
-
-Want to learn more about what __________ does with any information we collect? Click here to review the notice in full.`}
-          </p>
+<b>What personal information do we process?</b> When you visit, use, or navigate our Services, we may process personal information depending on how you interact with __________ and the Services, the choices you make, and the products and features you use. <a href="#personalInformationDisclose" class="underline">Click here</a> to learn more.
+            
+<b>Do we process any sensitive personal information?</b> We may process sensitive personal information when necessary with your consent or as otherwise permitted by applicable law. <a href="#sensitivePersonalInformation" class="underline">Click here</a> to learn more.
+            
+<b>Do we receive any information from third parties?</b> We do not receive any information from third parties.
+            
+<b>How do we process your information?</b> We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent. We process your information only when we have a valid legal reason to do so. 
+<a href="#HOW DO WE PROCESS YOUR INFORMATION?" class="underline">Click here</a> to learn more.
+            
+<b>In what situations and with which parties do we share personal information?</b> We may share information in specific situations and with specific third parties. <a href="#WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?" class="underline">Click here</a> to learn more.
+            
+<b>How do we keep your information safe?</b> We have organizational and technical processes and procedures in place to protect your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information. Click <a href="#HOW DO WE KEEP YOUR INFORMATION SAFE?" class="underline">here</a> to learn more.
+            
+<b>What are your rights?</b> Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Click <a href="#WHAT ARE YOUR PRIVACY RIGHTS?" class="underline">here</a> to learn more.
+            
+<b>How do you exercise your rights?</b> The easiest way to exercise your rights is by filling out our data subject request form available <a href="https://app.termly.io/notify/5ff4da52-0df2-4a72-aca3-3c3b4257ea39" target="_blank" class="underline">here</a>. You may also contact us via email at __________, or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws.
+            
+Want to learn more about what __________ does with any information we collect? Click <a href="#tableOfContent" class="underline">here</a> to review the notice in full.`,
+            }}
+          ></p>
         </div>
         <div className="mb-6 md:mb-10">
-          <h2 className="mb-4 text-red text-xl md:text-2xl font-rob500">
+          <h2
+            id="tableOfContent"
+            className="mb-4 text-red text-xl md:text-2xl font-rob500"
+          >
             TABLE OF CONTENTS
           </h2>
           <ul className="list-decimal space-y-1">
@@ -91,37 +98,58 @@ Want to learn more about what __________ does with any information we collect?
           <h2 className="mb-4 text-red text-xl md:text-2xl font-rob500">
             1. WHAT INFORMATION DO WE COLLECT?
           </h2>
-          <p className="whitespace-pre-wrap py-[13px] md:py-[15px]">
-            {`Personal information you disclose to us
-In Short: We collect personal information that you provide to us.
+          <p
+            id="personalInformationDisclose"
+            className="whitespace-pre-wrap text-[13px] md:text-[15px]"
+            dangerouslySetInnerHTML={{
+              __html: `<b>Personal information you disclose to us</b>
+<b>In Short:</b> We collect personal information that you provide to us.
 We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and Services, when you participate in activities on the Services, or otherwise when you contact us.
 Personal Information Provided by You. The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following:
-names
-phone numbers
-email addresses
-job titles
-Sensitive Information. When necessary, with your consent or as otherwise permitted by applicable law, we process the following categories of sensitive information:
-confidential material
-Payment Data. We may collect data necessary to process your payment if you make purchases, such as your payment instrument number (such as a credit card number), and the security code associated with your payment instrument. All payment data is stored by PayPal. You may find their privacy notice link(s) here: https://www.paypal.com/us/webapps/mpp/ua/privacy-full.
-All personal information that you provide to us must be true, complete, and accurate, and you must notify us of any changes to such personal information.
-
-Information automatically collected
-In Short: Some information — such as your Internet Protocol (IP) address and/or browser and device characteristics — is collected automatically when you visit our Services.
-We automatically collect certain information when you visit, use, or navigate the Services. This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as your IP address, browser and device characteristics, operating system, language preferences, referring URLs, device name, country, location, information about how and when you use our Services, and other technical information. This information is primarily needed to maintain the security and operation of our Services, and for our internal analytics and reporting purposes.
-The information we collect includes:
-Log and Usage Data. Log and usage data is service-related, diagnostic, usage, and performance information our servers automatically collect when you access or use our Services and which we record in log files. Depending on how you interact with us, this log data may include your IP address, device information, browser type, and settings and information about your activity in the Services (such as the date/time stamps associated with your usage, pages and files viewed, searches, and other actions you take such as which features you use), device event information (such as system activity, error reports (sometimes called "crash dumps"), and hardware settings).
-Device Data. We collect device data such as information about your computer, phone, tablet, or other device you use to access the Services. Depending on the device used, this device data may include information such as your IP address (or proxy server), device and application identification numbers, location, browser type, hardware model, Internet service provider and/or mobile carrier, operating system, and system configuration information.
-Location Data. We collect location data such as information about your device's location, which can be either precise or imprecise. How much information we collect depends on the type and settings of the device you use to access the Services. For example, we may use GPS and other technologies to collect geolocation data that tells us your current location (based on your IP address). You can opt out of allowing us to collect this information either by refusing access to the information or by disabling your Location setting on your device. However, if you choose to opt out, you may not be able to use certain aspects of the Services.`}
+            `,
+            }}
+          ></p>
+          <PolicyListing
+            list={["names", "phone numbers", "email addresses", "job titles"]}
+          />
+          <p
+            id="sensitivePersonalInformation"
+            className="whitespace-pre-wrap text-[13px] md:text-[15px]"
+          >
+            {`Sensitive Information. When necessary, with your consent or as otherwise permitted by applicable law, we process the following categories of sensitive information:`}
           </p>
+          <PolicyListing list={["confidential material"]} />
+          <p
+            className="whitespace-pre-wrap text-[13px] md:text-[15px]"
+            dangerouslySetInnerHTML={{
+              __html: `Payment Data. We may collect data necessary to process your payment if you make purchases, such as your payment instrument number (such as a credit card number), and the security code associated with your payment instrument. All payment data is stored by PayPal. You may find their privacy notice link(s) here: <a href="https://www.paypal.com/webapps/mpp/ua/privacy-full" target="_blank" class="underline">https://www.paypal.com/webapps/mpp/ua/privacy-full</a>.
+All personal information that you provide to us must be true, complete, and accurate, and you must notify us of any changes to such personal information.
+        
+
+<b>Information automatically collected</b>
+<b>In Short:</b> Some information — such as your Internet Protocol (IP) address and/or browser and device characteristics — is collected automatically when you visit our Services.
+We automatically collect certain information when you visit, use, or navigate the Services. This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as your IP address, browser and device characteristics, operating system, language preferences, referring URLs, device name, country, location, information about how and when you use our Services, and other technical information. This information is primarily needed to maintain the security and operation of our Services, and for our internal analytics and reporting purposes.
+The information we collect includes:`,
+            }}
+          ></p>
+          <PolicyListing
+            list={[
+              `Log and Usage Data. Log and usage data is service-related, diagnostic, usage, and performance information our servers automatically collect when you access or use our Services and which we record in log files. Depending on how you interact with us, this log data may include your IP address, device information, browser type, and settings and information about your activity in the Services (such as the date/time stamps associated with your usage, pages and files viewed, searches, and other actions you take such as which features you use), device event information (such as system activity, error reports (sometimes called "crash dumps"), and hardware settings).`,
+              `Device Data. We collect device data such as information about your computer, phone, tablet, or other device you use to access the Services. Depending on the device used, this device data may include information such as your IP address (or proxy server), device and application identification numbers, location, browser type, hardware model, Internet service provider and/or mobile carrier, operating system, and system configuration information.`,
+              `Location Data. We collect location data such as information about your device's location, which can be either precise or imprecise. How much information we collect depends on the type and settings of the device you use to access the Services. For example, we may use GPS and other technologies to collect geolocation data that tells us your current location (based on your IP address). You can opt out of allowing us to collect this information either by refusing access to the information or by disabling your Location setting on your device. However, if you choose to opt out, you may not be able to use certain aspects of the Services.`,
+            ]}
+          />
         </div>
 
         <div id="HOW DO WE PROCESS YOUR INFORMATION?" className="mb-6 md:mb-10">
           <h2 className="mb-4 text-red text-xl md:text-2xl font-rob500">
             2. HOW DO WE PROCESS YOUR INFORMATION?
           </h2>
-          <p className="whitespace-pre-wrap py-[13px] md:py-[15px]">
-            {`In Short: We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent.
-We process your personal information for a variety of reasons, depending on how you interact with our Services, including:
+          <p
+            className="whitespace-pre-wrap text-[13px] md:text-[15px]"
+            dangerouslySetInnerHTML={{
+              __html: `<b>In Short:</b> We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent.
+<b>We process your personal information for a variety of reasons, depending on how you interact with our Services, including:</b>
 To deliver and facilitate delivery of services to the user. We may process your information to provide you with the requested service.
 To respond to user inquiries/offer support to users. We may process your information to respond to your inquiries and solve any potential issues you might have with the requested service.
 To enable user-to-user communications. We may process your information if you choose to use any of our offerings that allow for communication with another user.
@@ -132,8 +160,9 @@ To protect our Services. We may process your information as part of our efforts
 To evaluate and improve our Services, products, marketing, and your experience. We may process your information when we believe it is necessary to identify usage trends, determine the effectiveness of our promotional campaigns, and to evaluate and improve our Services, products, marketing, and your experience.
 To identify usage trends. We may process information about how you use our Services to better understand how they are being used so we can improve them.
 To determine the effectiveness of our marketing and promotional campaigns. We may process your information to better understand how to provide marketing and promotional campaigns that are most relevant to you.
-To comply with our legal obligations. We may process your information to comply with our legal obligations, respond to legal requests, and exercise, establish, or defend our legal rights.`}
-          </p>
+To comply with our legal obligations. We may process your information to comply with our legal obligations, respond to legal requests, and exercise, establish, or defend our legal rights.`,
+}}
+          ></p>
         </div>
         <div
           id="WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?"
