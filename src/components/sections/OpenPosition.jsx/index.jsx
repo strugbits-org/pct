@@ -73,7 +73,7 @@ export default function OpenPosition({ slug }) {
             : ""}
 
           <AnimateButton
-            className={`${button.red} w-full before:bg-primary hover:bg-primary my-6`}
+            className={`${button.red} w-full before:bg-primary rounded-sm hover:bg-primary my-6`}
             onClick={() => setIsOpen(true)}
           >
             Apply Now
