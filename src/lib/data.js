@@ -36,7 +36,7 @@ export const headerSocialList = [
     id: 2,
     value: "",
     href: "https://twitter.com/paracoattech?lang=en",
-    icon: "/images/icons/social/twitter_bird_icon.svg",
+    icon: "/images/icons/social/twitter-x.svg",
   },
 ];
 
