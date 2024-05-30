@@ -16,7 +16,6 @@ import {
   industriesServed,
   headerNavList,
 } from "@/lib/data";
-import { buttonTheme } from "@/lib/constant";
 import { AnimateButton } from "./Buttons";
 import { MobServicesSubMenu, SubMenu } from "./ServicesSubMenu";
 import { IndustriesSubMenu, MobIndustriesSubMenu } from "./IndustiresSubMenu";
@@ -43,6 +42,7 @@ const Header = () => {
     setToggleServices(false);
     setMenuModal(false);
   }, [pathName]);
+
   const handleServices = (e) => {
     setToggleServices(!toggleServices);
     setToggleIndustries(false);
@@ -126,7 +126,6 @@ const Header = () => {
           <div className="hidden lg:flex items-center lg:gap-x-8">
             {headerNavList.length
               ? headerNavList.map((item) => {
-                console.log(pathName);
                   const isActive = item.href.includes(pathName);
                   // const isActive = pathName === item.href;
                   // Service Sub Menu
@@ -236,9 +235,10 @@ const Header = () => {
                   <div className="">
                     {headerNavList.length
                       ? headerNavList.map((item) => {
-                          const isActive = pathName === item.href;
+                          const isActive = item.href.includes(pathName);
+                          // const isActive = pathName === item.href;
                           // Service Sub Menu
-                          if (item.href === "" && item.value === "Services") {
+                          if (item.value === "Services") {
                             return (
                               <div
                                 key={item.id}
@@ -246,7 +246,10 @@ const Header = () => {
                               >
                                 <button
                                   type="button"
-                                  className="flex w-full items-center justify-between text-base font-rob400 text-white"
+                                  className={cn(
+                                    "flex w-full items-center justify-between text-base font-rob400 text-white",
+                                    isActive ? "text-red" : "text-secondary"
+                                  )}
                                   aria-controls="disclosure-1"
                                   aria-expanded={"false"}
                                   onClick={handleServices}
@@ -272,16 +275,15 @@ const Header = () => {
                                 </button>
                                 {/* <!-- 'Product' sub-menu, show/hide based on menu state. --> */}
                                 <div className="mt-0" id="disclosure-1">
-                                  {toggleServices && <MobServicesSubMenu capitalize={true}/>}
+                                  {toggleServices && (
+                                    <MobServicesSubMenu capitalize={true} />
+                                  )}
                                 </div>
                               </div>
                             );
                           }
                           // Industires Served Sub Menu
-                          if (
-                            item.href === "" &&
-                            item.value === "Industries Served"
-                          ) {
+                          if (item.value === "Industries Served") {
                             return (
                               <div
                                 key={item.id}
@@ -289,7 +291,10 @@ const Header = () => {
                               >
                                 <button
                                   type="button"
-                                  className="flex w-full items-center justify-between text-base font-rob400 text-white"
+                                  className={cn(
+                                    "flex w-full items-center justify-between text-base font-rob400 text-white",
+                                    isActive ? "text-red" : "text-secondary"
+                                  )}
                                   aria-controls="disclosure-2"
                                   aria-expanded={"false"}
                                   onClick={handleIndustriesServed}
@@ -323,7 +328,7 @@ const Header = () => {
                           // Other Links
                           return (
                             <Link
-                              href={item.href}
+                              href={item.href[0]}
                               key={item.id}
                               className={cn(
                                 mobMenuClass,
