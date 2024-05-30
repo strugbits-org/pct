@@ -44,37 +44,45 @@ export const headerNavList = [
   {
     id: 0,
     value: "Home",
-    href: "/",
+    href: ["/"],
   },
   {
     id: 1,
     value: "Services",
-    href: "",
+    href: ["services/polyurethane", "/services/parylene", "/services/epoxy", "/services/silicone", "/services/acrylic"],
   },
   {
     id: 2,
     value: "About Us",
-    href: "/about",
+    href: ["/about"],
   },
   {
     id: 3,
     value: "Industries Served",
-    href: "",
+    href: [
+      "/industries-served/automotive",
+      "/industries-served/consumer-electronics",
+      "/industries-served/defense-and-aerospace",
+      "/industries-served/elastomers",
+      "/industries-served/leds",
+      "/industries-served/medical",
+      "/industries-served/printed-circuit-boards",
+    ],
   },
   {
     id: 4,
     value: "Blog",
-    href: "/blog",
+    href: ["/blog"],
   },
   {
     id: 5,
     value: "Careers",
-    href: "/careers",
+    href: ["/careers"],
   },
   {
     id: 6,
     value: "Dimer & Machine Sales",
-    href: "/dimer-and-machine-sales",
+    href: ["/dimer-and-machine-sales"],
   },
 ]
 

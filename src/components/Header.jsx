@@ -126,9 +126,11 @@ const Header = () => {
           <div className="hidden lg:flex items-center lg:gap-x-8">
             {headerNavList.length
               ? headerNavList.map((item) => {
-                  const isActive = pathName === item.href;
+                console.log(pathName);
+                  const isActive = item.href.includes(pathName);
+                  // const isActive = pathName === item.href;
                   // Service Sub Menu
-                  if (item.href === "" && item.value === "Services") {
+                  if (item.value === "Services") {
                     return (
                       <div key={item.id}>
                         <Link
@@ -147,7 +149,7 @@ const Header = () => {
                     );
                   }
                   // Industires Served Sub Menu
-                  if (item.href === "" && item.value === "Industries Served") {
+                  if (item.value === "Industries Served") {
                     return (
                       <div key={item.id}>
                         <Link
@@ -169,7 +171,7 @@ const Header = () => {
                   return (
                     <div key={item.id}>
                       <Link
-                        href={item.href}
+                        href={item.href[0]}
                         className={cn(
                           linkClassValues,
                           isActive ? "text-red" : "text-secondary"
