@@ -79,7 +79,7 @@ const Header = () => {
               return (
                 <div key={item.id}>
                   <Link href={item.href} target="_blank">
-                    <TextWithIcon leftIcon={item.icon} text={item.value} iconSize={item.iconSize}/>
+                    <TextWithIcon leftIcon={item.icon} text={item.value}/>
                   </Link>
                 </div>
               );
