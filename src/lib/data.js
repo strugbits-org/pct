@@ -24,19 +24,22 @@ export const headerSocialList = [
     id: 0,
     value: "",
     href: "https://www.facebook.com/ParaCoat/",
-    icon: "/images/icons/social/social_facebook_icon.svg",
+    icon: "/images/icons/social/facebook.svg",
+    iconSize: 18,
   },
   {
     id: 1,
     value: "",
     href: "https://www.linkedin.com/company/para-coat-technologies-inc-",
-    icon: "/images/icons/social/linkedin_social_icon.svg",
+    icon: "/images/icons/social/linkedin-icon.svg",
+    iconSize: 18,
   },
   {
     id: 2,
     value: "",
     href: "https://twitter.com/paracoattech?lang=en",
     icon: "/images/icons/social/twitter-x.svg",
+    iconSize: 18,
   },
 ];
 

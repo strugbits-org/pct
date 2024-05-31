@@ -74,12 +74,14 @@ const Header = () => {
               );
             })}
           </div>
-          <div className="flex gap-x-6 items-center">
+          <div className="flex gap-x-5 items-center">
             {headerSocialList.map((item) => {
               return (
-                <Link href={item.href} key={item.id} target="_blank">
-                  <TextWithIcon leftIcon={item.icon} text={item.value} />
-                </Link>
+                <div key={item.id}>
+                  <Link href={item.href} target="_blank">
+                    <TextWithIcon leftIcon={item.icon} text={item.value} iconSize={item.iconSize}/>
+                  </Link>
+                </div>
               );
             })}
           </div>
