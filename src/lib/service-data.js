@@ -116,7 +116,7 @@ export const ourServices = [
     shortDetail:
       "Polyurethane coatings are available as either single or two-component formulations.",
     image: "/images/polyurethane.png",
-    mainImage: "/images/polyurethene.jpg",
+    mainImage: "/images/polyurethene1.png",
     slug: "polyurethane",
     page: {
       hero: {
@@ -195,7 +195,7 @@ export const ourServices = [
     shortDetail:
       "Epoxy resins exhibit good abrasive and chemical resistance, as well as reasonable humidity resistance.",
     image: "/images/epoxy.png",
-    mainImage: "/images/epoxy.jpg",
+    mainImage: "/images/epoxy1.png",
     slug: "epoxy",
     page: {
       hero: {
