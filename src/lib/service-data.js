@@ -10,7 +10,7 @@ export const ourServices = [
     slug: "parylene",
     page: {
       hero: {
-        bgImage: "/images/services/parylene-coating/hero-bg.jpg",
+        bgImage: "/images/services/parylene-coating/hero-bg.png",
         title: "Parylene Conformal Coating",
         detail:
           "We are specialists in parylene coating. Our Parylene coating services offer unparalleled protection for your components. Parylene coatings provide a thin, uniform, and pinhole-free layer of protection, ensuring excellent barrier properties against moisture, chemicals, and other environmental factors.",
@@ -18,7 +18,7 @@ export const ourServices = [
         buttonLink: "",
       },
       coating: {
-        image: "/images/services/parylene-coating/parylene-coating.jpg",
+        image: "/images/services/parylene-coating/parylene-coating.png",
         subTitle: "PARYLENE COATING",
         title: "Parylene (Type XY)",
         detail:
@@ -31,7 +31,7 @@ export const ourServices = [
       features: {
         subTitle: "FEATURES",
         title: "Parylene Coating Properties",
-        image: "/images/services/parylene-coating/parylene-feature.jpg",
+        image: "/images/services/parylene-coating/parylene-feature.png",
         properties: [
           {
             id: 0,
