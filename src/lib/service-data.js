@@ -120,7 +120,7 @@ export const ourServices = [
     slug: "polyurethane",
     page: {
       hero: {
-        bgImage: "/images/services/polyurethane-coating/hero-bg.jpg",
+        bgImage: "/images/services/polyurethane-coating/hero-bg.png",
         title: "Polyurethane Conformal Coating",
         detail:
           "Experience unmatched protection and durability with our polyurethane coating services. Our advanced polyurethane coatings offer a resilient barrier against moisture, chemicals, abrasion, and more, ensuring prolonged lifespan and performance for your components.",
@@ -128,7 +128,7 @@ export const ourServices = [
         buttonLink: "",
       },
       coating: {
-        image: "/images/services/polyurethane-coating/coating.jpg",
+        image: "/images/services/polyurethane-coating/coating.png",
         subTitle: "POLYURETHANE COATING",
         title: "Polyurethane (Type UR)",
         detail: `Polyurethane coatings are available as either single or two-component formulations. Both formulations provide excellent humidity resistance and far greater chemical resistance than Acrylic coatings. Single component Polyurethanes, while easy to apply, enjoy long pot life but sometimes require very lengthy cure cycles to achieve full or optimum cure. In some instances, the cure cycle can be accelerated by the judicious application of heat. \nTwo component formulations can reach optimum cure properties in as little as one to three hours with the assistance of heat. However, when compared to single component formulations, two-component formulas can have a relatively short pot life sometimes making them difficult to work with. Removal of Polyurethane coatings can be difficult due to their very high resistance to solvents. For single-components, the preferred method of removal is via burn through for spot repair, while the use of specially formulated strippers enables the user to completely remove the coating from an entire PCB assembly for more wide-ranging rework concerns. These products do not necessarily represent our complete Urethanes range. Mil-I-46058C and IPC-CC-830 approved.`,
@@ -140,7 +140,7 @@ export const ourServices = [
       features: {
         subTitle: "FEATURES",
         title: "Polyurethane Coating Properties",
-        image: "/images/services/polyurethane-coating/feature.jpg",
+        image: "/images/services/polyurethane-coating/feature.png",
         properties: [
           {
             id: 0,
