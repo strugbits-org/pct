@@ -335,7 +335,7 @@ export const ourServices = [
     slug: "acrylic",
     page: {
       hero: {
-        bgImage: "/images/services/acrylic-coating/hero-bg.jpg",
+        bgImage: "/images/services/acrylic-coating/hero-bg.png",
         title: "Acrylic Conformal Coating",
         detail:
           "Elevate the durability and performance of your components with our acrylic coating services. Our advanced acrylic coatings provide a robust protective layer, enhancing resistance to abrasion, weathering, and corrosion.",
@@ -343,7 +343,7 @@ export const ourServices = [
         buttonLink: "",
       },
       coating: {
-        image: "/images/services/acrylic-coating/coating.jpg",
+        image: "/images/services/acrylic-coating/coating.png",
         subTitle: "ACRYLIC COATING",
         title: "Acrylic (Type AR)",
         detail: `Acrylic conformal coatings are perhaps the most popular of all conformal coating materials due to their ease of application, removal and forgiving nature. Acrylics dry rapidly, reaching optimum physical properties in minutes, are fungus resistant, provide long pot life, and moderate dielectric constant. Additionally, acrylic coating gives off little or no heat during cure, eliminating potential damage to heat-sensitive components. They do not shrink during cure and have good humidity resistance and exhibit low glass transition temperatures. Mil-I-46058C and IPC-CC-830 approved.\nAcrylic coating protects electric circuit against moisture, dirt, dust, thermal shocks, and scratches that could corrode, short circuit, or otherwise damage the electric component. It insulates against high-voltage arcing, shorts, and static discharges. Additionally, this coating provides a high dielectric withstand voltage that allows traces to be put closer together helping with miniaturization.\n\nAcrylic Coatings (Typical Thickness: 1-3 mils)`,
@@ -355,7 +355,7 @@ export const ourServices = [
       features: {
         subTitle: "FEATURES",
         title: "Acrylic Coating Properties",
-        image: "/images/services/acrylic-coating/feature.jpg",
+        image: "/images/services/acrylic-coating/feature.png",
         properties: [
           {
             id: 0,
