@@ -207,7 +207,7 @@ export const ourServices = [
         buttonLink: "",
       },
       coating: {
-        image: "/images/services/epoxy-coating/coating.jpg",
+        image: "/images/services/epoxy-coating/coating.png",
         subTitle: "EPOXY COATING",
         title: "Epoxy (Type ER)",
         detail: `Epoxy resins (ER) are usually available as two-part compounds that start curing upon mixing, but single part coatings that can be cured thermally or with UV exposure, are also available. Epoxy resins exhibit good abrasive and chemical resistance, as well as reasonable humidity resistance. The coating is virtually impossible to remove and rework requires burning through with a soldering iron. A buffer is recommended around delicate components, since film shrinkage occurs during polymerization. The shrinkage can be minimized by curing at a low temperature. Epoxy resins can be applied by brush, spray, or dip-coating.`,
@@ -274,7 +274,7 @@ export const ourServices = [
         buttonLink: "",
       },
       coating: {
-        image: "/images/services/silicone-coating/coating.jpg",
+        image: "/images/services/silicone-coating/coating.png",
         subTitle: "SILICONE COATING",
         title: "Silicone (Type SR)",
         detail: `Silicone Conformal Coating is a transparent, soft, flexible coating which offers excellent moisture, corrosion and humidity resistance, good dielectric properties, and has exceptional light transmission capabilities for solar applications. It provides good chemical resistance, salt spray resistance and are very flexible. It functions well in high temperate applications and is resistant to UV light and dirt pick-up. This coating can be “solder-through” for easy repair. However, silicones are not solvent soluble and require chemical strippers for removal or repairs. MIL-I-46058C and IPC-CC-830 approved.`,
