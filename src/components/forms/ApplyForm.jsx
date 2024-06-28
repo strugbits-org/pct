@@ -88,7 +88,7 @@ const ApplyForm = ({ formTitle, detail, className, onClose }) => {
 
       const formAdmin = {
         email: toAdminEmail.split(","),
-        title: `New Applicatino for ${formTitle}`,
+        title: `New Application for ${formTitle}`,
         text: `The details of Form Application: \n ${JSON.stringify(formData)} 
         \n ${attachmentLink ? `File Attached: ${attachmentLink}` : ""}
         `,
