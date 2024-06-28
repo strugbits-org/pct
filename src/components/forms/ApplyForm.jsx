@@ -87,7 +87,7 @@ const ApplyForm = ({ formTitle, detail, className, onClose }) => {
       const toAdminEmail = process.env.NEXT_PUBLIC_TO_ADMIN_EMAIL;
 
       const formAdmin = {
-        email: toAdminEmail,
+        email: toAdminEmail.split(","),
         title: `New Applicatino for ${formTitle}`,
         text: `The details of Form Application: \n ${JSON.stringify(formData)} 
         \n ${attachmentLink ? `File Attached: ${attachmentLink}` : ""}
